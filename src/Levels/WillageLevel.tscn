@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=2]
+[gd_scene load_steps=40 format=2]
 
 [ext_resource path="res://src/Actors/Player_Main.tscn" type="PackedScene" id=1]
 [ext_resource path="res://tempAssets/tileset.tres" type="TileSet" id=2]
@@ -25,6 +25,7 @@
 [ext_resource path="res://assets/background_trees.png" type="Texture" id=23]
 [ext_resource path="res://assets/nowe/mushroom_1.png" type="Texture" id=24]
 [ext_resource path="res://assets/nowe/background_trees_3.png" type="Texture" id=25]
+[ext_resource path="res://src/Actors/Goose.tscn" type="PackedScene" id=26]
 [ext_resource path="res://assets/nowe/npc_house_1.png" type="Texture" id=27]
 [ext_resource path="res://assets/backgrounds/Background_3.png" type="Texture" id=29]
 [ext_resource path="res://assets/nowe/new_flowers.png" type="Texture" id=30]
@@ -110,7 +111,6 @@ texture = ExtResource( 23 )
 
 [node name="BackgroundTrees6" type="Sprite" parent="."]
 position = Vector2( 12367.2, 344.774 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 25 )
 
 [node name="NpcHouse1" type="Sprite" parent="."]
@@ -392,9 +392,25 @@ position = Vector2( 8446.83, 836.461 )
 scale = Vector2( 0.595844, 0.595844 )
 firstInteraction = [ "Brr.. Grr..", "If only somebody could help me with those potatoes" ]
 
+[node name="Goose1" parent="." instance=ExtResource( 26 )]
+position = Vector2( 14794.6, 843.849 )
+scale = Vector2( 1, 1 )
+
+[node name="Goose2" parent="." instance=ExtResource( 26 )]
+position = Vector2( 15118.7, 838.355 )
+scale = Vector2( 1, 1 )
+
 [node name="Player_Main" parent="." instance=ExtResource( 1 )]
-position = Vector2( 1487.87, 949.828 )
+position = Vector2( 14414.7, 890.988 )
 scale = Vector2( 0.825966, 0.825966 )
+
+[node name="Goose3" parent="." instance=ExtResource( 26 )]
+position = Vector2( 15220.4, 843.849 )
+scale = Vector2( 1, 1 )
+
+[node name="Goose4" parent="." instance=ExtResource( 26 )]
+position = Vector2( 15637.9, 830.114 )
+scale = Vector2( 1, 1 )
 
 [node name="ColorLayer" type="Sprite" parent="."]
 modulate = Color( 0.964706, 0.654902, 0.329412, 0.301961 )
