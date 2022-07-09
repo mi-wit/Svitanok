@@ -60,6 +60,7 @@ margin_bottom = 17.0
 theme = ExtResource( 5 )
 align = 1
 valign = 1
+autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
