@@ -8,9 +8,6 @@ var number_of_jumps: = 2
 onready var anim_player: AnimatedSprite = $AnimatedSprite
 
 
-func _on_EnemyDetector_body_entered(body: Node) -> void:
-	queue_free()
-
 func _ready() -> void:
 	anim_player.play()
 
