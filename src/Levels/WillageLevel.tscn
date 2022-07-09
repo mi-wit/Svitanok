@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=2]
+[gd_scene load_steps=48 format=2]
 
 [ext_resource path="res://src/Actors/Player_Main.tscn" type="PackedScene" id=1]
 [ext_resource path="res://tempAssets/tileset.tres" type="TileSet" id=2]
@@ -45,6 +45,7 @@
 [ext_resource path="res://assets/flowers_6.png" type="Texture" id=43]
 [ext_resource path="res://flowers_4.png" type="Texture" id=44]
 [ext_resource path="res://src/Levels/GooseHouse.gd" type="Script" id=45]
+[ext_resource path="res://assets/sounds/Svitaniok_calm_song.wav" type="AudioStream" id=46]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 61.8408, 285.46 )
@@ -571,5 +572,6 @@ scale = Vector2( 1.37408, 1.37408 )
 texture = ExtResource( 43 )
 
 [node name="MusicBackground" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 46 )
 autoplay = true
 [connection signal="body_entered" from="GooseHouse/Area2D" to="." method="_on_GooseHouse_body_entered"]
