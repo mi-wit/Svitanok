@@ -249,20 +249,22 @@ position = Vector2( 3405, 419.555 )
 scale = Vector2( 0.699102, 0.699102 )
 texture = ExtResource( 31 )
 
-[node name="NPC" parent="." instance=ExtResource( 4 )]
+[node name="NPC_Babushka" parent="." instance=ExtResource( 4 )]
 position = Vector2( 2440, 962 )
 scale = Vector2( 0.595844, 0.595844 )
 
-[node name="NPC2" parent="." instance=ExtResource( 4 )]
-position = Vector2( 8485, 949 )
+[node name="NPC_LazyDude" parent="." instance=ExtResource( 4 )]
+position = Vector2( 4504, 910 )
 scale = Vector2( 0.595844, 0.595844 )
+firstInteraction = [ "Zzzz", "Could you help me?", "Im very lazy today..." ]
 
-[node name="NPC3" parent="." instance=ExtResource( 4 )]
-position = Vector2( 13892, 944 )
+[node name="NPC_Boar" parent="." instance=ExtResource( 4 )]
+position = Vector2( 8446.83, 836.461 )
 scale = Vector2( 0.595844, 0.595844 )
+firstInteraction = [ "Brr.. Grr..", "If only somebody could help me with those potatoes" ]
 
 [node name="Player_Main" parent="." instance=ExtResource( 1 )]
-position = Vector2( 1222, 943 )
+position = Vector2( 4187.18, 800.149 )
 scale = Vector2( 0.825966, 0.825966 )
 
 [node name="ColorLayer" type="Sprite" parent="."]
