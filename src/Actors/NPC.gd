@@ -8,13 +8,14 @@ export var firstInteraction = [
 ] 
 
 func _ready() -> void:
-	$InteractionHint.visible = false
+	$dymek2.visible = false
 	$dymek.visible = false
 	$dymek/Label.text = firstInteraction.pop_front()
 
 func _process(delta: float) -> void:
 	
-	if $InteractionHint.visible and Input.is_action_just_pressed("interaction"):
+	if $dymek2.visible and Input.is_action_just_pressed("interaction"):
+		$dymek2.visible = false
 		$dymek.visible = true
 		$dymek/DialogTimeOut.start()
 
@@ -27,11 +28,11 @@ func _physics_process(delta: float) -> void:
 
 
 func _on_PlayerDetector_body_entered(body: Node) -> void:
-	$InteractionHint.visible = true
+	$dymek2.visible = true
 
 
 func _on_PlayerDetector_body_exited(body: Node) -> void:
-	$InteractionHint.visible = false
+	$dymek2.visible = false
 
 
 func _on_DialogTimeOut_timeout() -> void:
