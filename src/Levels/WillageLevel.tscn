@@ -1,6 +1,5 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://src/Actors/Player_Pigeon.tscn" type="PackedScene" id=1]
 [ext_resource path="res://tempAssets/tileset.tres" type="TileSet" id=2]
 [ext_resource path="res://tempAssets/level_dla_michala.png" type="Texture" id=3]
 [ext_resource path="res://src/Actors/NPC.tscn" type="PackedScene" id=4]
@@ -13,10 +12,6 @@ script = ExtResource( 5 )
 position = Vector2( 7680.06, 540.033 )
 texture = ExtResource( 3 )
 
-[node name="Player_Pigeon" parent="." instance=ExtResource( 1 )]
-position = Vector2( 1218.1, 966.267 )
-scale = Vector2( 2.11507, 2.11507 )
-
 [node name="BasicTileMap" type="TileMap" parent="."]
 modulate = Color( 1, 1, 1, 0.513726 )
 tile_set = ExtResource( 2 )
@@ -27,5 +22,3 @@ tile_data = PoolIntArray( 65535, 0, 0, 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0,
 
 [node name="NPC" parent="." instance=ExtResource( 4 )]
 position = Vector2( 1588.7, 929.331 )
-speed = Vector2( 500, 800 )
-gravity = 3000.0

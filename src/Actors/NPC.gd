@@ -17,3 +17,4 @@ func _on_PlayerDetector_body_entered(body: Node) -> void:
 
 func _on_PlayerDetector_body_exited(body: Node) -> void:
 	$InteractionHint.visible = false
+
