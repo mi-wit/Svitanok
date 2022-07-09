@@ -3,6 +3,11 @@ extends Actor
 func _ready() -> void:
 	$InteractionHint.visible = false
 
+func _process(delta: float) -> void:
+	
+	if $InteractionHint.visible and Input.is_action_just_pressed("interaction"):
+		print("interakcja")
+
 func _physics_process(delta: float) -> void:
 	if is_on_wall():
 		velocity *= -1.0
@@ -17,4 +22,6 @@ func _on_PlayerDetector_body_entered(body: Node) -> void:
 
 func _on_PlayerDetector_body_exited(body: Node) -> void:
 	$InteractionHint.visible = false
+
+
 
