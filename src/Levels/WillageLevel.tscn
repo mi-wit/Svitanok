@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=2]
+[gd_scene load_steps=47 format=2]
 
 [ext_resource path="res://src/Actors/Player_Main.tscn" type="PackedScene" id=1]
 [ext_resource path="res://tempAssets/tileset.tres" type="TileSet" id=2]
@@ -27,7 +27,6 @@
 [ext_resource path="res://assets/nowe/background_trees_3.png" type="Texture" id=25]
 [ext_resource path="res://src/Actors/Goose.tscn" type="PackedScene" id=26]
 [ext_resource path="res://assets/nowe/npc_house_1.png" type="Texture" id=27]
-[ext_resource path="res://assets/sounds/Svitaniok_calm_song.wav" type="AudioStream" id=28]
 [ext_resource path="res://assets/laundry.png" type="Texture" id=28]
 [ext_resource path="res://assets/backgrounds/Background_3.png" type="Texture" id=29]
 [ext_resource path="res://assets/nowe/new_flowers.png" type="Texture" id=30]
@@ -45,6 +44,10 @@
 [ext_resource path="res://assets/p2.png" type="Texture" id=42]
 [ext_resource path="res://assets/flowers_6.png" type="Texture" id=43]
 [ext_resource path="res://flowers_4.png" type="Texture" id=44]
+[ext_resource path="res://src/Levels/GooseHouse.gd" type="Script" id=45]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 61.8408, 285.46 )
 
 [node name="WillageLevel" type="Node2D"]
 scale = Vector2( 1.02966, 1.02966 )
@@ -258,7 +261,6 @@ texture = ExtResource( 21 )
 
 [node name="Bush16" type="Sprite" parent="."]
 position = Vector2( 15094.3, 568.149 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 16 )
 
 [node name="Sunflower" type="Sprite" parent="."]
@@ -407,8 +409,16 @@ texture = ExtResource( 16 )
 
 [node name="GooseHouse" type="Sprite" parent="."]
 position = Vector2( 15723.6, 606.025 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 39 )
+script = ExtResource( 45 )
+
+[node name="Area2D" type="Area2D" parent="GooseHouse"]
+collision_layer = 8
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GooseHouse/Area2D"]
+position = Vector2( 113.963, 74.1906 )
+shape = SubResource( 1 )
 
 [node name="P2" type="Sprite" parent="."]
 position = Vector2( 12931.5, 670.124 )
@@ -442,7 +452,7 @@ position = Vector2( 14794.6, 843.849 )
 position = Vector2( 15118.7, 838.355 )
 
 [node name="Player_Main" parent="." instance=ExtResource( 1 )]
-position = Vector2( 1521.86, 964.396 )
+position = Vector2( 14231.7, 871.056 )
 scale = Vector2( 0.825966, 0.825966 )
 
 [node name="Goose3" parent="." instance=ExtResource( 26 )]
@@ -543,10 +553,6 @@ position = Vector2( 3647.81, 943.03 )
 scale = Vector2( 1.24872, 1.24872 )
 texture = ExtResource( 16 )
 
-[node name="MusicBackground" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 28 )
-autoplay = true
-
 [node name="Flowers6" type="Sprite" parent="."]
 position = Vector2( 11113.4, 624.478 )
 scale = Vector2( 1.37408, 1.37408 )
@@ -563,3 +569,7 @@ position = Vector2( 11262, 800.264 )
 rotation = 0.247276
 scale = Vector2( 1.37408, 1.37408 )
 texture = ExtResource( 43 )
+
+[node name="MusicBackground" type="AudioStreamPlayer" parent="."]
+autoplay = true
+[connection signal="body_entered" from="GooseHouse/Area2D" to="." method="_on_GooseHouse_body_entered"]
