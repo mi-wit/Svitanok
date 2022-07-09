@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://src/Themes/new_basic_theme.tres" type="Theme" id=1]
 [ext_resource path="res://src/Levels/MainMenu.gd" type="Script" id=2]
 [ext_resource path="res://src/Levels/WillageLevel.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/videos/Intro.webm" type="VideoStream" id=4]
 
 [sub_resource type="Animation" id=1]
 resource_name = "fade_out"
@@ -37,6 +38,14 @@ script = ExtResource( 2 )
 next_scene = ExtResource( 3 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="VideoPlayer" type="VideoPlayer" parent="CanvasLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+stream = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Label" type="Label" parent="CanvasLayer"]
 anchor_left = 0.5
