@@ -1,6 +1,6 @@
 [gd_scene load_steps=28 format=2]
 
-[ext_resource path="res://src/Actors/Player_Pigeon.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/Actors/Player_Main.tscn" type="PackedScene" id=1]
 [ext_resource path="res://tempAssets/tileset.tres" type="TileSet" id=2]
 [ext_resource path="res://tempAssets/level_dla_michala.png" type="Texture" id=3]
 [ext_resource path="res://src/Actors/NPC.tscn" type="PackedScene" id=4]
@@ -29,6 +29,7 @@
 [ext_resource path="res://assets/nowe/npc_house_1.png" type="Texture" id=27]
 
 [node name="WillageLevel" type="Node2D"]
+script = ExtResource( 5 )
 
 [node name="level_dla_michala" type="Sprite" parent="."]
 position = Vector2( 9748.56, 394.574 )

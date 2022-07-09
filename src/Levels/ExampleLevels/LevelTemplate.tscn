@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://tempAssets/tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://src/Actors/Enemy.tscn" type="PackedScene" id=2]
@@ -31,6 +31,9 @@ void fragment(){
 [sub_resource type="ShaderMaterial" id=4]
 shader = SubResource( 3 )
 shader_param/lod = 1.606
+
+[sub_resource type="Environment" id=5]
+background_mode = 4
 
 [node name="Level01" type="Node2D"]
 material = SubResource( 2 )
@@ -110,3 +113,6 @@ material = SubResource( 4 )
 position = Vector2( 592, 1128 )
 scale = Vector2( 1.76197, 1.61121 )
 texture = ExtResource( 6 )
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 5 )
