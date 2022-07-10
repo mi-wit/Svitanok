@@ -715,6 +715,7 @@ texture = ExtResource( 43 )
 
 [node name="MusicBackground" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 50 )
+volume_db = 0.7
 autoplay = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
