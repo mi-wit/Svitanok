@@ -53,7 +53,7 @@
 [ext_resource path="res://src/Levels/StormCommingLevel.tscn" type="PackedScene" id=51]
 [ext_resource path="res://assets/sounds/SFX/birds_mixdown.wav" type="AudioStream" id=52]
 [ext_resource path="res://assets/NPCs/boar_npc_stand.png" type="Texture" id=53]
-[ext_resource path="res://assets/NPCs/stork_npc_stand.png" type="Texture" id=54]
+[ext_resource path="res://assets/NPCs/bocian.png" type="Texture" id=54]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 61.8408, 285.46 )
@@ -562,9 +562,9 @@ position = Vector2( 902.239, 949.828 )
 scale = Vector2( 0.595844, 0.595844 )
 
 [node name="NPC_LazyDude" parent="." instance=ExtResource( 4 )]
-position = Vector2( 4504, 910 )
+position = Vector2( 4755.74, 870.711 )
 scale = Vector2( 0.595844, 0.595844 )
-firstInteraction = [ "Zzzz", "Could you help me?", "Im very lazy today..." ]
+firstInteraction = [ "Zzzz", "Im very lazy today...", "zzz.." ]
 
 [node name="kaltka0000" parent="NPC_LazyDude" index="0"]
 texture = ExtResource( 54 )
@@ -584,7 +584,7 @@ position = Vector2( 14465.3, 877.555 )
 position = Vector2( 14983.9, 840.948 )
 
 [node name="Player_Main" parent="." instance=ExtResource( 1 )]
-position = Vector2( 14054.3, 881.983 )
+position = Vector2( 1418.85, 873.751 )
 scale = Vector2( 0.825966, 0.825966 )
 
 [node name="Goose3" parent="." instance=ExtResource( 26 )]

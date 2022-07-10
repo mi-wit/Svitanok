@@ -11,7 +11,7 @@
 extents = Vector2( 176.404, 447.594 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 219.822, 452.145 )
+extents = Vector2( 413.326, 452.145 )
 
 [node name="NPC" type="KinematicBody2D"]
 collision_layer = 32
@@ -30,7 +30,6 @@ shape = SubResource( 1 )
 collision_layer = 32
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetector"]
-visible = false
 position = Vector2( 2, -461.254 )
 shape = SubResource( 2 )
 
