@@ -570,13 +570,13 @@ scale = Vector2( 0.595844, 0.595844 )
 firstInteraction = [ "Brr.. Grr..", "If only somebody could help me with those potatoes" ]
 
 [node name="Goose1" parent="." instance=ExtResource( 26 )]
-position = Vector2( 14794.6, 843.849 )
+position = Vector2( 14465.3, 877.555 )
 
 [node name="Goose2" parent="." instance=ExtResource( 26 )]
-position = Vector2( 15118.7, 838.355 )
+position = Vector2( 14983.9, 840.948 )
 
 [node name="Player_Main" parent="." instance=ExtResource( 1 )]
-position = Vector2( 14474.3, 760.122 )
+position = Vector2( 14054.3, 881.983 )
 scale = Vector2( 0.825966, 0.825966 )
 
 [node name="Goose3" parent="." instance=ExtResource( 26 )]
