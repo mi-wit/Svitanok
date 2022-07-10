@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/thunder 3_mixdown.wav-b51f1d0b401835712a91bb2c7f88327e.sample"
+
+[deps]
+
+source_file="res://assets/sounds/SFX/thunder 3_mixdown.wav"
+dest_files=[ "res://.import/thunder 3_mixdown.wav-b51f1d0b401835712a91bb2c7f88327e.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
