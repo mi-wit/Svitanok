@@ -562,7 +562,7 @@ scale = Vector2( 0.595844, 0.595844 )
 [node name="NPC_LazyDude" parent="." instance=ExtResource( 4 )]
 position = Vector2( 4504, 910 )
 scale = Vector2( 0.595844, 0.595844 )
-firstInteraction = [ "Zzzz", "Could you help me?", "Im very lazy today..." ]
+firstInteraction = [ "OH, the storm", "I need to take down my laundry" ]
 
 [node name="kaltka0000" parent="NPC_LazyDude" index="0"]
 texture = ExtResource( 54 )
@@ -570,7 +570,7 @@ texture = ExtResource( 54 )
 [node name="NPC_Boar" parent="." instance=ExtResource( 4 )]
 position = Vector2( 8446.83, 836.461 )
 scale = Vector2( 0.595844, 0.595844 )
-firstInteraction = [ "Brr.. Grr..", "If only somebody could help me with those potatoes" ]
+firstInteraction = [ "Brr.. Grr..", "Hope everybody will be okay..." ]
 
 [node name="kaltka0000" parent="NPC_Boar" index="0"]
 texture = ExtResource( 53 )
