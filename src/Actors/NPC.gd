@@ -17,6 +17,7 @@ func _process(delta: float) -> void:
 	if $dymek2.visible and Input.is_action_just_pressed("interaction"):
 		$dymek2.visible = false
 		$dymek.visible = true
+		$AudioStreamPlayer2D.play()
 		$dymek/DialogTimeOut.start()
 
 func _physics_process(delta: float) -> void:
@@ -37,6 +38,7 @@ func _on_PlayerDetector_body_exited(body: Node) -> void:
 
 func _on_DialogTimeOut_timeout() -> void:
 	$dymek.visible = false
+	$AudioStreamPlayer2D.stop()
 	var nextDialog = firstInteraction.pop_front()
 	if nextDialog:
 		$dymek/NextSentenceTimer.start()
@@ -44,4 +46,6 @@ func _on_DialogTimeOut_timeout() -> void:
 
 func _on_NextSentenceTimer_timeout() -> void:
 	$dymek.visible = true
+	$AudioStreamPlayer2D.seek(rand_range(0, 8))
+	$AudioStreamPlayer2D.play()
 	$dymek/DialogTimeOut.start()
