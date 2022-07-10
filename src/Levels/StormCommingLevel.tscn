@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=2]
+[gd_scene load_steps=55 format=2]
 
 [ext_resource path="res://src/Actors/Player_Main.tscn" type="PackedScene" id=1]
 [ext_resource path="res://tempAssets/tileset.tres" type="TileSet" id=2]
@@ -51,9 +51,13 @@
 [ext_resource path="res://church_2_big.png" type="Texture" id=49]
 [ext_resource path="res://assets/videos/stormComming.webm" type="VideoStream" id=50]
 [ext_resource path="res://assets/sounds/SFX/thunder 3_mixdown.wav" type="AudioStream" id=51]
+[ext_resource path="res://src/Levels/Ending.tscn" type="PackedScene" id=52]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 61.8408, 285.46 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 126.844, 268.476 )
 
 [node name="StormCommingLevel" type="Node2D"]
 scale = Vector2( 1.02966, 1.02966 )
@@ -61,6 +65,7 @@ script = ExtResource( 5 )
 __meta__ = {
 "_edit_vertical_guides_": [  ]
 }
+next_scene = ExtResource( 52 )
 
 [node name="level_dla_michala" type="Sprite" parent="."]
 visible = false
@@ -548,6 +553,7 @@ scale = Vector2( 0.713113, 0.713112 )
 texture = ExtResource( 40 )
 
 [node name="NPC_Babushka" parent="." instance=ExtResource( 4 )]
+visible = false
 position = Vector2( 902.239, 949.828 )
 scale = Vector2( 0.595844, 0.595844 )
 
@@ -562,7 +568,7 @@ scale = Vector2( 0.595844, 0.595844 )
 firstInteraction = [ "Brr.. Grr..", "If only somebody could help me with those potatoes" ]
 
 [node name="Player_Main" parent="." instance=ExtResource( 1 )]
-position = Vector2( 15262.5, 890.936 )
+position = Vector2( 2292.19, 818.535 )
 scale = Vector2( 0.825966, 0.825966 )
 
 [node name="ColorLayer" type="Sprite" parent="."]
@@ -699,12 +705,25 @@ texture = ExtResource( 43 )
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="VideoPlayer" type="VideoPlayer" parent="CanvasLayer"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 stream = ExtResource( 50 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2( 1256.62, 695.375 )
+rotation = 0.247276
+scale = Vector2( 1.37408, 1.37408 )
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+modulate = Color( 0.988235, 0, 0, 1 )
+position = Vector2( -68.3757, 1.74869 )
+rotation = -0.227072
+shape = SubResource( 2 )
 
 [node name="Thunder" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 51 )
@@ -720,4 +739,5 @@ volume_db = -5.0
 autoplay = true
 [connection signal="body_entered" from="GooseHouse/Area2D" to="." method="_on_GooseHouse_body_entered"]
 [connection signal="finished" from="CanvasLayer/VideoPlayer" to="." method="_on_VideoPlayer_finished"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="timeout" from="Thunder/Timer" to="." method="_on_Timer_timeout"]
