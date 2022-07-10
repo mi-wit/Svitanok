@@ -52,7 +52,7 @@
 [ext_resource path="res://assets/sounds/Svitaniok_calm_song.wav" type="AudioStream" id=50]
 [ext_resource path="res://src/Levels/StormCommingLevel.tscn" type="PackedScene" id=51]
 [ext_resource path="res://assets/sounds/SFX/birds_mixdown.wav" type="AudioStream" id=52]
-[ext_resource path="res://assets/NPCs/boar_npc_stand.png" type="Texture" id=53]
+[ext_resource path="res://assets/NPCs/dzik.png" type="Texture" id=53]
 [ext_resource path="res://assets/NPCs/bocian.png" type="Texture" id=54]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -570,7 +570,7 @@ firstInteraction = [ "Zzzz", "Im very lazy today...", "zzz.." ]
 texture = ExtResource( 54 )
 
 [node name="NPC_Boar" parent="." instance=ExtResource( 4 )]
-position = Vector2( 8446.83, 836.461 )
+position = Vector2( 9235.74, 859.328 )
 scale = Vector2( 0.595844, 0.595844 )
 firstInteraction = [ "Brr.. Grr..", "If only somebody could help me with those potatoes" ]
 
