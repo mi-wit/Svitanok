@@ -7,10 +7,11 @@ func _ready() -> void:
 	
 func _process(delta: float) -> void:
 	if $dymek2/InterractionInfo.visible and Input.is_action_just_pressed("interaction"):
-		anim_player.play("fadeOut")
+		$roofFixed.visible = true
 
 func _on_body_entered(body: Node) -> void:
-	$dymek2.visible = true
+	if !$roofFixed.visible:
+		$dymek2.visible = true
 
 
 func _on_Coin_body_exited(body: Node) -> void:
