@@ -1,4 +1,4 @@
-[gd_scene load_steps=65 format=2]
+[gd_scene load_steps=67 format=2]
 
 [ext_resource path="res://src/Actors/Player_Main.tscn" type="PackedScene" id=1]
 [ext_resource path="res://tempAssets/tileset.tres" type="TileSet" id=2]
@@ -57,6 +57,8 @@
 [ext_resource path="res://src/Objects/Coin.gd" type="Script" id=55]
 [ext_resource path="res://assets/interactable/hammer_wood (1).png" type="Texture" id=56]
 [ext_resource path="res://assets/interactable/fixed_roof.png" type="Texture" id=57]
+[ext_resource path="res://assets/Pigeon/Idle/kaltka0000.png" type="Texture" id=58]
+[ext_resource path="res://assets/NPCs/mouse_2.png" type="Texture" id=59]
 [ext_resource path="res://assets/UI/dymek2.png" type="Texture" id=60]
 [ext_resource path="res://src/Themes/new_basic_theme.tres" type="Theme" id=61]
 
@@ -617,6 +619,17 @@ firstInteraction = [ "Brr.. Grr..", "Hope everybody will be okay..." ]
 [node name="kaltka0000" parent="NPC_Boar" index="0"]
 texture = ExtResource( 53 )
 
+[node name="NPC_Mouse" parent="." instance=ExtResource( 4 )]
+position = Vector2( 13365.8, 1008.8 )
+scale = Vector2( 0.595844, 0.595844 )
+firstInteraction = [ "Im scared of thunder!", "Thanks for help..." ]
+
+[node name="kaltka0000" parent="NPC_Mouse" index="0"]
+texture = ExtResource( 59 )
+
+[node name="InteractionHint" parent="NPC_Mouse/dymek2" index="0"]
+text = ""
+
 [node name="Roof" type="Area2D" parent="."]
 position = Vector2( 13038.6, 455.139 )
 scale = Vector2( 0.825966, 0.825966 )
@@ -669,6 +682,11 @@ __meta__ = {
 [node name="Player_Main" parent="." instance=ExtResource( 1 )]
 position = Vector2( 15079.8, 901.504 )
 scale = Vector2( 0.825966, 0.825966 )
+
+[node name="pigon" type="Sprite" parent="."]
+position = Vector2( 9558.38, 346.231 )
+scale = Vector2( 0.15666, 0.15666 )
+texture = ExtResource( 58 )
 
 [node name="ColorLayer" type="Sprite" parent="."]
 modulate = Color( 0, 0.121569, 0.670588, 0.654902 )
@@ -846,3 +864,5 @@ autoplay = true
 [editable path="NPC_LazyDude"]
 
 [editable path="NPC_Boar"]
+
+[editable path="NPC_Mouse"]

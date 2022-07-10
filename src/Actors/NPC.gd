@@ -21,12 +21,12 @@ func _process(delta: float) -> void:
 		$dymek/DialogTimeOut.start()
 
 func _physics_process(delta: float) -> void:
-	if is_on_wall():
-		velocity *= -1.0
-	
-	velocity.y += gravity * get_physics_process_delta_time()
-	velocity.y = move_and_slide(velocity, FLOOR_NORMAL).y
-
+#	if is_on_wall():
+#		velocity *= -1.0
+#
+#	velocity.y += gravity * get_physics_process_delta_time()
+#	velocity.y = move_and_slide(velocity, FLOOR_NORMAL).y
+	pass
 
 func _on_PlayerDetector_body_entered(body: Node) -> void:
 	$dymek2.visible = true

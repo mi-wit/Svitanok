@@ -3,7 +3,7 @@ extends Node2D
 export var next_scene: PackedScene
 
 func _ready() -> void:
-#	$CanvasLayer/VideoPlayer.visible = true
+	$CanvasLayer/VideoPlayer.visible = true
 	$CanvasLayer/VideoPlayer.play()
 
 

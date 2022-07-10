@@ -18,11 +18,11 @@ func _physics_process(delta: float) -> void:
 	if not is_computer_steering:
 		if direction.x > 0 and is_on_floor():
 			anim_player.animation = "walk"
-			anim_player.flip_h = true
+			anim_player.flip_h = false
 			if !$Steps.playing:
 				$Steps.play()
 		elif direction.x < 0 and is_on_floor(): 
-			anim_player.flip_h = false
+			anim_player.flip_h = true
 			anim_player.animation = "walk"
 			if !$Steps.playing:
 				$Steps.play()
