@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://src/Actors/Player_Main.gd" type="Script" id=1]
 [ext_resource path="res://assets/mainCharacterFinal.png" type="Texture" id=2]
+[ext_resource path="res://assets/sounds/SFX/walking_mixdown.wav" type="AudioStream" id=3]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -48,3 +49,7 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyDetector"]
 position = Vector2( -2.66339, -300.213 )
 shape = SubResource( 3 )
+
+[node name="Steps" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -10.909

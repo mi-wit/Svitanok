@@ -18,14 +18,20 @@ func _physics_process(delta: float) -> void:
 	if not is_computer_steering:
 		if direction.x > 0 and is_on_floor():
 			anim_player.animation = "walk"
-			anim_player.flip_h = false
-		elif direction.x < 0 and is_on_floor(): 
 			anim_player.flip_h = true
+			if !$Steps.playing:
+				$Steps.play()
+		elif direction.x < 0 and is_on_floor(): 
+			anim_player.flip_h = false
 			anim_player.animation = "walk"
+			if !$Steps.playing:
+				$Steps.play()
 		elif direction.x == 0 and is_on_floor(): 
 			anim_player.animation = "idle"
+			$Steps.stop()
 		elif direction.y != 0:
 			anim_player.animation = "jump"
+			$Steps.stop()
 		
 	velocity = calculate_linear_velocity(velocity, direction, speed, is_jump_interrupted) 
 	velocity = move_and_slide(velocity, FLOOR_NORMAL)
