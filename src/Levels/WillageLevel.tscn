@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=2]
+[gd_scene load_steps=58 format=2]
 
 [ext_resource path="res://src/Actors/Player_Main.tscn" type="PackedScene" id=1]
 [ext_resource path="res://tempAssets/tileset.tres" type="TileSet" id=2]
@@ -49,6 +49,22 @@
 [ext_resource path="res://assets/ground3.png" type="Texture" id=47]
 [ext_resource path="res://assets/ground4.png" type="Texture" id=48]
 [ext_resource path="res://church_2_big.png" type="Texture" id=49]
+[ext_resource path="res://assets/sounds/Svitaniok_calm_song.wav" type="AudioStream" id=50]
+[ext_resource path="res://src/Levels/StormCommingLevel.tscn" type="PackedScene" id=51]
+[ext_resource path="res://assets/sounds/SFX/birds_mixdown.wav" type="AudioStream" id=52]
+[ext_resource path="res://assets/NPCs/dzik.png" type="Texture" id=53]
+[ext_resource path="res://assets/NPCs/bocian.png" type="Texture" id=54]
+[ext_resource path="res://assets/NPCs/mouse_1.png" type="Texture" id=55]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 61.8408, 285.46 )
+
+[sub_resource type="Environment" id=2]
+background_mode = 4
+glow_enabled = true
+glow_intensity = 0.38
+glow_blend_mode = 0
+glow_hdr_threshold = 0.4
 
 [node name="WillageLevel" type="Node2D"]
 scale = Vector2( 1.02966, 1.02966 )
@@ -56,6 +72,7 @@ script = ExtResource( 5 )
 __meta__ = {
 "_edit_vertical_guides_": [  ]
 }
+next_scene = ExtResource( 51 )
 
 [node name="level_dla_michala" type="Sprite" parent="."]
 visible = false
@@ -520,6 +537,15 @@ texture = ExtResource( 16 )
 [node name="GooseHouse" type="Sprite" parent="."]
 position = Vector2( 15723.6, 606.025 )
 texture = ExtResource( 39 )
+script = ExtResource( 45 )
+
+[node name="Area2D" type="Area2D" parent="GooseHouse"]
+collision_layer = 8
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GooseHouse/Area2D"]
+position = Vector2( 113.963, 74.1906 )
+shape = SubResource( 1 )
 
 [node name="P2" type="Sprite" parent="."]
 position = Vector2( 12931.5, 670.124 )
@@ -537,30 +563,47 @@ position = Vector2( 902.239, 949.828 )
 scale = Vector2( 0.595844, 0.595844 )
 
 [node name="NPC_LazyDude" parent="." instance=ExtResource( 4 )]
-position = Vector2( 4504, 910 )
+position = Vector2( 4755.74, 870.711 )
 scale = Vector2( 0.595844, 0.595844 )
-firstInteraction = [ "Zzzz", "Could you help me?", "Im very lazy today..." ]
+firstInteraction = [ "Zzzz", "Im very lazy today...", "zzz.." ]
+
+[node name="kaltka0000" parent="NPC_LazyDude" index="0"]
+texture = ExtResource( 54 )
 
 [node name="NPC_Boar" parent="." instance=ExtResource( 4 )]
-position = Vector2( 8446.83, 836.461 )
+position = Vector2( 9235.74, 859.328 )
 scale = Vector2( 0.595844, 0.595844 )
 firstInteraction = [ "Brr.. Grr..", "If only somebody could help me with those potatoes" ]
 
+[node name="kaltka0000" parent="NPC_Boar" index="0"]
+texture = ExtResource( 53 )
+
+[node name="NPC_Mouse" parent="." instance=ExtResource( 4 )]
+position = Vector2( 13336.2, 1004.64 )
+scale = Vector2( 0.595844, 0.595844 )
+firstInteraction = [ "hmm", "I should fix this hole..." ]
+
+[node name="kaltka0000" parent="NPC_Mouse" index="0"]
+texture = ExtResource( 55 )
+
+[node name="InteractionHint" parent="NPC_Mouse/dymek2" index="0"]
+text = ""
+
 [node name="Goose1" parent="." instance=ExtResource( 26 )]
-position = Vector2( 14794.6, 843.849 )
+position = Vector2( 2550.84, 909.894 )
 
 [node name="Goose2" parent="." instance=ExtResource( 26 )]
-position = Vector2( 15118.7, 838.355 )
+position = Vector2( 3069.4, 873.287 )
 
 [node name="Player_Main" parent="." instance=ExtResource( 1 )]
-position = Vector2( 1387.84, 946.915 )
+position = Vector2( 1418.85, 873.751 )
 scale = Vector2( 0.825966, 0.825966 )
 
 [node name="Goose3" parent="." instance=ExtResource( 26 )]
-position = Vector2( 15220.4, 843.849 )
+position = Vector2( 3305.93, 876.188 )
 
 [node name="Goose4" parent="." instance=ExtResource( 26 )]
-position = Vector2( 15637.9, 830.114 )
+position = Vector2( 3723.43, 862.453 )
 
 [node name="ColorLayer" type="Sprite" parent="."]
 modulate = Color( 0.964706, 0.654902, 0.329412, 0.301961 )
@@ -692,3 +735,23 @@ position = Vector2( 11262, 800.264 )
 rotation = 0.247276
 scale = Vector2( 1.37408, 1.37408 )
 texture = ExtResource( 43 )
+
+[node name="BirdsBackground" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 52 )
+volume_db = -10.0
+autoplay = true
+
+[node name="MusicBackground" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 50 )
+volume_db = -5.0
+autoplay = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 2 )
+[connection signal="body_entered" from="GooseHouse/Area2D" to="." method="_on_GooseHouse_body_entered"]
+
+[editable path="NPC_LazyDude"]
+
+[editable path="NPC_Boar"]
+
+[editable path="NPC_Mouse"]

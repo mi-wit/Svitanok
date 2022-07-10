@@ -28,8 +28,12 @@ func calculate_linear_velocity(
 func _on_PlayerDetector_body_entered(body: Node) -> void:
 	if $runningAwayTimer.is_stopped():
 		$runningAwayTimer.start()
-		is_moving_left = true
+		is_moving_right = true
+		$AnimatedSprite.flip_h = true
+		$AnimatedSprite.animation = "walk"
+		$AnimatedSprite.play()
 
 func _on_runningAwayTimer_timeout() -> void:
 	is_moving_left = false
 	is_moving_right = false
+	$AnimatedSprite.animation = "idle"
