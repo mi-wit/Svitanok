@@ -566,6 +566,17 @@ rotation = -0.0275764
 scale = Vector2( 0.663877, 0.651872 )
 texture = ExtResource( 40 )
 
+[node name="LaundryTask" parent="Second_plan_background" instance=ExtResource( 6 )]
+position = Vector2( -2773.37, -90.2017 )
+rotation = -0.0589225
+scale = Vector2( 0.590876, 0.580252 )
+
+[node name="CollisionShape2D" parent="Second_plan_background/LaundryTask/Area2D" index="0"]
+position = Vector2( -36.2554, 603.461 )
+
+[node name="Basket" parent="Second_plan_background/LaundryTask/Area2D" index="2"]
+position = Vector2( -18.334, 575.159 )
+
 [node name="NPC_Babushka" parent="." instance=ExtResource( 4 )]
 visible = false
 position = Vector2( 902.239, 949.828 )
@@ -779,26 +790,15 @@ autoplay = true
 
 [node name="RoofTask" parent="." instance=ExtResource( 55 )]
 position = Vector2( 13029.5, 586.328 )
-
-[node name="LaundryTask" parent="." instance=ExtResource( 6 )]
-position = Vector2( 5253.79, 360.698 )
-rotation = -0.0600066
-scale = Vector2( 0.63473, 0.63473 )
-
-[node name="CollisionShape2D" parent="LaundryTask/Area2D" index="0"]
-position = Vector2( -36.2554, 603.461 )
-
-[node name="Basket" parent="LaundryTask/Area2D" index="2"]
-position = Vector2( -17.3037, 558.015 )
 [connection signal="body_entered" from="Second_plan_background/GooseHouse/Area2D" to="." method="_on_GooseHouse_body_entered"]
 [connection signal="finished" from="CanvasLayer/VideoPlayer" to="." method="_on_VideoPlayer_finished"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="timeout" from="Thunder/Timer" to="." method="_on_Timer_timeout"]
+
+[editable path="Second_plan_background/LaundryTask"]
 
 [editable path="NPC_LazyDude"]
 
 [editable path="NPC_Boar"]
 
 [editable path="NPC_Mouse"]
-
-[editable path="LaundryTask"]
