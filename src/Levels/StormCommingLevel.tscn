@@ -5,7 +5,7 @@
 [ext_resource path="res://tempAssets/level_dla_michala.png" type="Texture" id=3]
 [ext_resource path="res://src/Actors/NPC.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/Levels/StormCommingLevel.gd" type="Script" id=5]
-[ext_resource path="res://assets/nowe/placeholder.png" type="Texture" id=6]
+[ext_resource path="res://src/Objects/tasks/LaundryTask.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/nowe/bush_1.png" type="Texture" id=7]
 [ext_resource path="res://assets/nowe/sunflower.png" type="Texture" id=8]
 [ext_resource path="res://assets/g_house.png" type="Texture" id=9]
@@ -109,452 +109,461 @@ position = Vector2( 2352.32, -23.7152 )
 scale = Vector2( 0.714633, 0.72781 )
 texture = ExtResource( 37 )
 
-[node name="Background3" type="Sprite" parent="."]
+[node name="Second_plan_background" type="Node2D" parent="."]
 position = Vector2( 8232.81, 459.375 )
 scale = Vector2( 1.07415, 1.09396 )
+
+[node name="Background3" type="Sprite" parent="Second_plan_background"]
+position = Vector2( 0.000488281, 3.05176e-05 )
+scale = Vector2( 1, 1 )
 texture = ExtResource( 29 )
 
-[node name="Church2Big" type="Sprite" parent="."]
-position = Vector2( 14786.7, 222.453 )
-scale = Vector2( 0.506448, 0.506448 )
+[node name="Church2Big" type="Sprite" parent="Second_plan_background"]
+position = Vector2( 6101.47, -216.573 )
+scale = Vector2( 0.471487, 0.462949 )
 texture = ExtResource( 49 )
 
-[node name="Ground4" type="Sprite" parent="."]
-position = Vector2( 5084.2, 1469.42 )
-rotation = 0.0739548
+[node name="Ground4" type="Sprite" parent="Second_plan_background"]
+position = Vector2( -2931.26, 923.292 )
+rotation = 0.0726203
+scale = Vector2( 0.930878, 0.914203 )
 texture = ExtResource( 48 )
 
-[node name="Ground8" type="Sprite" parent="."]
-position = Vector2( 9415.73, 939.145 )
-rotation = -0.0185018
-scale = Vector2( 1, 0.837524 )
+[node name="Ground8" type="Sprite" parent="Second_plan_background"]
+position = Vector2( 1101.26, 438.563 )
+rotation = -0.0181668
+scale = Vector2( 0.930963, 0.765594 )
 texture = ExtResource( 48 )
 
-[node name="Ground5" type="Sprite" parent="."]
-position = Vector2( 5448.4, 1025.58 )
-scale = Vector2( 1.48013, 1 )
+[node name="Ground5" type="Sprite" parent="Second_plan_background"]
+position = Vector2( -2592.2, 517.574 )
+scale = Vector2( 1.37795, 0.91411 )
 texture = ExtResource( 48 )
 
-[node name="Ground1" type="Sprite" parent="."]
-position = Vector2( 2489.17, 412.758 )
+[node name="Ground1" type="Sprite" parent="Second_plan_background"]
+position = Vector2( -5347.15, -42.613 )
+scale = Vector2( 0.930969, 0.91411 )
 texture = ExtResource( 45 )
 
-[node name="Ground2" type="Sprite" parent="."]
-position = Vector2( 2947.58, 706.058 )
-scale = Vector2( 1.39681, 1.12384 )
+[node name="Ground2" type="Sprite" parent="Second_plan_background"]
+position = Vector2( -4920.38, 225.495 )
+scale = Vector2( 1.30039, 1.02731 )
 texture = ExtResource( 46 )
 
-[node name="Ground15" type="Sprite" parent="."]
-position = Vector2( 15261.3, 708.001 )
-rotation = 0.0152985
-scale = Vector2( 1.61529, 1.55139 )
+[node name="Ground15" type="Sprite" parent="Second_plan_background"]
+position = Vector2( 6543.31, 227.272 )
+rotation = 0.0150215
+scale = Vector2( 1.50378, 1.41815 )
 texture = ExtResource( 46 )
 
-[node name="Ground10" type="Sprite" parent="."]
-position = Vector2( 10025.6, 672.066 )
-scale = Vector2( 2.59596, 1.24179 )
+[node name="Ground10" type="Sprite" parent="Second_plan_background"]
+position = Vector2( 1669.03, 194.423 )
+scale = Vector2( 2.41676, 1.13513 )
 texture = ExtResource( 46 )
 
-[node name="Ground3" type="Sprite" parent="."]
-position = Vector2( 5811.63, 772.1 )
-scale = Vector2( 1.13081, 1.13081 )
+[node name="Ground3" type="Sprite" parent="Second_plan_background"]
+position = Vector2( -2254.04, 285.865 )
+scale = Vector2( 1.05275, 1.03368 )
 texture = ExtResource( 47 )
 
-[node name="Ground12" type="Sprite" parent="."]
-position = Vector2( 11188.2, 824.544 )
-scale = Vector2( 1.13081, 1.13081 )
+[node name="Ground12" type="Sprite" parent="Second_plan_background"]
+position = Vector2( 2751.38, 333.805 )
+scale = Vector2( 1.05275, 1.03368 )
 texture = ExtResource( 47 )
 
-[node name="Ground13" type="Sprite" parent="."]
-position = Vector2( 14297, 798.322 )
-scale = Vector2( 1.13081, 1.13081 )
+[node name="Ground13" type="Sprite" parent="Second_plan_background"]
+position = Vector2( 5645.57, 309.835 )
+scale = Vector2( 1.05275, 1.03368 )
 texture = ExtResource( 47 )
 
-[node name="Ground14" type="Sprite" parent="."]
-position = Vector2( 14768, 474.914 )
-rotation = 0.104116
-scale = Vector2( 0.836981, 0.836981 )
+[node name="Ground14" type="Sprite" parent="Second_plan_background"]
+position = Vector2( 6084.06, 14.2044 )
+rotation = 0.102244
+scale = Vector2( 0.779052, 0.765247 )
 texture = ExtResource( 47 )
 
-[node name="Ground7" type="Sprite" parent="."]
-position = Vector2( 6859.55, 351.572 )
-scale = Vector2( 1.25627, 1.25627 )
+[node name="Ground7" type="Sprite" parent="Second_plan_background"]
+position = Vector2( -1278.46, -98.5438 )
+scale = Vector2( 1.16955, 1.14837 )
 texture = ExtResource( 45 )
 
-[node name="BigTree7" type="Sprite" parent="."]
-position = Vector2( 13913.3, 321.465 )
-scale = Vector2( 1.25171, 0.983743 )
+[node name="BigTree7" type="Sprite" parent="Second_plan_background"]
+position = Vector2( 5288.36, -126.065 )
+scale = Vector2( 1.1653, 0.899249 )
 texture = ExtResource( 12 )
 
-[node name="Ground9" type="Sprite" parent="."]
-position = Vector2( 9691.55, 818.717 )
-scale = Vector2( 1.25171, 0.79101 )
+[node name="Ground9" type="Sprite" parent="Second_plan_background"]
+position = Vector2( 1358.04, 328.478 )
+scale = Vector2( 1.1653, 0.72307 )
 texture = ExtResource( 45 )
 
-[node name="Ground6" type="Sprite" parent="."]
-position = Vector2( 5483.36, 1039.18 )
+[node name="Ground6" type="Sprite" parent="Second_plan_background"]
+position = Vector2( -2559.65, 530.006 )
+scale = Vector2( 0.930969, 0.91411 )
 texture = ExtResource( 46 )
 
-[node name="Ground11" type="Sprite" parent="."]
-position = Vector2( 10651.1, 1022.67 )
+[node name="Ground11" type="Sprite" parent="Second_plan_background"]
+position = Vector2( 2251.35, 514.914 )
+scale = Vector2( 0.930969, 0.91411 )
 texture = ExtResource( 46 )
 
-[node name="BigTree6" type="Sprite" parent="."]
-position = Vector2( 7200.43, 373.91 )
-scale = Vector2( 0.846206, 1.08573 )
+[node name="BigTree6" type="Sprite" parent="Second_plan_background"]
+position = Vector2( -961.112, -78.1244 )
+scale = Vector2( 0.787791, 0.992477 )
 texture = ExtResource( 18 )
 
-[node name="SimpleWheat3" type="Sprite" parent="."]
-position = Vector2( 6662.39, 564.264 )
-scale = Vector2( 0.89432, 0.89432 )
+[node name="SimpleWheat3" type="Sprite" parent="Second_plan_background"]
+position = Vector2( -1462.01, 95.8802 )
+scale = Vector2( 0.832584, 0.817507 )
 texture = ExtResource( 20 )
 
-[node name="Bush17" type="Sprite" parent="."]
-position = Vector2( 2542.59, 530.272 )
-scale = Vector2( 0.825653, 0.825653 )
+[node name="Bush17" type="Sprite" parent="Second_plan_background"]
+position = Vector2( -5297.42, 64.8076 )
+scale = Vector2( 0.768657, 0.754738 )
 texture = ExtResource( 16 )
 
-[node name="BigTree1" type="Sprite" parent="."]
-position = Vector2( 640, 301 )
-rotation = -0.0105973
-scale = Vector2( 0.700225, 0.700225 )
+[node name="BigTree1" type="Sprite" parent="Second_plan_background"]
+position = Vector2( -7068.67, -144.772 )
+rotation = -0.0104054
+scale = Vector2( 0.651886, 0.640084 )
 texture = ExtResource( 18 )
 
-[node name="BigTree3" type="Sprite" parent="."]
-position = Vector2( 4176.14, 99.0618 )
-rotation = -0.0105973
-scale = Vector2( 0.882881, 1.24525 )
+[node name="BigTree3" type="Sprite" parent="Second_plan_background"]
+position = Vector2( -3776.63, -329.366 )
+rotation = -0.0104054
+scale = Vector2( 0.821933, 1.1383 )
 texture = ExtResource( 18 )
 
-[node name="BackgroundTrees2" type="Sprite" parent="."]
+[node name="BackgroundTrees2" type="Sprite" parent="Second_plan_background"]
 visible = false
-position = Vector2( 15804, 215 )
-scale = Vector2( 1.12965, 1.12965 )
+position = Vector2( 7048.54, -223.386 )
+scale = Vector2( 1.05167, 1.03262 )
 texture = ExtResource( 23 )
 
-[node name="BackgroundTrees6" type="Sprite" parent="."]
-position = Vector2( 12367.2, 344.774 )
+[node name="BackgroundTrees6" type="Sprite" parent="Second_plan_background"]
+position = Vector2( 3848.99, -104.758 )
+scale = Vector2( 0.930969, 0.91411 )
 texture = ExtResource( 25 )
 
-[node name="NpcHouse1" type="Sprite" parent="."]
-position = Vector2( 12889.7, 528.33 )
-scale = Vector2( 1.09288, 1.09288 )
+[node name="NpcHouse1" type="Sprite" parent="Second_plan_background"]
+position = Vector2( 4335.42, 63.0325 )
+scale = Vector2( 1.01744, 0.999013 )
 texture = ExtResource( 27 )
 
-[node name="BackgroundTrees" type="Sprite" parent="."]
+[node name="BackgroundTrees" type="Sprite" parent="Second_plan_background"]
 visible = false
-position = Vector2( 2459, 286 )
-scale = Vector2( 0.86306, 0.86306 )
+position = Vector2( -5375.24, -158.484 )
+scale = Vector2( 0.803482, 0.788932 )
 texture = ExtResource( 23 )
 
-[node name="BigTree2" type="Sprite" parent="."]
-position = Vector2( 1944.33, 271.934 )
-scale = Vector2( 1.05215, 1.05215 )
+[node name="BigTree2" type="Sprite" parent="Second_plan_background"]
+position = Vector2( -5854.38, -171.342 )
+scale = Vector2( 0.979519, 0.961781 )
 texture = ExtResource( 12 )
 
-[node name="BackgroundTrees5" type="Sprite" parent="."]
-position = Vector2( 6077.73, 272.906 )
-scale = Vector2( 1.05215, 1.05215 )
+[node name="BackgroundTrees5" type="Sprite" parent="Second_plan_background"]
+position = Vector2( -2006.31, -170.453 )
+scale = Vector2( 0.979519, 0.961781 )
 texture = ExtResource( 25 )
 
-[node name="BigTree4" type="Sprite" parent="."]
-position = Vector2( 8732, 268.05 )
-rotation = -0.0105973
-scale = Vector2( 0.565709, 0.847503 )
+[node name="BigTree4" type="Sprite" parent="Second_plan_background"]
+position = Vector2( 464.732, -174.892 )
+rotation = -0.0104054
+scale = Vector2( 0.526656, 0.774713 )
 texture = ExtResource( 18 )
 
-[node name="BigTree5" type="Sprite" parent="."]
-position = Vector2( 7519.96, 204.922 )
-rotation = -0.0105973
-scale = Vector2( 0.831177, 1.24521 )
+[node name="BigTree5" type="Sprite" parent="Second_plan_background"]
+position = Vector2( -663.64, -232.598 )
+rotation = -0.0104054
+scale = Vector2( 0.773798, 1.13826 )
 texture = ExtResource( 18 )
 
-[node name="Fence4" type="Sprite" parent="."]
-position = Vector2( 9908.13, 624.478 )
-scale = Vector2( 0.470528, 0.424636 )
+[node name="Fence4" type="Sprite" parent="Second_plan_background"]
+position = Vector2( 1559.67, 150.922 )
+scale = Vector2( 0.438047, 0.388164 )
 texture = ExtResource( 10 )
 
-[node name="NewTree4" type="Sprite" parent="."]
-position = Vector2( 455, 256 )
-scale = Vector2( 0.761412, 0.761412 )
+[node name="NewTree4" type="Sprite" parent="Second_plan_background"]
+position = Vector2( -7240.9, -185.907 )
+scale = Vector2( 0.708851, 0.696014 )
 texture = ExtResource( 14 )
 
-[node name="NewTree3" type="Sprite" parent="."]
-position = Vector2( 5367.79, 342.832 )
-scale = Vector2( 0.63473, 0.63473 )
+[node name="NewTree3" type="Sprite" parent="Second_plan_background"]
+position = Vector2( -2667.24, -106.533 )
+scale = Vector2( 0.590914, 0.580213 )
 texture = ExtResource( 14 )
 
-[node name="ForegroundTree2" type="Sprite" parent="."]
-position = Vector2( 4710.29, 248.626 )
-rotation = -0.0280847
-scale = Vector2( 0.874428, 0.777127 )
+[node name="ForegroundTree2" type="Sprite" parent="Second_plan_background"]
+position = Vector2( -3279.35, -192.648 )
+rotation = -0.0275764
+scale = Vector2( 0.814054, 0.71039 )
 texture = ExtResource( 41 )
 
-[node name="Bush19" type="Sprite" parent="."]
-position = Vector2( 10775.4, 578.832 )
-scale = Vector2( 0.687617, 0.687617 )
+[node name="Bush19" type="Sprite" parent="Second_plan_background"]
+position = Vector2( 2367.07, 109.197 )
+scale = Vector2( 0.64015, 0.628558 )
 texture = ExtResource( 16 )
 
-[node name="Laundry" type="Sprite" parent="."]
-position = Vector2( 5254.16, 306.897 )
-rotation = -0.0600066
-scale = Vector2( 0.63473, 0.63473 )
+[node name="Laundry" type="Sprite" parent="Second_plan_background"]
+visible = false
+position = Vector2( -2773.03, -139.382 )
+rotation = -0.0589225
+scale = Vector2( 0.590876, 0.580252 )
 texture = ExtResource( 28 )
 
-[node name="Ul3" type="Sprite" parent="."]
-position = Vector2( 14183.3, 629.334 )
-rotation = 0.0258429
-scale = Vector2( 0.715897, 0.715897 )
+[node name="Ul3" type="Sprite" parent="Second_plan_background"]
+position = Vector2( 5539.72, 155.361 )
+rotation = 0.0253751
+scale = Vector2( 0.66647, 0.654417 )
 texture = ExtResource( 13 )
 
-[node name="NewTree5" type="Sprite" parent="."]
-position = Vector2( 6540.99, 273.877 )
-scale = Vector2( 0.85499, 0.85499 )
+[node name="NewTree5" type="Sprite" parent="Second_plan_background"]
+position = Vector2( -1575.03, -169.566 )
+scale = Vector2( 0.795969, 0.781555 )
 texture = ExtResource( 14 )
 
-[node name="Bush3" type="Sprite" parent="."]
-position = Vector2( 327, 633 )
-scale = Vector2( 0.673479, 0.673479 )
+[node name="Bush3" type="Sprite" parent="Second_plan_background"]
+position = Vector2( -7360.06, 158.712 )
+scale = Vector2( 0.626988, 0.615634 )
 texture = ExtResource( 15 )
 
-[node name="GHouse" type="Sprite" parent="."]
-position = Vector2( 841.054, 554.552 )
-rotation = 0.0124917
-scale = Vector2( 0.972739, 0.972739 )
+[node name="GHouse" type="Sprite" parent="Second_plan_background"]
+position = Vector2( -6881.49, 87.0023 )
+rotation = 0.0122655
+scale = Vector2( 0.905587, 0.889193 )
 texture = ExtResource( 9 )
 
-[node name="BackgroundTrees3" type="Sprite" parent="."]
-position = Vector2( 9435.15, 305.926 )
+[node name="BackgroundTrees3" type="Sprite" parent="Second_plan_background"]
+position = Vector2( 1119.34, -140.269 )
+scale = Vector2( 0.930969, 0.91411 )
 texture = ExtResource( 25 )
 
-[node name="BackgroundTrees4" type="Sprite" parent="."]
-position = Vector2( 10366.5, 407.902 )
-scale = Vector2( 0.812036, 0.812036 )
+[node name="BackgroundTrees4" type="Sprite" parent="Second_plan_background"]
+position = Vector2( 1986.4, -47.0519 )
+scale = Vector2( 0.75598, 0.74229 )
 texture = ExtResource( 25 )
 
-[node name="NpcHouse2" type="Sprite" parent="."]
-position = Vector2( 9459.43, 369.054 )
-rotation = -0.0105973
-scale = Vector2( 0.910428, 0.910428 )
+[node name="NpcHouse2" type="Sprite" parent="Second_plan_background"]
+position = Vector2( 1141.95, -82.5633 )
+rotation = -0.0104054
+scale = Vector2( 0.847578, 0.832233 )
 texture = ExtResource( 17 )
 
-[node name="Bush9" type="Sprite" parent="."]
-position = Vector2( 6210.79, 616.708 )
-rotation = -0.0105973
-scale = Vector2( 0.599555, 0.522877 )
+[node name="Bush9" type="Sprite" parent="Second_plan_background"]
+position = Vector2( -1882.44, 143.82 )
+rotation = -0.0104054
+scale = Vector2( 0.558166, 0.477968 )
 texture = ExtResource( 21 )
 
-[node name="Fence1" type="Sprite" parent="."]
-position = Vector2( 6421.54, 693.433 )
-scale = Vector2( 0.590291, 0.590291 )
+[node name="Fence1" type="Sprite" parent="Second_plan_background"]
+position = Vector2( -1686.23, 213.955 )
+scale = Vector2( 0.549542, 0.539591 )
 texture = ExtResource( 33 )
 
-[node name="Fence3" type="Sprite" parent="."]
-position = Vector2( 231, 742 )
-scale = Vector2( 0.99687, 0.99687 )
+[node name="Fence3" type="Sprite" parent="Second_plan_background"]
+position = Vector2( -7449.43, 258.35 )
+scale = Vector2( 0.928055, 0.911249 )
 texture = ExtResource( 10 )
 
-[node name="Mushroom1" type="Sprite" parent="."]
-position = Vector2( 3054, 717 )
-scale = Vector2( 0.438817, 0.438817 )
+[node name="Mushroom1" type="Sprite" parent="Second_plan_background"]
+position = Vector2( -4821.31, 235.498 )
+scale = Vector2( 0.408525, 0.401127 )
 texture = ExtResource( 24 )
 
-[node name="Mushroom2" type="Sprite" parent="."]
-position = Vector2( 4241.2, 809.975 )
-scale = Vector2( 0.438817, 0.438817 )
+[node name="Mushroom2" type="Sprite" parent="Second_plan_background"]
+position = Vector2( -3716.06, 320.487 )
+scale = Vector2( 0.408525, 0.401127 )
 texture = ExtResource( 24 )
 
-[node name="Ul" type="Sprite" parent="."]
-position = Vector2( 1567.51, 576.889 )
-scale = Vector2( 0.753626, 0.753626 )
+[node name="Ul" type="Sprite" parent="Second_plan_background"]
+position = Vector2( -6205.18, 107.421 )
+scale = Vector2( 0.701602, 0.688897 )
 texture = ExtResource( 13 )
 
-[node name="Bush2" type="Sprite" parent="."]
-position = Vector2( 1725.81, 609.91 )
-scale = Vector2( 0.463184, 0.463184 )
+[node name="Bush2" type="Sprite" parent="Second_plan_background"]
+position = Vector2( -6057.81, 137.606 )
+scale = Vector2( 0.43121, 0.423401 )
 texture = ExtResource( 21 )
 
-[node name="PinkFlower" type="Sprite" parent="."]
-position = Vector2( 1348.02, 476.856 )
-scale = Vector2( 0.249634, 0.249634 )
+[node name="PinkFlower" type="Sprite" parent="Second_plan_background"]
+position = Vector2( -6409.52, 15.9796 )
+scale = Vector2( 0.232401, 0.228193 )
 texture = ExtResource( 11 )
 
-[node name="Bush15" type="Sprite" parent="."]
-position = Vector2( 14467.9, 614.766 )
-rotation = -0.0280847
-scale = Vector2( 0.856657, 0.856657 )
+[node name="Bush15" type="Sprite" parent="Second_plan_background"]
+position = Vector2( 5804.68, 142.045 )
+rotation = -0.0275764
+scale = Vector2( 0.79751, 0.78309 )
 texture = ExtResource( 21 )
 
-[node name="Bush16" type="Sprite" parent="."]
-position = Vector2( 15094.3, 568.149 )
+[node name="Bush16" type="Sprite" parent="Second_plan_background"]
+position = Vector2( 6387.83, 99.4315 )
+scale = Vector2( 0.930969, 0.91411 )
 texture = ExtResource( 16 )
 
-[node name="Sunflower" type="Sprite" parent="."]
-position = Vector2( 1503.41, 485.597 )
-rotation = 0.0634939
-scale = Vector2( 0.345099, 0.345099 )
+[node name="Sunflower" type="Sprite" parent="Second_plan_background"]
+position = Vector2( -6264.86, 23.9698 )
+rotation = 0.0623471
+scale = Vector2( 0.321253, 0.315482 )
 texture = ExtResource( 8 )
 
-[node name="Sunflower3" type="Sprite" parent="."]
-position = Vector2( 2673.69, 545.811 )
-rotation = 0.0634939
-scale = Vector2( 0.421229, 0.421229 )
+[node name="Sunflower3" type="Sprite" parent="Second_plan_background"]
+position = Vector2( -5175.37, 79.012 )
+rotation = 0.0623471
+scale = Vector2( 0.392123, 0.385079 )
 texture = ExtResource( 8 )
 
-[node name="Sunflower2" type="Sprite" parent="."]
-position = Vector2( 1233.42, 504.05 )
-rotation = -0.132558
-scale = Vector2( 0.307831, 0.30783 )
+[node name="Sunflower2" type="Sprite" parent="Second_plan_background"]
+position = Vector2( -6516.21, 40.8379 )
+rotation = -0.130185
+scale = Vector2( 0.286491, 0.281482 )
 texture = ExtResource( 8 )
 
-[node name="NewFlowers" type="Sprite" parent="."]
-position = Vector2( 2105.55, 608.939 )
-scale = Vector2( 0.420008, 0.417411 )
+[node name="NewFlowers" type="Sprite" parent="Second_plan_background"]
+position = Vector2( -5704.29, 136.718 )
+scale = Vector2( 0.391014, 0.38156 )
 texture = ExtResource( 30 )
 
-[node name="NewFlowers2" type="Sprite" parent="."]
-position = Vector2( 4273.25, 531.243 )
-scale = Vector2( 0.381258, 0.378901 )
+[node name="NewFlowers2" type="Sprite" parent="Second_plan_background"]
+position = Vector2( -3686.23, 65.6953 )
+scale = Vector2( 0.354939, 0.346357 )
 texture = ExtResource( 30 )
 
-[node name="Bush1" type="Sprite" parent="."]
-position = Vector2( 1379.1, 567.177 )
-scale = Vector2( 0.515422, 0.465152 )
+[node name="Bush1" type="Sprite" parent="Second_plan_background"]
+position = Vector2( -6380.59, 98.5429 )
+scale = Vector2( 0.479842, 0.4252 )
 texture = ExtResource( 7 )
 
-[node name="Fence6" type="Sprite" parent="."]
-position = Vector2( 5775.69, 638.075 )
-scale = Vector2( 0.686573, 0.619609 )
+[node name="Fence6" type="Sprite" parent="Second_plan_background"]
+position = Vector2( -2287.5, 163.352 )
+scale = Vector2( 0.639178, 0.566391 )
 texture = ExtResource( 10 )
 
-[node name="Bush6" type="Sprite" parent="."]
-position = Vector2( 2820, 635 )
-scale = Vector2( 0.686573, 0.619609 )
+[node name="Bush6" type="Sprite" parent="Second_plan_background"]
+position = Vector2( -5039.16, 160.541 )
+scale = Vector2( 0.639178, 0.566391 )
 texture = ExtResource( 7 )
 
-[node name="Fence2" type="Sprite" parent="."]
-position = Vector2( 1355.79, 621.564 )
-scale = Vector2( 0.470528, 0.424636 )
+[node name="Fence2" type="Sprite" parent="Second_plan_background"]
+position = Vector2( -6402.29, 148.259 )
+scale = Vector2( 0.438047, 0.388164 )
 texture = ExtResource( 10 )
 
-[node name="Bush7" type="Sprite" parent="."]
-position = Vector2( 3957, 734 )
-scale = Vector2( 0.858637, 0.774891 )
+[node name="Bush7" type="Sprite" parent="Second_plan_background"]
+position = Vector2( -3980.64, 251.038 )
+scale = Vector2( 0.799364, 0.708336 )
 texture = ExtResource( 7 )
 
-[node name="Placeholder" type="Sprite" parent="."]
-position = Vector2( 5125.96, 669.153 )
-scale = Vector2( 0.749024, 0.749024 )
-texture = ExtResource( 6 )
-
-[node name="NewTree1" type="Sprite" parent="."]
-position = Vector2( 16260.7, 305.926 )
-rotation = -0.0280847
-scale = Vector2( 1.37207, 1.37207 )
+[node name="NewTree1" type="Sprite" parent="Second_plan_background"]
+position = Vector2( 7473.72, -140.269 )
+rotation = -0.0275764
+scale = Vector2( 1.27734, 1.25424 )
 texture = ExtResource( 14 )
 
-[node name="BasicTileMap" type="TileMap" parent="."]
+[node name="BasicTileMap" type="TileMap" parent="Second_plan_background"]
 visible = false
 modulate = Color( 1, 1, 1, 0.513726 )
-position = Vector2( 3, 1 )
+position = Vector2( -7661.69, -419.005 )
+scale = Vector2( 0.930969, 0.91411 )
 tile_set = ExtResource( 2 )
 collision_layer = 8
 collision_mask = 0
 format = 1
 tile_data = PoolIntArray( 65535, 0, 0, 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 254, 0, 0, 255, 0, 0, 256, 0, 0, 257, 0, 0, 131071, 0, 0, 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 65790, 0, 0, 65791, 0, 0, 65792, 0, 0, 65793, 0, 0, 196607, 0, 0, 131072, 0, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 131077, 0, 0, 131326, 0, 0, 131327, 0, 0, 131328, 0, 0, 131329, 0, 0, 262143, 0, 0, 196608, 0, 0, 196609, 0, 0, 196610, 0, 0, 196611, 0, 0, 196612, 0, 0, 196613, 0, 0, 196862, 0, 0, 196863, 0, 0, 196864, 0, 0, 196865, 0, 0, 327679, 0, 0, 262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 262149, 0, 0, 262398, 0, 0, 262399, 0, 0, 262400, 0, 0, 262401, 0, 0, 393215, 0, 0, 327680, 0, 0, 327681, 0, 0, 327682, 0, 0, 327683, 0, 0, 327684, 0, 0, 327685, 0, 0, 327934, 0, 0, 327935, 0, 0, 327936, 0, 0, 327937, 0, 0, 458751, 0, 0, 393216, 0, 0, 393217, 0, 0, 393218, 0, 0, 393219, 0, 0, 393220, 0, 0, 393221, 0, 0, 393470, 0, 0, 393471, 0, 0, 393472, 0, 0, 393473, 0, 0, 524287, 0, 0, 458752, 0, 0, 458753, 0, 0, 458754, 0, 0, 458755, 0, 0, 458756, 0, 0, 458757, 0, 0, 459006, 0, 0, 459007, 0, 0, 459008, 0, 0, 459009, 0, 0, 589823, 0, 0, 524288, 0, 0, 524289, 0, 0, 524290, 0, 0, 524291, 0, 0, 524292, 0, 0, 524293, 0, 0, 524542, 0, 0, 524543, 0, 0, 524544, 0, 0, 524545, 0, 0, 655359, 0, 0, 589824, 0, 0, 589825, 0, 0, 589826, 0, 0, 589827, 0, 0, 589828, 0, 0, 589829, 0, 0, 590078, 0, 0, 590079, 0, 0, 590080, 0, 0, 590081, 0, 0, 720895, 0, 0, 655360, 0, 0, 655361, 0, 0, 655362, 0, 0, 655363, 0, 0, 655364, 0, 0, 655365, 0, 0, 655614, 0, 0, 655615, 0, 0, 655616, 0, 0, 655617, 0, 0, 786431, 0, 0, 720896, 0, 0, 720897, 0, 0, 720898, 0, 0, 720899, 0, 0, 720900, 0, 0, 720901, 0, 0, 721150, 0, 0, 721151, 0, 0, 721152, 0, 0, 721153, 0, 0, 851967, 0, 0, 786432, 0, 0, 786433, 0, 0, 786434, 0, 0, 786435, 0, 0, 786436, 0, 0, 786437, 0, 0, 786686, 0, 0, 786687, 0, 0, 786688, 0, 0, 786689, 0, 0, 917503, 0, 0, 851968, 0, 0, 851969, 0, 0, 851970, 0, 0, 851971, 0, 0, 851972, 0, 0, 851973, 0, 0, 852222, 0, 0, 852223, 0, 0, 852224, 0, 0, 852225, 0, 0, 983039, 0, 0, 917504, 0, 0, 917505, 0, 0, 917506, 0, 0, 917507, 0, 0, 917508, 0, 0, 917509, 0, 0, 917758, 0, 0, 917759, 0, 0, 917760, 0, 0, 917761, 0, 0, 1048575, 0, 0, 983040, 0, 0, 983041, 0, 0, 983042, 0, 0, 983043, 0, 0, 983044, 0, 0, 983045, 0, 0, 983046, 0, 0, 983047, 0, 0, 983048, 0, 0, 983049, 0, 0, 983050, 0, 0, 983051, 0, 0, 983052, 0, 0, 983053, 0, 0, 983054, 0, 0, 983055, 0, 0, 983056, 0, 0, 983057, 0, 0, 983058, 0, 0, 983059, 0, 0, 983060, 0, 0, 983061, 0, 0, 983062, 0, 0, 983063, 0, 0, 983064, 0, 0, 983065, 0, 0, 983066, 0, 0, 983067, 0, 0, 983068, 0, 0, 983069, 0, 0, 983070, 0, 0, 983071, 0, 0, 983072, 0, 0, 983073, 0, 0, 983074, 0, 0, 983075, 0, 0, 983076, 0, 0, 983077, 0, 0, 983078, 0, 0, 983079, 0, 0, 983080, 0, 0, 983081, 0, 0, 983082, 0, 0, 983083, 0, 0, 983084, 0, 0, 983085, 0, 0, 983086, 0, 0, 983087, 0, 0, 983088, 0, 0, 983089, 0, 0, 983090, 0, 0, 983091, 0, 0, 983092, 0, 0, 983093, 0, 0, 983094, 0, 0, 983095, 0, 0, 983096, 0, 0, 983097, 0, 0, 983098, 0, 0, 983099, 0, 0, 983100, 0, 0, 983101, 0, 0, 983102, 0, 0, 983103, 0, 0, 983104, 0, 0, 983105, 0, 0, 983106, 0, 0, 983107, 0, 0, 983108, 0, 0, 983109, 0, 0, 983110, 0, 0, 983111, 0, 0, 983112, 0, 0, 983113, 0, 0, 983114, 0, 0, 983115, 0, 0, 983116, 0, 0, 983117, 0, 0, 983118, 0, 0, 983119, 0, 0, 983120, 0, 0, 983121, 0, 0, 983122, 0, 0, 983123, 0, 0, 983124, 0, 0, 983125, 0, 0, 983126, 0, 0, 983127, 0, 0, 983128, 0, 0, 983129, 0, 0, 983130, 0, 0, 983131, 0, 0, 983132, 0, 0, 983133, 0, 0, 983134, 0, 0, 983135, 0, 0, 983136, 0, 0, 983137, 0, 0, 983138, 0, 0, 983139, 0, 0, 983140, 0, 0, 983141, 0, 0, 983142, 0, 0, 983143, 0, 0, 983144, 0, 0, 983145, 0, 0, 983146, 0, 0, 983147, 0, 0, 983148, 0, 0, 983149, 0, 0, 983150, 0, 0, 983151, 0, 0, 983152, 0, 0, 983153, 0, 0, 983154, 0, 0, 983155, 0, 0, 983156, 0, 0, 983157, 0, 0, 983158, 0, 0, 983159, 0, 0, 983160, 0, 0, 983161, 0, 0, 983162, 0, 0, 983163, 0, 0, 983164, 0, 0, 983165, 0, 0, 983166, 0, 0, 983167, 0, 0, 983168, 0, 0, 983169, 0, 0, 983170, 0, 0, 983171, 0, 0, 983172, 0, 0, 983173, 0, 0, 983174, 0, 0, 983175, 0, 0, 983176, 0, 0, 983177, 0, 0, 983178, 0, 0, 983179, 0, 0, 983180, 0, 0, 983181, 0, 0, 983182, 0, 0, 983183, 0, 0, 983184, 0, 0, 983185, 0, 0, 983186, 0, 0, 983187, 0, 0, 983188, 0, 0, 983189, 0, 0, 983190, 0, 0, 983191, 0, 0, 983192, 0, 0, 983193, 0, 0, 983194, 0, 0, 983195, 0, 0, 983196, 0, 0, 983197, 0, 0, 983198, 0, 0, 983199, 0, 0, 983200, 0, 0, 983201, 0, 0, 983202, 0, 0, 983203, 0, 0, 983204, 0, 0, 983205, 0, 0, 983206, 0, 0, 983207, 0, 0, 983208, 0, 0, 983209, 0, 0, 983210, 0, 0, 983211, 0, 0, 983212, 0, 0, 983213, 0, 0, 983214, 0, 0, 983215, 0, 0, 983216, 0, 0, 983217, 0, 0, 983218, 0, 0, 983219, 0, 0, 983220, 0, 0, 983221, 0, 0, 983222, 0, 0, 983223, 0, 0, 983224, 0, 0, 983225, 0, 0, 983226, 0, 0, 983227, 0, 0, 983228, 0, 0, 983229, 0, 0, 983230, 0, 0, 983231, 0, 0, 983232, 0, 0, 983233, 0, 0, 983234, 0, 0, 983235, 0, 0, 983236, 0, 0, 983237, 0, 0, 983238, 0, 0, 983239, 0, 0, 983240, 0, 0, 983241, 0, 0, 983242, 0, 0, 983243, 0, 0, 983244, 0, 0, 983245, 0, 0, 983246, 0, 0, 983247, 0, 0, 983248, 0, 0, 983249, 0, 0, 983250, 0, 0, 983251, 0, 0, 983252, 0, 0, 983253, 0, 0, 983254, 0, 0, 983255, 0, 0, 983256, 0, 0, 983257, 0, 0, 983258, 0, 0, 983259, 0, 0, 983260, 0, 0, 983261, 0, 0, 983262, 0, 0, 983263, 0, 0, 983264, 0, 0, 983265, 0, 0, 983266, 0, 0, 983267, 0, 0, 983268, 0, 0, 983269, 0, 0, 983270, 0, 0, 983271, 0, 0, 983272, 0, 0, 983273, 0, 0, 983274, 0, 0, 983275, 0, 0, 983276, 0, 0, 983277, 0, 0, 983278, 0, 0, 983279, 0, 0, 983280, 0, 0, 983281, 0, 0, 983282, 0, 0, 983283, 0, 0, 983284, 0, 0, 983285, 0, 0, 983286, 0, 0, 983287, 0, 0, 983288, 0, 0, 983289, 0, 0, 983290, 0, 0, 983291, 0, 0, 983292, 0, 0, 983293, 0, 0, 983294, 0, 0, 983295, 0, 0, 983296, 0, 0, 983297, 0, 0, 1114110, 0, 0, 1114111, 0, 0, 1048576, 0, 0, 1048577, 0, 0, 1048578, 0, 0, 1048579, 0, 0, 1048580, 0, 0, 1048581, 0, 0, 1048582, 0, 0, 1048583, 0, 0, 1048584, 0, 0, 1048585, 0, 0, 1048586, 0, 0, 1048587, 0, 0, 1048588, 0, 0, 1048589, 0, 0, 1048590, 0, 0, 1048591, 0, 0, 1048592, 0, 0, 1048593, 0, 0, 1048594, 0, 0, 1048595, 0, 0, 1048596, 0, 0, 1048597, 0, 0, 1048598, 0, 0, 1048599, 0, 0, 1048600, 0, 0, 1048601, 0, 0, 1048602, 0, 0, 1048603, 0, 0, 1048604, 0, 0, 1048605, 0, 0, 1048606, 0, 0, 1048607, 0, 0, 1048608, 0, 0, 1048609, 0, 0, 1048610, 0, 0, 1048611, 0, 0, 1048612, 0, 0, 1048613, 0, 0, 1048614, 0, 0, 1048615, 0, 0, 1048616, 0, 0, 1048617, 0, 0, 1048618, 0, 0, 1048619, 0, 0, 1048620, 0, 0, 1048621, 0, 0, 1048622, 0, 0, 1048623, 0, 0, 1048624, 0, 0, 1048625, 0, 0, 1048626, 0, 0, 1048627, 0, 0, 1048628, 0, 0, 1048629, 0, 0, 1048630, 0, 0, 1048631, 0, 0, 1048632, 0, 0, 1048633, 0, 0, 1048634, 0, 0, 1048635, 0, 0, 1048636, 0, 0, 1048637, 0, 0, 1048638, 0, 0, 1048639, 0, 0, 1048640, 0, 0, 1048641, 0, 0, 1048642, 0, 0, 1048643, 0, 0, 1048644, 0, 0, 1048645, 0, 0, 1048646, 0, 0, 1048647, 0, 0, 1048648, 0, 0, 1048649, 0, 0, 1048650, 0, 0, 1048651, 0, 0, 1048652, 0, 0, 1048653, 0, 0, 1048654, 0, 0, 1048655, 0, 0, 1048656, 0, 0, 1048657, 0, 0, 1048658, 0, 0, 1048659, 0, 0, 1048660, 0, 0, 1048661, 0, 0, 1048662, 0, 0, 1048663, 0, 0, 1048664, 0, 0, 1048665, 0, 0, 1048666, 0, 0, 1048667, 0, 0, 1048668, 0, 0, 1048669, 0, 0, 1048670, 0, 0, 1048671, 0, 0, 1048672, 0, 0, 1048673, 0, 0, 1048674, 0, 0, 1048675, 0, 0, 1048676, 0, 0, 1048677, 0, 0, 1048678, 0, 0, 1048679, 0, 0, 1048680, 0, 0, 1048681, 0, 0, 1048682, 0, 0, 1048683, 0, 0, 1048684, 0, 0, 1048685, 0, 0, 1048686, 0, 0, 1048687, 0, 0, 1048688, 0, 0, 1048689, 0, 0, 1048690, 0, 0, 1048691, 0, 0, 1048692, 0, 0, 1048693, 0, 0, 1048694, 0, 0, 1048695, 0, 0, 1048696, 0, 0, 1048697, 0, 0, 1048698, 0, 0, 1048699, 0, 0, 1048700, 0, 0, 1048701, 0, 0, 1048702, 0, 0, 1048703, 0, 0, 1048704, 0, 0, 1048705, 0, 0, 1048706, 0, 0, 1048707, 0, 0, 1048708, 0, 0, 1048709, 0, 0, 1048710, 0, 0, 1048711, 0, 0, 1048712, 0, 0, 1048713, 0, 0, 1048714, 0, 0, 1048715, 0, 0, 1048716, 0, 0, 1048717, 0, 0, 1048718, 0, 0, 1048719, 0, 0, 1048720, 0, 0, 1048721, 0, 0, 1048722, 0, 0, 1048723, 0, 0, 1048724, 0, 0, 1048725, 0, 0, 1048726, 0, 0, 1048727, 0, 0, 1048728, 0, 0, 1048729, 0, 0, 1048730, 0, 0, 1048731, 0, 0, 1048732, 0, 0, 1048733, 0, 0, 1048734, 0, 0, 1048735, 0, 0, 1048736, 0, 0, 1048737, 0, 0, 1048738, 0, 0, 1048739, 0, 0, 1048740, 0, 0, 1048741, 0, 0, 1048742, 0, 0, 1048743, 0, 0, 1048744, 0, 0, 1048745, 0, 0, 1048746, 0, 0, 1048747, 0, 0, 1048748, 0, 0, 1048749, 0, 0, 1048750, 0, 0, 1048751, 0, 0, 1048752, 0, 0, 1048753, 0, 0, 1048754, 0, 0, 1048755, 0, 0, 1048756, 0, 0, 1048757, 0, 0, 1048758, 0, 0, 1048759, 0, 0, 1048760, 0, 0, 1048761, 0, 0, 1048762, 0, 0, 1048763, 0, 0, 1048764, 0, 0, 1048765, 0, 0, 1048766, 0, 0, 1048767, 0, 0, 1048768, 0, 0, 1048769, 0, 0, 1048770, 0, 0, 1048771, 0, 0, 1048772, 0, 0, 1048773, 0, 0, 1048774, 0, 0, 1048775, 0, 0, 1048776, 0, 0, 1048777, 0, 0, 1048778, 0, 0, 1048779, 0, 0, 1048780, 0, 0, 1048781, 0, 0, 1048782, 0, 0, 1048783, 0, 0, 1048784, 0, 0, 1048785, 0, 0, 1048786, 0, 0, 1048787, 0, 0, 1048788, 0, 0, 1048789, 0, 0, 1048790, 0, 0, 1048791, 0, 0, 1048792, 0, 0, 1048793, 0, 0, 1048794, 0, 0, 1048795, 0, 0, 1048796, 0, 0, 1048797, 0, 0, 1048798, 0, 0, 1048799, 0, 0, 1048800, 0, 0, 1048801, 0, 0, 1048802, 0, 0, 1048803, 0, 0, 1048804, 0, 0, 1048805, 0, 0, 1048806, 0, 0, 1048807, 0, 0, 1048808, 0, 0, 1048809, 0, 0, 1048810, 0, 0, 1048811, 0, 0, 1048812, 0, 0, 1048813, 0, 0, 1048814, 0, 0, 1048815, 0, 0, 1048816, 0, 0, 1048817, 0, 0, 1048818, 0, 0, 1048819, 0, 0, 1048820, 0, 0, 1048821, 0, 0, 1048822, 0, 0, 1048823, 0, 0, 1048824, 0, 0, 1048825, 0, 0, 1048826, 0, 0, 1048827, 0, 0, 1048828, 0, 0, 1048829, 0, 0, 1048830, 0, 0, 1048831, 0, 0, 1048832, 0, 0, 1048833, 0, 0, 1179647, 0, 0, 1114112, 0, 0, 1114113, 0, 0, 1114114, 0, 0, 1114115, 0, 0, 1114116, 0, 0, 1114117, 0, 0, 1114118, 0, 0, 1114119, 0, 0, 1114120, 0, 0, 1114121, 0, 0, 1114122, 0, 0, 1114123, 0, 0, 1114124, 0, 0, 1114125, 0, 0, 1114126, 0, 0, 1114127, 0, 0, 1114128, 0, 0, 1114129, 0, 0, 1114130, 0, 0, 1114131, 0, 0, 1114132, 0, 0, 1114133, 0, 0, 1114134, 0, 0, 1114135, 0, 0, 1114136, 0, 0, 1114137, 0, 0, 1114138, 0, 0, 1114139, 0, 0, 1114140, 0, 0, 1114141, 0, 0, 1114142, 0, 0, 1114143, 0, 0, 1114144, 0, 0, 1114145, 0, 0, 1114146, 0, 0, 1114147, 0, 0, 1114148, 0, 0, 1114149, 0, 0, 1114150, 0, 0, 1114151, 0, 0, 1114152, 0, 0, 1114153, 0, 0, 1114154, 0, 0, 1114155, 0, 0, 1114156, 0, 0, 1114157, 0, 0, 1114158, 0, 0, 1114159, 0, 0, 1114160, 0, 0, 1114161, 0, 0, 1114162, 0, 0, 1114163, 0, 0, 1114164, 0, 0, 1114165, 0, 0, 1114166, 0, 0, 1114167, 0, 0, 1114168, 0, 0, 1114169, 0, 0, 1114170, 0, 0, 1114171, 0, 0, 1114172, 0, 0, 1114173, 0, 0, 1114174, 0, 0, 1114175, 0, 0, 1114176, 0, 0, 1114177, 0, 0, 1114178, 0, 0, 1114179, 0, 0, 1114180, 0, 0, 1114181, 0, 0, 1114182, 0, 0, 1114183, 0, 0, 1114184, 0, 0, 1114185, 0, 0, 1114186, 0, 0, 1114187, 0, 0, 1114188, 0, 0, 1114189, 0, 0, 1114190, 0, 0, 1114191, 0, 0, 1114192, 0, 0, 1114193, 0, 0, 1114194, 0, 0, 1114195, 0, 0, 1114196, 0, 0, 1114197, 0, 0, 1114198, 0, 0, 1114199, 0, 0, 1114200, 0, 0, 1114201, 0, 0, 1114202, 0, 0, 1114203, 0, 0, 1114204, 0, 0, 1114205, 0, 0, 1114206, 0, 0, 1114207, 0, 0, 1114208, 0, 0, 1114209, 0, 0, 1114210, 0, 0, 1114211, 0, 0, 1114212, 0, 0, 1114213, 0, 0, 1114214, 0, 0, 1114215, 0, 0, 1114216, 0, 0, 1114217, 0, 0, 1114218, 0, 0, 1114219, 0, 0, 1114220, 0, 0, 1114221, 0, 0, 1114222, 0, 0, 1114223, 0, 0, 1114224, 0, 0, 1114225, 0, 0, 1114226, 0, 0, 1114227, 0, 0, 1114228, 0, 0, 1114229, 0, 0, 1114230, 0, 0, 1114231, 0, 0, 1114232, 0, 0, 1114233, 0, 0, 1114234, 0, 0, 1114235, 0, 0, 1114236, 0, 0, 1114237, 0, 0, 1114238, 0, 0, 1114239, 0, 0, 1114240, 0, 0, 1114241, 0, 0, 1114242, 0, 0, 1114243, 0, 0, 1114244, 0, 0, 1114245, 0, 0, 1114246, 0, 0, 1114247, 0, 0, 1114248, 0, 0, 1114249, 0, 0, 1114250, 0, 0, 1114251, 0, 0, 1114252, 0, 0, 1114253, 0, 0, 1114254, 0, 0, 1114255, 0, 0, 1114256, 0, 0, 1114257, 0, 0, 1114258, 0, 0, 1114259, 0, 0, 1114260, 0, 0, 1114261, 0, 0, 1114262, 0, 0, 1114263, 0, 0, 1114264, 0, 0, 1114265, 0, 0, 1114266, 0, 0, 1114267, 0, 0, 1114268, 0, 0, 1114269, 0, 0, 1114270, 0, 0, 1114271, 0, 0, 1114272, 0, 0, 1114273, 0, 0, 1114274, 0, 0, 1114275, 0, 0, 1114276, 0, 0, 1114277, 0, 0, 1114278, 0, 0, 1114279, 0, 0, 1114280, 0, 0, 1114281, 0, 0, 1114282, 0, 0, 1114283, 0, 0, 1114284, 0, 0, 1114285, 0, 0, 1114286, 0, 0, 1114287, 0, 0, 1114288, 0, 0, 1114289, 0, 0, 1114290, 0, 0, 1114291, 0, 0, 1114292, 0, 0, 1114293, 0, 0, 1114294, 0, 0, 1114295, 0, 0, 1114296, 0, 0, 1114297, 0, 0, 1114298, 0, 0, 1114299, 0, 0, 1114300, 0, 0, 1114301, 0, 0, 1114302, 0, 0, 1114303, 0, 0, 1114304, 0, 0, 1114305, 0, 0, 1114306, 0, 0, 1114307, 0, 0, 1114308, 0, 0, 1114309, 0, 0, 1114310, 0, 0, 1114311, 0, 0, 1114312, 0, 0, 1114313, 0, 0, 1114314, 0, 0, 1114315, 0, 0, 1114316, 0, 0, 1114317, 0, 0, 1114318, 0, 0, 1114319, 0, 0, 1114320, 0, 0, 1114321, 0, 0, 1114322, 0, 0, 1114323, 0, 0, 1114324, 0, 0, 1114325, 0, 0, 1114326, 0, 0, 1114327, 0, 0, 1114328, 0, 0, 1114329, 0, 0, 1114330, 0, 0, 1114331, 0, 0, 1114332, 0, 0, 1114333, 0, 0, 1114334, 0, 0, 1114335, 0, 0, 1114336, 0, 0, 1114337, 0, 0, 1114338, 0, 0, 1114339, 0, 0, 1114340, 0, 0, 1114341, 0, 0, 1114342, 0, 0, 1114343, 0, 0, 1114344, 0, 0, 1114345, 0, 0, 1114346, 0, 0, 1114347, 0, 0, 1114348, 0, 0, 1114349, 0, 0, 1114350, 0, 0, 1114351, 0, 0, 1114352, 0, 0, 1114353, 0, 0, 1114354, 0, 0, 1114355, 0, 0, 1114356, 0, 0, 1114357, 0, 0, 1114358, 0, 0, 1114359, 0, 0, 1114360, 0, 0, 1114361, 0, 0, 1114362, 0, 0, 1114363, 0, 0, 1114364, 0, 0, 1114365, 0, 0, 1114366, 0, 0, 1114367, 0, 0, 1114368, 0, 0, 1114369, 0, 0 )
 
-[node name="Duck" type="Sprite" parent="."]
-position = Vector2( 6149.6, 679.836 )
-scale = Vector2( 0.675604, 0.675604 )
+[node name="Duck" type="Sprite" parent="Second_plan_background"]
+position = Vector2( -1939.4, 201.526 )
+scale = Vector2( 0.628966, 0.617576 )
 texture = ExtResource( 34 )
 
-[node name="Bush10" type="Sprite" parent="."]
-position = Vector2( 5944.68, 745.877 )
-scale = Vector2( 0.762824, 0.688423 )
+[node name="Bush10" type="Sprite" parent="Second_plan_background"]
+position = Vector2( -2130.18, 261.894 )
+scale = Vector2( 0.710165, 0.629294 )
 texture = ExtResource( 7 )
 
-[node name="House1" type="Sprite" parent="."]
-position = Vector2( 3495.33, 487.54 )
-scale = Vector2( 0.699102, 0.699102 )
+[node name="House1" type="Sprite" parent="Second_plan_background"]
+position = Vector2( -4410.44, 25.7459 )
+scale = Vector2( 0.650842, 0.639056 )
 texture = ExtResource( 31 )
 
-[node name="Pole" type="Sprite" parent="."]
-position = Vector2( 10033.4, 779.869 )
-scale = Vector2( 1.07434, 1.13653 )
+[node name="Pole" type="Sprite" parent="Second_plan_background"]
+position = Vector2( 1676.29, 292.967 )
+scale = Vector2( 1.00018, 1.03891 )
 texture = ExtResource( 35 )
 
-[node name="Ul2" type="Sprite" parent="."]
-position = Vector2( 10474.3, 611.852 )
-scale = Vector2( 0.809455, 0.809455 )
+[node name="Ul2" type="Sprite" parent="Second_plan_background"]
+position = Vector2( 2086.76, 139.381 )
+scale = Vector2( 0.753577, 0.739931 )
 texture = ExtResource( 13 )
 
-[node name="Bush18" type="Sprite" parent="."]
-position = Vector2( 10628.7, 660.412 )
-scale = Vector2( 0.481852, 0.481852 )
+[node name="Bush18" type="Sprite" parent="Second_plan_background"]
+position = Vector2( 2230.5, 183.77 )
+scale = Vector2( 0.448589, 0.440466 )
 texture = ExtResource( 21 )
 
-[node name="PurpleFlower2" type="Sprite" parent="."]
-position = Vector2( 14493.1, 507.935 )
-rotation = -0.0280847
-scale = Vector2( 0.513099, 0.513099 )
+[node name="PurpleFlower2" type="Sprite" parent="Second_plan_background"]
+position = Vector2( 5828.14, 44.3893 )
+rotation = -0.0275764
+scale = Vector2( 0.477672, 0.469036 )
 texture = ExtResource( 36 )
 
-[node name="Fence5" type="Sprite" parent="."]
-position = Vector2( 13528.7, 702.174 )
-scale = Vector2( 0.702332, 0.702332 )
+[node name="Fence5" type="Sprite" parent="Second_plan_background"]
+position = Vector2( 4930.31, 221.945 )
+scale = Vector2( 0.653849, 0.642009 )
 texture = ExtResource( 33 )
 
-[node name="Bush14" type="Sprite" parent="."]
-position = Vector2( 15585.7, 642.931 )
-rotation = 0.0258429
-scale = Vector2( 0.715897, 0.715897 )
+[node name="Bush14" type="Sprite" parent="Second_plan_background"]
+position = Vector2( 6845.31, 167.79 )
+rotation = 0.0253751
+scale = Vector2( 0.66647, 0.654417 )
 texture = ExtResource( 15 )
 
-[node name="Fence7" type="Sprite" parent="."]
-position = Vector2( 14436.8, 709.943 )
-rotation = -0.150962
-scale = Vector2( 0.715897, 0.715897 )
+[node name="Fence7" type="Sprite" parent="Second_plan_background"]
+position = Vector2( 5775.72, 229.047 )
+rotation = -0.148269
+scale = Vector2( 0.666207, 0.654684 )
 texture = ExtResource( 10 )
 
-[node name="Fence8" type="Sprite" parent="."]
-position = Vector2( 14908.8, 668.182 )
-rotation = -0.0208577
-scale = Vector2( 0.715897, 0.715897 )
+[node name="Fence8" type="Sprite" parent="Second_plan_background"]
+position = Vector2( 6215.14, 190.873 )
+rotation = -0.0204801
+scale = Vector2( 0.666473, 0.654414 )
 texture = ExtResource( 10 )
 
-[node name="Fence9" type="Sprite" parent="."]
-position = Vector2( 15395.4, 677.894 )
-rotation = 0.0688721
-scale = Vector2( 0.715897, 0.715897 )
+[node name="Fence9" type="Sprite" parent="Second_plan_background"]
+position = Vector2( 6668.15, 199.75 )
+rotation = 0.0676288
+scale = Vector2( 0.666421, 0.654466 )
 texture = ExtResource( 10 )
 
-[node name="Bush11" type="Sprite" parent="."]
-position = Vector2( 7858.9, 624.478 )
-scale = Vector2( 0.793952, 0.793952 )
+[node name="Bush11" type="Sprite" parent="Second_plan_background"]
+position = Vector2( -348.097, 150.922 )
+scale = Vector2( 0.739145, 0.72576 )
 texture = ExtResource( 16 )
 
-[node name="GooseHouse" type="Sprite" parent="."]
-position = Vector2( 15723.6, 606.025 )
+[node name="GooseHouse" type="Sprite" parent="Second_plan_background"]
+position = Vector2( 6973.69, 134.054 )
+scale = Vector2( 0.930969, 0.91411 )
 texture = ExtResource( 39 )
 script = ExtResource( 45 )
 
-[node name="Area2D" type="Area2D" parent="GooseHouse"]
+[node name="Area2D" type="Area2D" parent="Second_plan_background/GooseHouse"]
 collision_layer = 8
 collision_mask = 16
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="GooseHouse/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Second_plan_background/GooseHouse/Area2D"]
 position = Vector2( 113.963, 74.1906 )
 shape = SubResource( 1 )
 
-[node name="P2" type="Sprite" parent="."]
-position = Vector2( 12931.5, 670.124 )
-scale = Vector2( 0.626258, 0.626258 )
+[node name="P2" type="Sprite" parent="Second_plan_background"]
+position = Vector2( 4374.33, 192.648 )
+scale = Vector2( 0.583027, 0.572469 )
 texture = ExtResource( 42 )
 
-[node name="Flowers2" type="Sprite" parent="."]
-position = Vector2( 11131.8, 605.054 )
-rotation = -0.0280847
-scale = Vector2( 0.713113, 0.713112 )
+[node name="Flowers2" type="Sprite" parent="Second_plan_background"]
+position = Vector2( 2698.87, 133.167 )
+rotation = -0.0275764
+scale = Vector2( 0.663877, 0.651872 )
 texture = ExtResource( 40 )
 
 [node name="NPC_Babushka" parent="." instance=ExtResource( 4 )]
@@ -563,7 +572,7 @@ position = Vector2( 902.239, 949.828 )
 scale = Vector2( 0.595844, 0.595844 )
 
 [node name="NPC_LazyDude" parent="." instance=ExtResource( 4 )]
-position = Vector2( 4504, 910 )
+position = Vector2( 4339.37, 903.826 )
 scale = Vector2( 0.595844, 0.595844 )
 firstInteraction = [ "OH, the storm", "I need to take down my laundry" ]
 
@@ -590,7 +599,7 @@ texture = ExtResource( 59 )
 text = ""
 
 [node name="Player_Main" parent="." instance=ExtResource( 1 )]
-position = Vector2( 15079.8, 901.504 )
+position = Vector2( 6036.19, 927.432 )
 scale = Vector2( 0.825966, 0.825966 )
 
 [node name="pigon" type="Sprite" parent="."]
@@ -599,6 +608,7 @@ scale = Vector2( 0.15666, 0.15666 )
 texture = ExtResource( 58 )
 
 [node name="ColorLayer" type="Sprite" parent="."]
+visible = false
 modulate = Color( 0, 0.121569, 0.670588, 0.654902 )
 position = Vector2( 9741.08, 543.869 )
 scale = Vector2( 1.26962, 1 )
@@ -611,122 +621,124 @@ position = Vector2( 9747.96, 531.243 )
 scale = Vector2( 1.26962, 1 )
 texture = ExtResource( 32 )
 
-[node name="Mushroom3" type="Sprite" parent="."]
+[node name="First_plan_background" type="Node2D" parent="."]
 position = Vector2( 6367.15, 976.05 )
 scale = Vector2( 0.778265, 0.778265 )
+
+[node name="Mushroom3" type="Sprite" parent="First_plan_background"]
+position = Vector2( 0.000976562, 0.00012207 )
 texture = ExtResource( 24 )
 
-[node name="Mushroom4" type="Sprite" parent="."]
-position = Vector2( 7964.76, 963.425 )
-scale = Vector2( 0.778265, 0.778265 )
+[node name="Mushroom4" type="Sprite" parent="First_plan_background"]
+position = Vector2( 2052.78, -16.2219 )
 texture = ExtResource( 24 )
 
-[node name="Bush4" type="Sprite" parent="."]
-position = Vector2( 508, 892 )
+[node name="Bush4" type="Sprite" parent="First_plan_background"]
+position = Vector2( -7528.48, -107.997 )
 rotation = -0.00117486
-scale = Vector2( 1.54381, 1.54381 )
+scale = Vector2( 1.98366, 1.98366 )
 texture = ExtResource( 16 )
 
-[node name="Bush5" type="Sprite" parent="."]
-position = Vector2( 9004.91, 843.968 )
-scale = Vector2( 1.47144, 1.47938 )
+[node name="Bush5" type="Sprite" parent="First_plan_background"]
+position = Vector2( 3389.28, -169.713 )
+scale = Vector2( 1.89067, 1.90087 )
 texture = ExtResource( 15 )
 
-[node name="SimpleWheat" type="Sprite" parent="."]
-position = Vector2( 2571.72, 928.462 )
-scale = Vector2( 2.14346, 2.14346 )
+[node name="SimpleWheat" type="Sprite" parent="First_plan_background"]
+position = Vector2( -4876.78, -61.1462 )
+scale = Vector2( 2.75415, 2.75415 )
 texture = ExtResource( 20 )
 
-[node name="SimpleWheat2" type="Sprite" parent="."]
-position = Vector2( 6957.64, 911.951 )
-scale = Vector2( 2.14346, 2.14346 )
+[node name="SimpleWheat2" type="Sprite" parent="First_plan_background"]
+position = Vector2( 758.727, -82.3613 )
+scale = Vector2( 2.75415, 2.75415 )
 texture = ExtResource( 20 )
 
-[node name="ForegroundTree3" type="Sprite" parent="."]
-position = Vector2( 664, 545 )
-scale = Vector2( 1.14742, 1.13263 )
+[node name="ForegroundTree3" type="Sprite" parent="First_plan_background"]
+position = Vector2( -7328.03, -553.86 )
+scale = Vector2( 1.47433, 1.45533 )
 texture = ExtResource( 19 )
 
-[node name="ForegroundTree4" type="Sprite" parent="."]
-position = Vector2( 6131.15, 459.375 )
-scale = Vector2( 1.21105, 1.21105 )
+[node name="ForegroundTree4" type="Sprite" parent="First_plan_background"]
+position = Vector2( -303.238, -663.88 )
+scale = Vector2( 1.55609, 1.55609 )
 texture = ExtResource( 19 )
 
-[node name="ForegroundTree5" type="Sprite" parent="."]
-position = Vector2( 7411.19, 534.157 )
+[node name="ForegroundTree5" type="Sprite" parent="First_plan_background"]
+position = Vector2( 1341.5, -567.792 )
 rotation = 0.0863196
-scale = Vector2( 1.21105, 1.21105 )
+scale = Vector2( 1.55609, 1.55609 )
 texture = ExtResource( 19 )
 
-[node name="ForegroundTreesCombined" type="Sprite" parent="."]
-position = Vector2( 3912, 504 )
-scale = Vector2( 1.21105, 1.21105 )
+[node name="ForegroundTreesCombined" type="Sprite" parent="First_plan_background"]
+position = Vector2( -3154.64, -606.541 )
+scale = Vector2( 1.55609, 1.55609 )
 texture = ExtResource( 22 )
 
-[node name="ForegroundTreesCombined2" type="Sprite" parent="."]
-position = Vector2( 12729.4, 489.482 )
-scale = Vector2( 1.21105, 1.21105 )
+[node name="ForegroundTreesCombined2" type="Sprite" parent="First_plan_background"]
+position = Vector2( 8174.92, -625.196 )
+scale = Vector2( 1.55609, 1.55609 )
 texture = ExtResource( 22 )
 
-[node name="PinkFlower3" type="Sprite" parent="."]
-position = Vector2( 5526.1, 819.688 )
+[node name="PinkFlower3" type="Sprite" parent="First_plan_background"]
+position = Vector2( -1080.67, -200.911 )
 rotation = 0.0634939
-scale = Vector2( 0.884852, 0.810417 )
+scale = Vector2( 1.13695, 1.04131 )
 texture = ExtResource( 11 )
 
-[node name="Bush13" type="Sprite" parent="."]
-position = Vector2( 16303.4, 941.087 )
+[node name="Bush13" type="Sprite" parent="First_plan_background"]
+position = Vector2( 12767.2, -44.9243 )
 rotation = -0.0373067
-scale = Vector2( 1.19994, 1.19994 )
+scale = Vector2( 1.54181, 1.54181 )
 texture = ExtResource( 21 )
 
-[node name="PinkFlower2" type="Sprite" parent="."]
-position = Vector2( 8087.14, 808.034 )
+[node name="PinkFlower2" type="Sprite" parent="First_plan_background"]
+position = Vector2( 2210.03, -215.885 )
 rotation = -0.0280847
-scale = Vector2( 0.801472, 0.801471 )
+scale = Vector2( 1.02982, 1.02982 )
 texture = ExtResource( 11 )
 
-[node name="Bush12" type="Sprite" parent="."]
-position = Vector2( 13965.8, 909.038 )
+[node name="Bush12" type="Sprite" parent="First_plan_background"]
+position = Vector2( 9763.58, -86.1042 )
 rotation = -0.0280847
-scale = Vector2( 1.37207, 1.37207 )
+scale = Vector2( 1.76299, 1.76299 )
 texture = ExtResource( 7 )
 
-[node name="Bush8" type="Sprite" parent="."]
-position = Vector2( 3647.81, 943.03 )
-scale = Vector2( 1.24872, 1.24872 )
+[node name="Bush8" type="Sprite" parent="First_plan_background"]
+position = Vector2( -3494.1, -42.4276 )
+scale = Vector2( 1.60449, 1.60449 )
 texture = ExtResource( 16 )
 
-[node name="Flowers6" type="Sprite" parent="."]
-position = Vector2( 11113.4, 624.478 )
-scale = Vector2( 1.37408, 1.37408 )
+[node name="Flowers6" type="Sprite" parent="First_plan_background"]
+position = Vector2( 6098.5, -451.738 )
+scale = Vector2( 1.76557, 1.76557 )
 texture = ExtResource( 43 )
 
-[node name="Flowers8" type="Sprite" parent="."]
-position = Vector2( 7137.31, 667.211 )
-scale = Vector2( 1.37408, 1.37408 )
+[node name="Flowers8" type="Sprite" parent="First_plan_background"]
+position = Vector2( 989.587, -396.83 )
+scale = Vector2( 1.76557, 1.76557 )
 texture = ExtResource( 43 )
 
-[node name="Flowers9" type="Sprite" parent="."]
-position = Vector2( 2956.32, 595.342 )
-scale = Vector2( 1.37408, 1.37408 )
+[node name="Flowers9" type="Sprite" parent="First_plan_background"]
+position = Vector2( -4382.61, -489.175 )
+scale = Vector2( 1.76557, 1.76557 )
 texture = ExtResource( 43 )
 
-[node name="Flowers10" type="Sprite" parent="."]
-position = Vector2( 3290.41, 659.441 )
-scale = Vector2( 1.37408, 1.37408 )
+[node name="Flowers10" type="Sprite" parent="First_plan_background"]
+position = Vector2( -3953.33, -406.814 )
+scale = Vector2( 1.76557, 1.76557 )
 texture = ExtResource( 43 )
 
-[node name="Flowers4" type="Sprite" parent="."]
-position = Vector2( 11384.3, 573.976 )
+[node name="Flowers4" type="Sprite" parent="First_plan_background"]
+position = Vector2( 6446.58, -516.629 )
 rotation = -0.154175
-scale = Vector2( 1.76915, 1.76915 )
+scale = Vector2( 2.2732, 2.2732 )
 texture = ExtResource( 44 )
 
-[node name="Flowers7" type="Sprite" parent="."]
-position = Vector2( 11262, 800.264 )
+[node name="Flowers7" type="Sprite" parent="First_plan_background"]
+position = Vector2( 6289.44, -225.869 )
 rotation = 0.247276
-scale = Vector2( 1.37408, 1.37408 )
+scale = Vector2( 1.76557, 1.76557 )
 texture = ExtResource( 43 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -767,7 +779,18 @@ autoplay = true
 
 [node name="RoofTask" parent="." instance=ExtResource( 55 )]
 position = Vector2( 13029.5, 586.328 )
-[connection signal="body_entered" from="GooseHouse/Area2D" to="." method="_on_GooseHouse_body_entered"]
+
+[node name="LaundryTask" parent="." instance=ExtResource( 6 )]
+position = Vector2( 5253.79, 360.698 )
+rotation = -0.0600066
+scale = Vector2( 0.63473, 0.63473 )
+
+[node name="CollisionShape2D" parent="LaundryTask/Area2D" index="0"]
+position = Vector2( -36.2554, 603.461 )
+
+[node name="Basket" parent="LaundryTask/Area2D" index="2"]
+position = Vector2( -17.3037, 558.015 )
+[connection signal="body_entered" from="Second_plan_background/GooseHouse/Area2D" to="." method="_on_GooseHouse_body_entered"]
 [connection signal="finished" from="CanvasLayer/VideoPlayer" to="." method="_on_VideoPlayer_finished"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="timeout" from="Thunder/Timer" to="." method="_on_Timer_timeout"]
@@ -777,3 +800,5 @@ position = Vector2( 13029.5, 586.328 )
 [editable path="NPC_Boar"]
 
 [editable path="NPC_Mouse"]
+
+[editable path="LaundryTask"]

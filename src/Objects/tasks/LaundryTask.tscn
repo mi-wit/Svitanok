@@ -1,0 +1,60 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://src/Themes/new_basic_theme.tres" type="Theme" id=1]
+[ext_resource path="res://assets/interactable/basket_empty.png" type="Texture" id=2]
+[ext_resource path="res://src/Objects/tasks/LaundryTask.gd" type="Script" id=3]
+[ext_resource path="res://assets/UI/dymek2.png" type="Texture" id=4]
+[ext_resource path="res://assets/interactable/laundry1.png" type="Texture" id=5]
+[ext_resource path="res://assets/interactable/basket_full.png" type="Texture" id=6]
+[ext_resource path="res://assets/interactable/laundry2.png" type="Texture" id=7]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 347.788
+
+[node name="LaundryTask" type="Node2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 64
+script = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 1 )
+
+[node name="dymek2" type="Sprite" parent="Area2D"]
+visible = false
+position = Vector2( 3.41031, -222.263 )
+texture = ExtResource( 4 )
+
+[node name="Info" type="Label" parent="Area2D/dymek2"]
+margin_left = -250.0
+margin_top = -79.0
+margin_right = 209.0
+margin_bottom = 74.0
+theme = ExtResource( 1 )
+text = "Press E to interact"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Basket" type="Node2D" parent="Area2D"]
+position = Vector2( 0, 270 )
+
+[node name="basket_empty" type="Sprite" parent="Area2D/Basket"]
+texture = ExtResource( 2 )
+
+[node name="basket_full" type="Sprite" parent="Area2D/Basket"]
+texture = ExtResource( 6 )
+
+[node name="Laundry" type="Node2D" parent="Area2D"]
+
+[node name="laundry" type="Sprite" parent="Area2D/Laundry"]
+texture = ExtResource( 7 )
+
+[node name="laundry_string" type="Sprite" parent="Area2D/Laundry"]
+texture = ExtResource( 5 )
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_Area2D_body_exited"]
+[connection signal="interaction_started" from="Area2D" to="Area2D" method="_on_interaction_started"]
