@@ -37,7 +37,7 @@
 [ext_resource path="res://assets/nowe/pole.png" type="Texture" id=35]
 [ext_resource path="res://assets/nowe/purple_flower.png" type="Texture" id=36]
 [ext_resource path="res://assets/nowe/c1.png" type="Texture" id=37]
-[ext_resource path="res://assets/sun.png" type="Texture" id=38]
+[ext_resource path="res://assets/nowe/c2.png" type="Texture" id=38]
 [ext_resource path="res://assets/nowe/goose_house.png" type="Texture" id=39]
 [ext_resource path="res://assets/flowers_2.png" type="Texture" id=40]
 [ext_resource path="res://assets/nowe/foreground_tree_2.png" type="Texture" id=41]
@@ -85,19 +85,38 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 7.62939e-06
 rect_scale = Vector2( 0.995291, 1 )
-color = Color( 0.529412, 0.737255, 0.905882, 1 )
+color = Color( 0.376471, 0.447059, 0.505882, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+modulate = Color( 0.494118, 0.490196, 0.545098, 1 )
+motion_scale = Vector2( 0.2, 1 )
+motion_mirroring = Vector2( 500, 0 )
+
+[node name="c2" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2( 518.979, 202.268 )
+texture = ExtResource( 38 )
+
+[node name="c1" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2( 726.979, 262.268 )
+texture = ExtResource( 37 )
+
+[node name="c3" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
+modulate = Color( 0.388235, 0.360784, 0.360784, 1 )
+position = Vector2( 1743.63, 380.612 )
+texture = ExtResource( 37 )
+
+[node name="c2" type="Sprite" parent="ParallaxBackground/ParallaxLayer2/c3"]
+position = Vector2( 42.3784, -258.509 )
+texture = ExtResource( 38 )
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 position = Vector2( -112, 91 )
 scale = Vector2( 0.885509, 0.885509 )
 motion_scale = Vector2( 0.1, 1 )
 motion_mirroring = Vector2( 4000, 0 )
-
-[node name="Sun" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-visible = false
-position = Vector2( 1817.03, -6.77574 )
-scale = Vector2( 0.99546, 0.99546 )
-texture = ExtResource( 38 )
 
 [node name="C1" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
 position = Vector2( 1279.49, -24.8445 )
@@ -618,13 +637,6 @@ position = Vector2( 9558.38, 346.231 )
 scale = Vector2( 0.15666, 0.15666 )
 texture = ExtResource( 58 )
 
-[node name="ColorLayer" type="Sprite" parent="."]
-visible = false
-modulate = Color( 0, 0.121569, 0.670588, 0.654902 )
-position = Vector2( 9741.08, 543.869 )
-scale = Vector2( 1.26962, 1 )
-texture = ExtResource( 32 )
-
 [node name="ColorLayer2" type="Sprite" parent="."]
 visible = false
 modulate = Color( 0.785156, 0.72399, 0.619537, 0.756863 )
@@ -751,6 +763,12 @@ position = Vector2( 6289.44, -225.869 )
 rotation = 0.247276
 scale = Vector2( 1.76557, 1.76557 )
 texture = ExtResource( 43 )
+
+[node name="ColorLayer" type="Sprite" parent="."]
+modulate = Color( 0, 0.121569, 0.670588, 0.654902 )
+position = Vector2( 9741.08, 543.869 )
+scale = Vector2( 1.26962, 1 )
+texture = ExtResource( 32 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
