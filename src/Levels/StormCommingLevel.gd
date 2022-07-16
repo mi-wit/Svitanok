@@ -3,7 +3,7 @@ extends Node2D
 export var next_scene: PackedScene
 
 func _ready() -> void:
-	$CanvasLayer/VideoPlayer.visible = true
+#	$CanvasLayer/VideoPlayer.visible = true
 	$CanvasLayer/VideoPlayer.play()
 
 
@@ -21,3 +21,5 @@ func _on_Timer_timeout() -> void:
 func _on_Area2D_body_entered(body: Node) -> void:
 	print("entered")
 	get_tree().change_scene_to(next_scene)
+
+
