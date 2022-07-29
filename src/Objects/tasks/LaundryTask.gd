@@ -12,3 +12,4 @@ func _on_interaction_started() -> void:
 	$Basket/basket_full.visible = true
 
 	$Laundry/laundry.visible = false
+	emit_signal("task_completed")

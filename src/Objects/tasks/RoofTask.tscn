@@ -1,10 +1,9 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://src/Objects/tasks/RoofTask.gd" type="Script" id=1]
 [ext_resource path="res://src/Themes/new_basic_theme.tres" type="Theme" id=2]
 [ext_resource path="res://assets/UI/dymek2.png" type="Texture" id=3]
 [ext_resource path="res://assets/interactable/fixed_roof.png" type="Texture" id=4]
-[ext_resource path="res://assets/sounds/SFX/success_mixdown.wav" type="AudioStream" id=5]
 [ext_resource path="res://assets/interactable/hammer_wood (1).png" type="Texture" id=6]
 
 [sub_resource type="CircleShape2D" id=1]
@@ -24,9 +23,6 @@ texture = ExtResource( 4 )
 position = Vector2( 29.4194, 229.567 )
 scale = Vector2( 0.607192, 0.607192 )
 texture = ExtResource( 6 )
-
-[node name="SuccesSound" type="AudioStreamPlayer" parent="Area2D"]
-stream = ExtResource( 5 )
 
 [node name="collisionShape" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource( 1 )

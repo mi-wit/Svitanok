@@ -7,4 +7,4 @@ func _ready() -> void:
 func _on_interaction_started() -> void:
 	$fixed_roof.visible = true
 	$hammer_wood.visible = false
-	$SuccesSound.play()
+	emit_signal("task_completed")
