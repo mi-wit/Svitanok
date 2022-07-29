@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=2]
+[gd_scene load_steps=64 format=2]
 
 [ext_resource path="res://src/Actors/Player_Main.tscn" type="PackedScene" id=1]
 [ext_resource path="res://tempAssets/tileset.tres" type="TileSet" id=2]
@@ -59,6 +59,7 @@
 [ext_resource path="res://assets/sounds/SFX/success_mixdown.wav" type="AudioStream" id=57]
 [ext_resource path="res://assets/Pigeon/Idle/kaltka0000.png" type="Texture" id=58]
 [ext_resource path="res://assets/NPCs/mouse_2.png" type="Texture" id=59]
+[ext_resource path="res://assets/sounds/SFX/rain.wav" type="AudioStream" id=60]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 61.8408, 285.46 )
@@ -839,6 +840,12 @@ stream = ExtResource( 26 )
 volume_db = -5.0
 autoplay = true
 bus = "Music"
+
+[node name="RainSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 60 )
+volume_db = -26.291
+autoplay = true
+bus = "Environment"
 
 [node name="Rain" type="ParallaxBackground" parent="."]
 layer = 99
