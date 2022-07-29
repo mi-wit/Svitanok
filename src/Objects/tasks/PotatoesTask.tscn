@@ -21,6 +21,7 @@ shape = SubResource( 1 )
 [node name="dymek2" type="Sprite" parent="Area2D"]
 visible = false
 position = Vector2( 3.41031, -222.263 )
+scale = Vector2( 0.385317, 0.385317 )
 texture = ExtResource( 3 )
 
 [node name="Info" type="Label" parent="Area2D/dymek2"]
@@ -29,7 +30,7 @@ margin_top = -79.0
 margin_right = 209.0
 margin_bottom = 74.0
 theme = ExtResource( 2 )
-text = "Press E to collect potatoes"
+text = "Keep pushing E to collect potatoes"
 align = 1
 valign = 1
 autowrap = true
