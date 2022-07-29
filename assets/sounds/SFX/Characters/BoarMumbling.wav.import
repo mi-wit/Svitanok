@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/BoarMumbling.wav-ab01ca32bdf13d8dbc3a1509f4e06eca.sample"
+
+[deps]
+
+source_file="res://assets/sounds/SFX/Characters/BoarMumbling.wav"
+dest_files=[ "res://.import/BoarMumbling.wav-ab01ca32bdf13d8dbc3a1509f4e06eca.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=true
+compress/mode=0

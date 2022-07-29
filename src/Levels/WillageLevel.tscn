@@ -1,8 +1,8 @@
-[gd_scene load_steps=58 format=2]
+[gd_scene load_steps=61 format=2]
 
 [ext_resource path="res://src/Actors/Player_Main.tscn" type="PackedScene" id=1]
 [ext_resource path="res://tempAssets/tileset.tres" type="TileSet" id=2]
-[ext_resource path="res://tempAssets/level_dla_michala.png" type="Texture" id=3]
+[ext_resource path="res://assets/sounds/SFX/Characters/LazyDudeHmmm.wav" type="AudioStream" id=3]
 [ext_resource path="res://src/Actors/NPC.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/Levels/WillageLevel.gd" type="Script" id=5]
 [ext_resource path="res://assets/nowe/placeholder.png" type="Texture" id=6]
@@ -55,6 +55,9 @@
 [ext_resource path="res://assets/NPCs/dzik.png" type="Texture" id=53]
 [ext_resource path="res://assets/NPCs/bocian.png" type="Texture" id=54]
 [ext_resource path="res://assets/NPCs/mouse_1.png" type="Texture" id=55]
+[ext_resource path="res://assets/sounds/SFX/Characters/BoarMumbling.wav" type="AudioStream" id=56]
+[ext_resource path="res://assets/sounds/SFX/Characters/MouseHmm.wav" type="AudioStream" id=57]
+[ext_resource path="res://assets/sounds/SFX/grab.wav" type="AudioStream" id=58]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 61.8408, 285.46 )
@@ -73,12 +76,6 @@ __meta__ = {
 "_edit_vertical_guides_": [  ]
 }
 next_scene = ExtResource( 51 )
-
-[node name="level_dla_michala" type="Sprite" parent="."]
-visible = false
-position = Vector2( 9748.56, 394.574 )
-scale = Vector2( 1.2696, 1.2696 )
-texture = ExtResource( 3 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
@@ -110,500 +107,528 @@ position = Vector2( 2352.32, -23.7152 )
 scale = Vector2( 0.714633, 0.72781 )
 texture = ExtResource( 37 )
 
-[node name="Background3" type="Sprite" parent="."]
+[node name="SecondPlan" type="Node2D" parent="."]
+scale = Vector2( 1, 1 )
+
+[node name="Background3" type="Sprite" parent="SecondPlan"]
 position = Vector2( 8232.81, 459.375 )
 scale = Vector2( 1.07415, 1.09396 )
 texture = ExtResource( 29 )
 
-[node name="Church2Big" type="Sprite" parent="."]
+[node name="Church2Big" type="Sprite" parent="SecondPlan"]
 position = Vector2( 14786.7, 222.453 )
 scale = Vector2( 0.506448, 0.506448 )
 texture = ExtResource( 49 )
 
-[node name="Ground4" type="Sprite" parent="."]
+[node name="Ground4" type="Sprite" parent="SecondPlan"]
 position = Vector2( 5084.2, 1469.42 )
 rotation = 0.0739548
 texture = ExtResource( 48 )
 
-[node name="Ground8" type="Sprite" parent="."]
+[node name="Ground8" type="Sprite" parent="SecondPlan"]
 position = Vector2( 9415.73, 939.145 )
 rotation = -0.0185018
 scale = Vector2( 1, 0.837524 )
 texture = ExtResource( 48 )
 
-[node name="Ground5" type="Sprite" parent="."]
+[node name="Ground5" type="Sprite" parent="SecondPlan"]
 position = Vector2( 5448.4, 1025.58 )
 scale = Vector2( 1.48013, 1 )
 texture = ExtResource( 48 )
 
-[node name="Ground1" type="Sprite" parent="."]
+[node name="Ground1" type="Sprite" parent="SecondPlan"]
 position = Vector2( 2489.17, 412.758 )
+scale = Vector2( 1, 1 )
 texture = ExtResource( 45 )
 
-[node name="Ground2" type="Sprite" parent="."]
+[node name="Ground2" type="Sprite" parent="SecondPlan"]
 position = Vector2( 2947.58, 706.058 )
 scale = Vector2( 1.39681, 1.12384 )
 texture = ExtResource( 46 )
 
-[node name="Ground15" type="Sprite" parent="."]
+[node name="Ground15" type="Sprite" parent="SecondPlan"]
 position = Vector2( 15261.3, 708.001 )
 rotation = 0.0152985
 scale = Vector2( 1.61529, 1.55139 )
 texture = ExtResource( 46 )
 
-[node name="Ground10" type="Sprite" parent="."]
+[node name="Ground10" type="Sprite" parent="SecondPlan"]
 position = Vector2( 10025.6, 672.066 )
 scale = Vector2( 2.59596, 1.24179 )
 texture = ExtResource( 46 )
 
-[node name="Ground3" type="Sprite" parent="."]
+[node name="Ground3" type="Sprite" parent="SecondPlan"]
 position = Vector2( 5811.63, 772.1 )
 scale = Vector2( 1.13081, 1.13081 )
 texture = ExtResource( 47 )
 
-[node name="Ground12" type="Sprite" parent="."]
+[node name="Ground12" type="Sprite" parent="SecondPlan"]
 position = Vector2( 11188.2, 824.544 )
 scale = Vector2( 1.13081, 1.13081 )
 texture = ExtResource( 47 )
 
-[node name="Ground13" type="Sprite" parent="."]
+[node name="Ground13" type="Sprite" parent="SecondPlan"]
 position = Vector2( 14297, 798.322 )
 scale = Vector2( 1.13081, 1.13081 )
 texture = ExtResource( 47 )
 
-[node name="Ground14" type="Sprite" parent="."]
+[node name="Ground14" type="Sprite" parent="SecondPlan"]
 position = Vector2( 14768, 474.914 )
 rotation = 0.104116
 scale = Vector2( 0.836981, 0.836981 )
 texture = ExtResource( 47 )
 
-[node name="Ground7" type="Sprite" parent="."]
+[node name="Ground7" type="Sprite" parent="SecondPlan"]
 position = Vector2( 6859.55, 351.572 )
 scale = Vector2( 1.25627, 1.25627 )
 texture = ExtResource( 45 )
 
-[node name="BigTree7" type="Sprite" parent="."]
+[node name="BigTree7" type="Sprite" parent="SecondPlan"]
 position = Vector2( 13913.3, 321.465 )
 scale = Vector2( 1.25171, 0.983743 )
 texture = ExtResource( 12 )
 
-[node name="Ground9" type="Sprite" parent="."]
+[node name="Ground9" type="Sprite" parent="SecondPlan"]
 position = Vector2( 9691.55, 818.717 )
 scale = Vector2( 1.25171, 0.79101 )
 texture = ExtResource( 45 )
 
-[node name="Ground6" type="Sprite" parent="."]
+[node name="Ground6" type="Sprite" parent="SecondPlan"]
 position = Vector2( 5483.36, 1039.18 )
+scale = Vector2( 1, 1 )
 texture = ExtResource( 46 )
 
-[node name="Ground11" type="Sprite" parent="."]
+[node name="Ground11" type="Sprite" parent="SecondPlan"]
 position = Vector2( 10651.1, 1022.67 )
+scale = Vector2( 1, 1 )
 texture = ExtResource( 46 )
 
-[node name="BigTree6" type="Sprite" parent="."]
+[node name="BigTree6" type="Sprite" parent="SecondPlan"]
 position = Vector2( 7200.43, 373.91 )
 scale = Vector2( 0.846206, 1.08573 )
 texture = ExtResource( 18 )
 
-[node name="SimpleWheat3" type="Sprite" parent="."]
+[node name="SimpleWheat3" type="Sprite" parent="SecondPlan"]
 position = Vector2( 6662.39, 564.264 )
 scale = Vector2( 0.89432, 0.89432 )
 texture = ExtResource( 20 )
 
-[node name="Bush17" type="Sprite" parent="."]
+[node name="Bush17" type="Sprite" parent="SecondPlan"]
 position = Vector2( 2542.59, 530.272 )
 scale = Vector2( 0.825653, 0.825653 )
 texture = ExtResource( 16 )
 
-[node name="BigTree1" type="Sprite" parent="."]
+[node name="BigTree1" type="Sprite" parent="SecondPlan"]
 position = Vector2( 640, 301 )
 rotation = -0.0105973
 scale = Vector2( 0.700225, 0.700225 )
 texture = ExtResource( 18 )
 
-[node name="BigTree3" type="Sprite" parent="."]
+[node name="BigTree3" type="Sprite" parent="SecondPlan"]
 position = Vector2( 4176.14, 99.0618 )
 rotation = -0.0105973
 scale = Vector2( 0.882881, 1.24525 )
 texture = ExtResource( 18 )
 
-[node name="BackgroundTrees2" type="Sprite" parent="."]
+[node name="BackgroundTrees2" type="Sprite" parent="SecondPlan"]
 visible = false
 position = Vector2( 15804, 215 )
 scale = Vector2( 1.12965, 1.12965 )
 texture = ExtResource( 23 )
 
-[node name="BackgroundTrees6" type="Sprite" parent="."]
+[node name="BackgroundTrees6" type="Sprite" parent="SecondPlan"]
 position = Vector2( 12367.2, 344.774 )
+scale = Vector2( 1, 1 )
 texture = ExtResource( 25 )
 
-[node name="NpcHouse1" type="Sprite" parent="."]
+[node name="NpcHouse1" type="Sprite" parent="SecondPlan"]
 position = Vector2( 12889.7, 528.33 )
 scale = Vector2( 1.09288, 1.09288 )
 texture = ExtResource( 27 )
 
-[node name="BackgroundTrees" type="Sprite" parent="."]
+[node name="BackgroundTrees" type="Sprite" parent="SecondPlan"]
 visible = false
 position = Vector2( 2459, 286 )
 scale = Vector2( 0.86306, 0.86306 )
 texture = ExtResource( 23 )
 
-[node name="BigTree2" type="Sprite" parent="."]
+[node name="BigTree2" type="Sprite" parent="SecondPlan"]
 position = Vector2( 1944.33, 271.934 )
 scale = Vector2( 1.05215, 1.05215 )
 texture = ExtResource( 12 )
 
-[node name="BackgroundTrees5" type="Sprite" parent="."]
+[node name="BackgroundTrees5" type="Sprite" parent="SecondPlan"]
 position = Vector2( 6077.73, 272.906 )
 scale = Vector2( 1.05215, 1.05215 )
 texture = ExtResource( 25 )
 
-[node name="BigTree4" type="Sprite" parent="."]
+[node name="BigTree4" type="Sprite" parent="SecondPlan"]
 position = Vector2( 8732, 268.05 )
 rotation = -0.0105973
 scale = Vector2( 0.565709, 0.847503 )
 texture = ExtResource( 18 )
 
-[node name="BigTree5" type="Sprite" parent="."]
+[node name="BigTree5" type="Sprite" parent="SecondPlan"]
 position = Vector2( 7519.96, 204.922 )
 rotation = -0.0105973
 scale = Vector2( 0.831177, 1.24521 )
 texture = ExtResource( 18 )
 
-[node name="Fence4" type="Sprite" parent="."]
+[node name="Fence4" type="Sprite" parent="SecondPlan"]
 position = Vector2( 9908.13, 624.478 )
 scale = Vector2( 0.470528, 0.424636 )
 texture = ExtResource( 10 )
 
-[node name="NewTree4" type="Sprite" parent="."]
+[node name="NewTree4" type="Sprite" parent="SecondPlan"]
 position = Vector2( 455, 256 )
 scale = Vector2( 0.761412, 0.761412 )
 texture = ExtResource( 14 )
 
-[node name="NewTree3" type="Sprite" parent="."]
+[node name="NewTree3" type="Sprite" parent="SecondPlan"]
 position = Vector2( 5367.79, 342.832 )
 scale = Vector2( 0.63473, 0.63473 )
 texture = ExtResource( 14 )
 
-[node name="ForegroundTree2" type="Sprite" parent="."]
+[node name="ForegroundTree2" type="Sprite" parent="SecondPlan"]
 position = Vector2( 4710.29, 248.626 )
 rotation = -0.0280847
 scale = Vector2( 0.874428, 0.777127 )
 texture = ExtResource( 41 )
 
-[node name="Bush19" type="Sprite" parent="."]
+[node name="Bush19" type="Sprite" parent="SecondPlan"]
 position = Vector2( 10775.4, 578.832 )
 scale = Vector2( 0.687617, 0.687617 )
 texture = ExtResource( 16 )
 
-[node name="Laundry" type="Sprite" parent="."]
+[node name="Laundry" type="Sprite" parent="SecondPlan"]
 position = Vector2( 5254.16, 306.897 )
 rotation = -0.0600066
 scale = Vector2( 0.63473, 0.63473 )
 texture = ExtResource( 28 )
 
-[node name="Ul3" type="Sprite" parent="."]
+[node name="Ul3" type="Sprite" parent="SecondPlan"]
 position = Vector2( 14183.3, 629.334 )
 rotation = 0.0258429
 scale = Vector2( 0.715897, 0.715897 )
 texture = ExtResource( 13 )
 
-[node name="NewTree5" type="Sprite" parent="."]
+[node name="NewTree5" type="Sprite" parent="SecondPlan"]
 position = Vector2( 6540.99, 273.877 )
 scale = Vector2( 0.85499, 0.85499 )
 texture = ExtResource( 14 )
 
-[node name="Bush3" type="Sprite" parent="."]
+[node name="Bush3" type="Sprite" parent="SecondPlan"]
 position = Vector2( 327, 633 )
 scale = Vector2( 0.673479, 0.673479 )
 texture = ExtResource( 15 )
 
-[node name="GHouse" type="Sprite" parent="."]
+[node name="GHouse" type="Sprite" parent="SecondPlan"]
 position = Vector2( 841.054, 554.552 )
 rotation = 0.0124917
 scale = Vector2( 0.972739, 0.972739 )
 texture = ExtResource( 9 )
 
-[node name="BackgroundTrees3" type="Sprite" parent="."]
+[node name="BackgroundTrees3" type="Sprite" parent="SecondPlan"]
 position = Vector2( 9435.15, 305.926 )
+scale = Vector2( 1, 1 )
 texture = ExtResource( 25 )
 
-[node name="BackgroundTrees4" type="Sprite" parent="."]
+[node name="BackgroundTrees4" type="Sprite" parent="SecondPlan"]
 position = Vector2( 10366.5, 407.902 )
 scale = Vector2( 0.812036, 0.812036 )
 texture = ExtResource( 25 )
 
-[node name="NpcHouse2" type="Sprite" parent="."]
+[node name="NpcHouse2" type="Sprite" parent="SecondPlan"]
 position = Vector2( 9459.43, 369.054 )
 rotation = -0.0105973
 scale = Vector2( 0.910428, 0.910428 )
 texture = ExtResource( 17 )
 
-[node name="Bush9" type="Sprite" parent="."]
+[node name="Bush9" type="Sprite" parent="SecondPlan"]
 position = Vector2( 6210.79, 616.708 )
 rotation = -0.0105973
 scale = Vector2( 0.599555, 0.522877 )
 texture = ExtResource( 21 )
 
-[node name="Fence1" type="Sprite" parent="."]
+[node name="Fence1" type="Sprite" parent="SecondPlan"]
 position = Vector2( 6421.54, 693.433 )
 scale = Vector2( 0.590291, 0.590291 )
 texture = ExtResource( 33 )
 
-[node name="Fence3" type="Sprite" parent="."]
+[node name="Fence3" type="Sprite" parent="SecondPlan"]
 position = Vector2( 231, 742 )
 scale = Vector2( 0.99687, 0.99687 )
 texture = ExtResource( 10 )
 
-[node name="Mushroom1" type="Sprite" parent="."]
+[node name="Mushroom1" type="Sprite" parent="SecondPlan"]
 position = Vector2( 3054, 717 )
 scale = Vector2( 0.438817, 0.438817 )
 texture = ExtResource( 24 )
 
-[node name="Mushroom2" type="Sprite" parent="."]
+[node name="Mushroom2" type="Sprite" parent="SecondPlan"]
 position = Vector2( 4241.2, 809.975 )
 scale = Vector2( 0.438817, 0.438817 )
 texture = ExtResource( 24 )
 
-[node name="Ul" type="Sprite" parent="."]
+[node name="Ul" type="Sprite" parent="SecondPlan"]
 position = Vector2( 1567.51, 576.889 )
 scale = Vector2( 0.753626, 0.753626 )
 texture = ExtResource( 13 )
 
-[node name="Bush2" type="Sprite" parent="."]
+[node name="Bush2" type="Sprite" parent="SecondPlan"]
 position = Vector2( 1725.81, 609.91 )
 scale = Vector2( 0.463184, 0.463184 )
 texture = ExtResource( 21 )
 
-[node name="PinkFlower" type="Sprite" parent="."]
+[node name="PinkFlower" type="Sprite" parent="SecondPlan"]
 position = Vector2( 1348.02, 476.856 )
 scale = Vector2( 0.249634, 0.249634 )
 texture = ExtResource( 11 )
 
-[node name="Bush15" type="Sprite" parent="."]
+[node name="Bush15" type="Sprite" parent="SecondPlan"]
 position = Vector2( 14467.9, 614.766 )
 rotation = -0.0280847
 scale = Vector2( 0.856657, 0.856657 )
 texture = ExtResource( 21 )
 
-[node name="Bush16" type="Sprite" parent="."]
+[node name="Bush16" type="Sprite" parent="SecondPlan"]
 position = Vector2( 15094.3, 568.149 )
+scale = Vector2( 1, 1 )
 texture = ExtResource( 16 )
 
-[node name="Sunflower" type="Sprite" parent="."]
+[node name="Sunflower" type="Sprite" parent="SecondPlan"]
 position = Vector2( 1503.41, 485.597 )
 rotation = 0.0634939
 scale = Vector2( 0.345099, 0.345099 )
 texture = ExtResource( 8 )
 
-[node name="Sunflower3" type="Sprite" parent="."]
+[node name="Sunflower3" type="Sprite" parent="SecondPlan"]
 position = Vector2( 2673.69, 545.811 )
 rotation = 0.0634939
 scale = Vector2( 0.421229, 0.421229 )
 texture = ExtResource( 8 )
 
-[node name="Sunflower2" type="Sprite" parent="."]
+[node name="Sunflower2" type="Sprite" parent="SecondPlan"]
 position = Vector2( 1233.42, 504.05 )
 rotation = -0.132558
 scale = Vector2( 0.307831, 0.30783 )
 texture = ExtResource( 8 )
 
-[node name="NewFlowers" type="Sprite" parent="."]
+[node name="NewFlowers" type="Sprite" parent="SecondPlan"]
 position = Vector2( 2105.55, 608.939 )
 scale = Vector2( 0.420008, 0.417411 )
 texture = ExtResource( 30 )
 
-[node name="NewFlowers2" type="Sprite" parent="."]
+[node name="NewFlowers2" type="Sprite" parent="SecondPlan"]
 position = Vector2( 4273.25, 531.243 )
 scale = Vector2( 0.381258, 0.378901 )
 texture = ExtResource( 30 )
 
-[node name="Bush1" type="Sprite" parent="."]
+[node name="Bush1" type="Sprite" parent="SecondPlan"]
 position = Vector2( 1379.1, 567.177 )
 scale = Vector2( 0.515422, 0.465152 )
 texture = ExtResource( 7 )
 
-[node name="Fence6" type="Sprite" parent="."]
+[node name="Fence6" type="Sprite" parent="SecondPlan"]
 position = Vector2( 5775.69, 638.075 )
 scale = Vector2( 0.686573, 0.619609 )
 texture = ExtResource( 10 )
 
-[node name="Bush6" type="Sprite" parent="."]
+[node name="Bush6" type="Sprite" parent="SecondPlan"]
 position = Vector2( 2820, 635 )
 scale = Vector2( 0.686573, 0.619609 )
 texture = ExtResource( 7 )
 
-[node name="Fence2" type="Sprite" parent="."]
+[node name="Fence2" type="Sprite" parent="SecondPlan"]
 position = Vector2( 1355.79, 621.564 )
 scale = Vector2( 0.470528, 0.424636 )
 texture = ExtResource( 10 )
 
-[node name="Bush7" type="Sprite" parent="."]
+[node name="Bush7" type="Sprite" parent="SecondPlan"]
 position = Vector2( 3957, 734 )
 scale = Vector2( 0.858637, 0.774891 )
 texture = ExtResource( 7 )
 
-[node name="Placeholder" type="Sprite" parent="."]
+[node name="Placeholder" type="Sprite" parent="SecondPlan"]
 position = Vector2( 5125.96, 669.153 )
 scale = Vector2( 0.749024, 0.749024 )
 texture = ExtResource( 6 )
 
-[node name="NewTree1" type="Sprite" parent="."]
+[node name="NewTree1" type="Sprite" parent="SecondPlan"]
 position = Vector2( 16260.7, 305.926 )
 rotation = -0.0280847
 scale = Vector2( 1.37207, 1.37207 )
 texture = ExtResource( 14 )
 
-[node name="BasicTileMap" type="TileMap" parent="."]
+[node name="BasicTileMap" type="TileMap" parent="SecondPlan"]
 visible = false
 modulate = Color( 1, 1, 1, 0.513726 )
 position = Vector2( 3, 1 )
+scale = Vector2( 1, 1 )
 tile_set = ExtResource( 2 )
 collision_layer = 8
 collision_mask = 0
 format = 1
 tile_data = PoolIntArray( 65535, 0, 0, 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 254, 0, 0, 255, 0, 0, 256, 0, 0, 257, 0, 0, 131071, 0, 0, 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 65790, 0, 0, 65791, 0, 0, 65792, 0, 0, 65793, 0, 0, 196607, 0, 0, 131072, 0, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 131077, 0, 0, 131326, 0, 0, 131327, 0, 0, 131328, 0, 0, 131329, 0, 0, 262143, 0, 0, 196608, 0, 0, 196609, 0, 0, 196610, 0, 0, 196611, 0, 0, 196612, 0, 0, 196613, 0, 0, 196862, 0, 0, 196863, 0, 0, 196864, 0, 0, 196865, 0, 0, 327679, 0, 0, 262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 262149, 0, 0, 262398, 0, 0, 262399, 0, 0, 262400, 0, 0, 262401, 0, 0, 393215, 0, 0, 327680, 0, 0, 327681, 0, 0, 327682, 0, 0, 327683, 0, 0, 327684, 0, 0, 327685, 0, 0, 327934, 0, 0, 327935, 0, 0, 327936, 0, 0, 327937, 0, 0, 458751, 0, 0, 393216, 0, 0, 393217, 0, 0, 393218, 0, 0, 393219, 0, 0, 393220, 0, 0, 393221, 0, 0, 393470, 0, 0, 393471, 0, 0, 393472, 0, 0, 393473, 0, 0, 524287, 0, 0, 458752, 0, 0, 458753, 0, 0, 458754, 0, 0, 458755, 0, 0, 458756, 0, 0, 458757, 0, 0, 459006, 0, 0, 459007, 0, 0, 459008, 0, 0, 459009, 0, 0, 589823, 0, 0, 524288, 0, 0, 524289, 0, 0, 524290, 0, 0, 524291, 0, 0, 524292, 0, 0, 524293, 0, 0, 524542, 0, 0, 524543, 0, 0, 524544, 0, 0, 524545, 0, 0, 655359, 0, 0, 589824, 0, 0, 589825, 0, 0, 589826, 0, 0, 589827, 0, 0, 589828, 0, 0, 589829, 0, 0, 590078, 0, 0, 590079, 0, 0, 590080, 0, 0, 590081, 0, 0, 720895, 0, 0, 655360, 0, 0, 655361, 0, 0, 655362, 0, 0, 655363, 0, 0, 655364, 0, 0, 655365, 0, 0, 655614, 0, 0, 655615, 0, 0, 655616, 0, 0, 655617, 0, 0, 786431, 0, 0, 720896, 0, 0, 720897, 0, 0, 720898, 0, 0, 720899, 0, 0, 720900, 0, 0, 720901, 0, 0, 721150, 0, 0, 721151, 0, 0, 721152, 0, 0, 721153, 0, 0, 851967, 0, 0, 786432, 0, 0, 786433, 0, 0, 786434, 0, 0, 786435, 0, 0, 786436, 0, 0, 786437, 0, 0, 786686, 0, 0, 786687, 0, 0, 786688, 0, 0, 786689, 0, 0, 917503, 0, 0, 851968, 0, 0, 851969, 0, 0, 851970, 0, 0, 851971, 0, 0, 851972, 0, 0, 851973, 0, 0, 852222, 0, 0, 852223, 0, 0, 852224, 0, 0, 852225, 0, 0, 983039, 0, 0, 917504, 0, 0, 917505, 0, 0, 917506, 0, 0, 917507, 0, 0, 917508, 0, 0, 917509, 0, 0, 917758, 0, 0, 917759, 0, 0, 917760, 0, 0, 917761, 0, 0, 1048575, 0, 0, 983040, 0, 0, 983041, 0, 0, 983042, 0, 0, 983043, 0, 0, 983044, 0, 0, 983045, 0, 0, 983046, 0, 0, 983047, 0, 0, 983048, 0, 0, 983049, 0, 0, 983050, 0, 0, 983051, 0, 0, 983052, 0, 0, 983053, 0, 0, 983054, 0, 0, 983055, 0, 0, 983056, 0, 0, 983057, 0, 0, 983058, 0, 0, 983059, 0, 0, 983060, 0, 0, 983061, 0, 0, 983062, 0, 0, 983063, 0, 0, 983064, 0, 0, 983065, 0, 0, 983066, 0, 0, 983067, 0, 0, 983068, 0, 0, 983069, 0, 0, 983070, 0, 0, 983071, 0, 0, 983072, 0, 0, 983073, 0, 0, 983074, 0, 0, 983075, 0, 0, 983076, 0, 0, 983077, 0, 0, 983078, 0, 0, 983079, 0, 0, 983080, 0, 0, 983081, 0, 0, 983082, 0, 0, 983083, 0, 0, 983084, 0, 0, 983085, 0, 0, 983086, 0, 0, 983087, 0, 0, 983088, 0, 0, 983089, 0, 0, 983090, 0, 0, 983091, 0, 0, 983092, 0, 0, 983093, 0, 0, 983094, 0, 0, 983095, 0, 0, 983096, 0, 0, 983097, 0, 0, 983098, 0, 0, 983099, 0, 0, 983100, 0, 0, 983101, 0, 0, 983102, 0, 0, 983103, 0, 0, 983104, 0, 0, 983105, 0, 0, 983106, 0, 0, 983107, 0, 0, 983108, 0, 0, 983109, 0, 0, 983110, 0, 0, 983111, 0, 0, 983112, 0, 0, 983113, 0, 0, 983114, 0, 0, 983115, 0, 0, 983116, 0, 0, 983117, 0, 0, 983118, 0, 0, 983119, 0, 0, 983120, 0, 0, 983121, 0, 0, 983122, 0, 0, 983123, 0, 0, 983124, 0, 0, 983125, 0, 0, 983126, 0, 0, 983127, 0, 0, 983128, 0, 0, 983129, 0, 0, 983130, 0, 0, 983131, 0, 0, 983132, 0, 0, 983133, 0, 0, 983134, 0, 0, 983135, 0, 0, 983136, 0, 0, 983137, 0, 0, 983138, 0, 0, 983139, 0, 0, 983140, 0, 0, 983141, 0, 0, 983142, 0, 0, 983143, 0, 0, 983144, 0, 0, 983145, 0, 0, 983146, 0, 0, 983147, 0, 0, 983148, 0, 0, 983149, 0, 0, 983150, 0, 0, 983151, 0, 0, 983152, 0, 0, 983153, 0, 0, 983154, 0, 0, 983155, 0, 0, 983156, 0, 0, 983157, 0, 0, 983158, 0, 0, 983159, 0, 0, 983160, 0, 0, 983161, 0, 0, 983162, 0, 0, 983163, 0, 0, 983164, 0, 0, 983165, 0, 0, 983166, 0, 0, 983167, 0, 0, 983168, 0, 0, 983169, 0, 0, 983170, 0, 0, 983171, 0, 0, 983172, 0, 0, 983173, 0, 0, 983174, 0, 0, 983175, 0, 0, 983176, 0, 0, 983177, 0, 0, 983178, 0, 0, 983179, 0, 0, 983180, 0, 0, 983181, 0, 0, 983182, 0, 0, 983183, 0, 0, 983184, 0, 0, 983185, 0, 0, 983186, 0, 0, 983187, 0, 0, 983188, 0, 0, 983189, 0, 0, 983190, 0, 0, 983191, 0, 0, 983192, 0, 0, 983193, 0, 0, 983194, 0, 0, 983195, 0, 0, 983196, 0, 0, 983197, 0, 0, 983198, 0, 0, 983199, 0, 0, 983200, 0, 0, 983201, 0, 0, 983202, 0, 0, 983203, 0, 0, 983204, 0, 0, 983205, 0, 0, 983206, 0, 0, 983207, 0, 0, 983208, 0, 0, 983209, 0, 0, 983210, 0, 0, 983211, 0, 0, 983212, 0, 0, 983213, 0, 0, 983214, 0, 0, 983215, 0, 0, 983216, 0, 0, 983217, 0, 0, 983218, 0, 0, 983219, 0, 0, 983220, 0, 0, 983221, 0, 0, 983222, 0, 0, 983223, 0, 0, 983224, 0, 0, 983225, 0, 0, 983226, 0, 0, 983227, 0, 0, 983228, 0, 0, 983229, 0, 0, 983230, 0, 0, 983231, 0, 0, 983232, 0, 0, 983233, 0, 0, 983234, 0, 0, 983235, 0, 0, 983236, 0, 0, 983237, 0, 0, 983238, 0, 0, 983239, 0, 0, 983240, 0, 0, 983241, 0, 0, 983242, 0, 0, 983243, 0, 0, 983244, 0, 0, 983245, 0, 0, 983246, 0, 0, 983247, 0, 0, 983248, 0, 0, 983249, 0, 0, 983250, 0, 0, 983251, 0, 0, 983252, 0, 0, 983253, 0, 0, 983254, 0, 0, 983255, 0, 0, 983256, 0, 0, 983257, 0, 0, 983258, 0, 0, 983259, 0, 0, 983260, 0, 0, 983261, 0, 0, 983262, 0, 0, 983263, 0, 0, 983264, 0, 0, 983265, 0, 0, 983266, 0, 0, 983267, 0, 0, 983268, 0, 0, 983269, 0, 0, 983270, 0, 0, 983271, 0, 0, 983272, 0, 0, 983273, 0, 0, 983274, 0, 0, 983275, 0, 0, 983276, 0, 0, 983277, 0, 0, 983278, 0, 0, 983279, 0, 0, 983280, 0, 0, 983281, 0, 0, 983282, 0, 0, 983283, 0, 0, 983284, 0, 0, 983285, 0, 0, 983286, 0, 0, 983287, 0, 0, 983288, 0, 0, 983289, 0, 0, 983290, 0, 0, 983291, 0, 0, 983292, 0, 0, 983293, 0, 0, 983294, 0, 0, 983295, 0, 0, 983296, 0, 0, 983297, 0, 0, 1114110, 0, 0, 1114111, 0, 0, 1048576, 0, 0, 1048577, 0, 0, 1048578, 0, 0, 1048579, 0, 0, 1048580, 0, 0, 1048581, 0, 0, 1048582, 0, 0, 1048583, 0, 0, 1048584, 0, 0, 1048585, 0, 0, 1048586, 0, 0, 1048587, 0, 0, 1048588, 0, 0, 1048589, 0, 0, 1048590, 0, 0, 1048591, 0, 0, 1048592, 0, 0, 1048593, 0, 0, 1048594, 0, 0, 1048595, 0, 0, 1048596, 0, 0, 1048597, 0, 0, 1048598, 0, 0, 1048599, 0, 0, 1048600, 0, 0, 1048601, 0, 0, 1048602, 0, 0, 1048603, 0, 0, 1048604, 0, 0, 1048605, 0, 0, 1048606, 0, 0, 1048607, 0, 0, 1048608, 0, 0, 1048609, 0, 0, 1048610, 0, 0, 1048611, 0, 0, 1048612, 0, 0, 1048613, 0, 0, 1048614, 0, 0, 1048615, 0, 0, 1048616, 0, 0, 1048617, 0, 0, 1048618, 0, 0, 1048619, 0, 0, 1048620, 0, 0, 1048621, 0, 0, 1048622, 0, 0, 1048623, 0, 0, 1048624, 0, 0, 1048625, 0, 0, 1048626, 0, 0, 1048627, 0, 0, 1048628, 0, 0, 1048629, 0, 0, 1048630, 0, 0, 1048631, 0, 0, 1048632, 0, 0, 1048633, 0, 0, 1048634, 0, 0, 1048635, 0, 0, 1048636, 0, 0, 1048637, 0, 0, 1048638, 0, 0, 1048639, 0, 0, 1048640, 0, 0, 1048641, 0, 0, 1048642, 0, 0, 1048643, 0, 0, 1048644, 0, 0, 1048645, 0, 0, 1048646, 0, 0, 1048647, 0, 0, 1048648, 0, 0, 1048649, 0, 0, 1048650, 0, 0, 1048651, 0, 0, 1048652, 0, 0, 1048653, 0, 0, 1048654, 0, 0, 1048655, 0, 0, 1048656, 0, 0, 1048657, 0, 0, 1048658, 0, 0, 1048659, 0, 0, 1048660, 0, 0, 1048661, 0, 0, 1048662, 0, 0, 1048663, 0, 0, 1048664, 0, 0, 1048665, 0, 0, 1048666, 0, 0, 1048667, 0, 0, 1048668, 0, 0, 1048669, 0, 0, 1048670, 0, 0, 1048671, 0, 0, 1048672, 0, 0, 1048673, 0, 0, 1048674, 0, 0, 1048675, 0, 0, 1048676, 0, 0, 1048677, 0, 0, 1048678, 0, 0, 1048679, 0, 0, 1048680, 0, 0, 1048681, 0, 0, 1048682, 0, 0, 1048683, 0, 0, 1048684, 0, 0, 1048685, 0, 0, 1048686, 0, 0, 1048687, 0, 0, 1048688, 0, 0, 1048689, 0, 0, 1048690, 0, 0, 1048691, 0, 0, 1048692, 0, 0, 1048693, 0, 0, 1048694, 0, 0, 1048695, 0, 0, 1048696, 0, 0, 1048697, 0, 0, 1048698, 0, 0, 1048699, 0, 0, 1048700, 0, 0, 1048701, 0, 0, 1048702, 0, 0, 1048703, 0, 0, 1048704, 0, 0, 1048705, 0, 0, 1048706, 0, 0, 1048707, 0, 0, 1048708, 0, 0, 1048709, 0, 0, 1048710, 0, 0, 1048711, 0, 0, 1048712, 0, 0, 1048713, 0, 0, 1048714, 0, 0, 1048715, 0, 0, 1048716, 0, 0, 1048717, 0, 0, 1048718, 0, 0, 1048719, 0, 0, 1048720, 0, 0, 1048721, 0, 0, 1048722, 0, 0, 1048723, 0, 0, 1048724, 0, 0, 1048725, 0, 0, 1048726, 0, 0, 1048727, 0, 0, 1048728, 0, 0, 1048729, 0, 0, 1048730, 0, 0, 1048731, 0, 0, 1048732, 0, 0, 1048733, 0, 0, 1048734, 0, 0, 1048735, 0, 0, 1048736, 0, 0, 1048737, 0, 0, 1048738, 0, 0, 1048739, 0, 0, 1048740, 0, 0, 1048741, 0, 0, 1048742, 0, 0, 1048743, 0, 0, 1048744, 0, 0, 1048745, 0, 0, 1048746, 0, 0, 1048747, 0, 0, 1048748, 0, 0, 1048749, 0, 0, 1048750, 0, 0, 1048751, 0, 0, 1048752, 0, 0, 1048753, 0, 0, 1048754, 0, 0, 1048755, 0, 0, 1048756, 0, 0, 1048757, 0, 0, 1048758, 0, 0, 1048759, 0, 0, 1048760, 0, 0, 1048761, 0, 0, 1048762, 0, 0, 1048763, 0, 0, 1048764, 0, 0, 1048765, 0, 0, 1048766, 0, 0, 1048767, 0, 0, 1048768, 0, 0, 1048769, 0, 0, 1048770, 0, 0, 1048771, 0, 0, 1048772, 0, 0, 1048773, 0, 0, 1048774, 0, 0, 1048775, 0, 0, 1048776, 0, 0, 1048777, 0, 0, 1048778, 0, 0, 1048779, 0, 0, 1048780, 0, 0, 1048781, 0, 0, 1048782, 0, 0, 1048783, 0, 0, 1048784, 0, 0, 1048785, 0, 0, 1048786, 0, 0, 1048787, 0, 0, 1048788, 0, 0, 1048789, 0, 0, 1048790, 0, 0, 1048791, 0, 0, 1048792, 0, 0, 1048793, 0, 0, 1048794, 0, 0, 1048795, 0, 0, 1048796, 0, 0, 1048797, 0, 0, 1048798, 0, 0, 1048799, 0, 0, 1048800, 0, 0, 1048801, 0, 0, 1048802, 0, 0, 1048803, 0, 0, 1048804, 0, 0, 1048805, 0, 0, 1048806, 0, 0, 1048807, 0, 0, 1048808, 0, 0, 1048809, 0, 0, 1048810, 0, 0, 1048811, 0, 0, 1048812, 0, 0, 1048813, 0, 0, 1048814, 0, 0, 1048815, 0, 0, 1048816, 0, 0, 1048817, 0, 0, 1048818, 0, 0, 1048819, 0, 0, 1048820, 0, 0, 1048821, 0, 0, 1048822, 0, 0, 1048823, 0, 0, 1048824, 0, 0, 1048825, 0, 0, 1048826, 0, 0, 1048827, 0, 0, 1048828, 0, 0, 1048829, 0, 0, 1048830, 0, 0, 1048831, 0, 0, 1048832, 0, 0, 1048833, 0, 0, 1179647, 0, 0, 1114112, 0, 0, 1114113, 0, 0, 1114114, 0, 0, 1114115, 0, 0, 1114116, 0, 0, 1114117, 0, 0, 1114118, 0, 0, 1114119, 0, 0, 1114120, 0, 0, 1114121, 0, 0, 1114122, 0, 0, 1114123, 0, 0, 1114124, 0, 0, 1114125, 0, 0, 1114126, 0, 0, 1114127, 0, 0, 1114128, 0, 0, 1114129, 0, 0, 1114130, 0, 0, 1114131, 0, 0, 1114132, 0, 0, 1114133, 0, 0, 1114134, 0, 0, 1114135, 0, 0, 1114136, 0, 0, 1114137, 0, 0, 1114138, 0, 0, 1114139, 0, 0, 1114140, 0, 0, 1114141, 0, 0, 1114142, 0, 0, 1114143, 0, 0, 1114144, 0, 0, 1114145, 0, 0, 1114146, 0, 0, 1114147, 0, 0, 1114148, 0, 0, 1114149, 0, 0, 1114150, 0, 0, 1114151, 0, 0, 1114152, 0, 0, 1114153, 0, 0, 1114154, 0, 0, 1114155, 0, 0, 1114156, 0, 0, 1114157, 0, 0, 1114158, 0, 0, 1114159, 0, 0, 1114160, 0, 0, 1114161, 0, 0, 1114162, 0, 0, 1114163, 0, 0, 1114164, 0, 0, 1114165, 0, 0, 1114166, 0, 0, 1114167, 0, 0, 1114168, 0, 0, 1114169, 0, 0, 1114170, 0, 0, 1114171, 0, 0, 1114172, 0, 0, 1114173, 0, 0, 1114174, 0, 0, 1114175, 0, 0, 1114176, 0, 0, 1114177, 0, 0, 1114178, 0, 0, 1114179, 0, 0, 1114180, 0, 0, 1114181, 0, 0, 1114182, 0, 0, 1114183, 0, 0, 1114184, 0, 0, 1114185, 0, 0, 1114186, 0, 0, 1114187, 0, 0, 1114188, 0, 0, 1114189, 0, 0, 1114190, 0, 0, 1114191, 0, 0, 1114192, 0, 0, 1114193, 0, 0, 1114194, 0, 0, 1114195, 0, 0, 1114196, 0, 0, 1114197, 0, 0, 1114198, 0, 0, 1114199, 0, 0, 1114200, 0, 0, 1114201, 0, 0, 1114202, 0, 0, 1114203, 0, 0, 1114204, 0, 0, 1114205, 0, 0, 1114206, 0, 0, 1114207, 0, 0, 1114208, 0, 0, 1114209, 0, 0, 1114210, 0, 0, 1114211, 0, 0, 1114212, 0, 0, 1114213, 0, 0, 1114214, 0, 0, 1114215, 0, 0, 1114216, 0, 0, 1114217, 0, 0, 1114218, 0, 0, 1114219, 0, 0, 1114220, 0, 0, 1114221, 0, 0, 1114222, 0, 0, 1114223, 0, 0, 1114224, 0, 0, 1114225, 0, 0, 1114226, 0, 0, 1114227, 0, 0, 1114228, 0, 0, 1114229, 0, 0, 1114230, 0, 0, 1114231, 0, 0, 1114232, 0, 0, 1114233, 0, 0, 1114234, 0, 0, 1114235, 0, 0, 1114236, 0, 0, 1114237, 0, 0, 1114238, 0, 0, 1114239, 0, 0, 1114240, 0, 0, 1114241, 0, 0, 1114242, 0, 0, 1114243, 0, 0, 1114244, 0, 0, 1114245, 0, 0, 1114246, 0, 0, 1114247, 0, 0, 1114248, 0, 0, 1114249, 0, 0, 1114250, 0, 0, 1114251, 0, 0, 1114252, 0, 0, 1114253, 0, 0, 1114254, 0, 0, 1114255, 0, 0, 1114256, 0, 0, 1114257, 0, 0, 1114258, 0, 0, 1114259, 0, 0, 1114260, 0, 0, 1114261, 0, 0, 1114262, 0, 0, 1114263, 0, 0, 1114264, 0, 0, 1114265, 0, 0, 1114266, 0, 0, 1114267, 0, 0, 1114268, 0, 0, 1114269, 0, 0, 1114270, 0, 0, 1114271, 0, 0, 1114272, 0, 0, 1114273, 0, 0, 1114274, 0, 0, 1114275, 0, 0, 1114276, 0, 0, 1114277, 0, 0, 1114278, 0, 0, 1114279, 0, 0, 1114280, 0, 0, 1114281, 0, 0, 1114282, 0, 0, 1114283, 0, 0, 1114284, 0, 0, 1114285, 0, 0, 1114286, 0, 0, 1114287, 0, 0, 1114288, 0, 0, 1114289, 0, 0, 1114290, 0, 0, 1114291, 0, 0, 1114292, 0, 0, 1114293, 0, 0, 1114294, 0, 0, 1114295, 0, 0, 1114296, 0, 0, 1114297, 0, 0, 1114298, 0, 0, 1114299, 0, 0, 1114300, 0, 0, 1114301, 0, 0, 1114302, 0, 0, 1114303, 0, 0, 1114304, 0, 0, 1114305, 0, 0, 1114306, 0, 0, 1114307, 0, 0, 1114308, 0, 0, 1114309, 0, 0, 1114310, 0, 0, 1114311, 0, 0, 1114312, 0, 0, 1114313, 0, 0, 1114314, 0, 0, 1114315, 0, 0, 1114316, 0, 0, 1114317, 0, 0, 1114318, 0, 0, 1114319, 0, 0, 1114320, 0, 0, 1114321, 0, 0, 1114322, 0, 0, 1114323, 0, 0, 1114324, 0, 0, 1114325, 0, 0, 1114326, 0, 0, 1114327, 0, 0, 1114328, 0, 0, 1114329, 0, 0, 1114330, 0, 0, 1114331, 0, 0, 1114332, 0, 0, 1114333, 0, 0, 1114334, 0, 0, 1114335, 0, 0, 1114336, 0, 0, 1114337, 0, 0, 1114338, 0, 0, 1114339, 0, 0, 1114340, 0, 0, 1114341, 0, 0, 1114342, 0, 0, 1114343, 0, 0, 1114344, 0, 0, 1114345, 0, 0, 1114346, 0, 0, 1114347, 0, 0, 1114348, 0, 0, 1114349, 0, 0, 1114350, 0, 0, 1114351, 0, 0, 1114352, 0, 0, 1114353, 0, 0, 1114354, 0, 0, 1114355, 0, 0, 1114356, 0, 0, 1114357, 0, 0, 1114358, 0, 0, 1114359, 0, 0, 1114360, 0, 0, 1114361, 0, 0, 1114362, 0, 0, 1114363, 0, 0, 1114364, 0, 0, 1114365, 0, 0, 1114366, 0, 0, 1114367, 0, 0, 1114368, 0, 0, 1114369, 0, 0 )
 
-[node name="Duck" type="Sprite" parent="."]
+[node name="Duck" type="Sprite" parent="SecondPlan"]
 position = Vector2( 6149.6, 679.836 )
 scale = Vector2( 0.675604, 0.675604 )
 texture = ExtResource( 34 )
 
-[node name="Bush10" type="Sprite" parent="."]
+[node name="Bush10" type="Sprite" parent="SecondPlan"]
 position = Vector2( 5944.68, 745.877 )
 scale = Vector2( 0.762824, 0.688423 )
 texture = ExtResource( 7 )
 
-[node name="House1" type="Sprite" parent="."]
+[node name="House1" type="Sprite" parent="SecondPlan"]
 position = Vector2( 3495.33, 487.54 )
 scale = Vector2( 0.699102, 0.699102 )
 texture = ExtResource( 31 )
 
-[node name="Pole" type="Sprite" parent="."]
+[node name="Pole" type="Sprite" parent="SecondPlan"]
 position = Vector2( 10033.4, 779.869 )
 scale = Vector2( 1.07434, 1.13653 )
 texture = ExtResource( 35 )
 
-[node name="Ul2" type="Sprite" parent="."]
+[node name="Ul2" type="Sprite" parent="SecondPlan"]
 position = Vector2( 10474.3, 611.852 )
 scale = Vector2( 0.809455, 0.809455 )
 texture = ExtResource( 13 )
 
-[node name="Bush18" type="Sprite" parent="."]
+[node name="Bush18" type="Sprite" parent="SecondPlan"]
 position = Vector2( 10628.7, 660.412 )
 scale = Vector2( 0.481852, 0.481852 )
 texture = ExtResource( 21 )
 
-[node name="PurpleFlower2" type="Sprite" parent="."]
+[node name="PurpleFlower2" type="Sprite" parent="SecondPlan"]
 position = Vector2( 14493.1, 507.935 )
 rotation = -0.0280847
 scale = Vector2( 0.513099, 0.513099 )
 texture = ExtResource( 36 )
 
-[node name="Fence5" type="Sprite" parent="."]
+[node name="Fence5" type="Sprite" parent="SecondPlan"]
 position = Vector2( 13528.7, 702.174 )
 scale = Vector2( 0.702332, 0.702332 )
 texture = ExtResource( 33 )
 
-[node name="Bush14" type="Sprite" parent="."]
+[node name="Bush14" type="Sprite" parent="SecondPlan"]
 position = Vector2( 15585.7, 642.931 )
 rotation = 0.0258429
 scale = Vector2( 0.715897, 0.715897 )
 texture = ExtResource( 15 )
 
-[node name="Fence7" type="Sprite" parent="."]
+[node name="Fence7" type="Sprite" parent="SecondPlan"]
 position = Vector2( 14436.8, 709.943 )
 rotation = -0.150962
 scale = Vector2( 0.715897, 0.715897 )
 texture = ExtResource( 10 )
 
-[node name="Fence8" type="Sprite" parent="."]
+[node name="Fence8" type="Sprite" parent="SecondPlan"]
 position = Vector2( 14908.8, 668.182 )
 rotation = -0.0208577
 scale = Vector2( 0.715897, 0.715897 )
 texture = ExtResource( 10 )
 
-[node name="Fence9" type="Sprite" parent="."]
+[node name="Fence9" type="Sprite" parent="SecondPlan"]
 position = Vector2( 15395.4, 677.894 )
 rotation = 0.0688721
 scale = Vector2( 0.715897, 0.715897 )
 texture = ExtResource( 10 )
 
-[node name="Bush11" type="Sprite" parent="."]
+[node name="Bush11" type="Sprite" parent="SecondPlan"]
 position = Vector2( 7858.9, 624.478 )
 scale = Vector2( 0.793952, 0.793952 )
 texture = ExtResource( 16 )
 
-[node name="GooseHouse" type="Sprite" parent="."]
+[node name="GooseHouse" type="Sprite" parent="SecondPlan"]
 position = Vector2( 15723.6, 606.025 )
+scale = Vector2( 1, 1 )
 texture = ExtResource( 39 )
 script = ExtResource( 45 )
 
-[node name="Area2D" type="Area2D" parent="GooseHouse"]
+[node name="Area2D" type="Area2D" parent="SecondPlan/GooseHouse"]
 collision_layer = 8
 collision_mask = 16
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="GooseHouse/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SecondPlan/GooseHouse/Area2D"]
 position = Vector2( 113.963, 74.1906 )
 shape = SubResource( 1 )
 
-[node name="P2" type="Sprite" parent="."]
+[node name="P2" type="Sprite" parent="SecondPlan"]
 position = Vector2( 12931.5, 670.124 )
 scale = Vector2( 0.626258, 0.626258 )
 texture = ExtResource( 42 )
 
-[node name="Flowers2" type="Sprite" parent="."]
+[node name="Flowers2" type="Sprite" parent="SecondPlan"]
 position = Vector2( 11131.8, 605.054 )
 rotation = -0.0280847
 scale = Vector2( 0.713113, 0.713112 )
 texture = ExtResource( 40 )
 
-[node name="NPC_Babushka" parent="." instance=ExtResource( 4 )]
+[node name="Characters" type="Node2D" parent="."]
+scale = Vector2( 1, 1 )
+
+[node name="NPC_Babushka" parent="Characters" instance=ExtResource( 4 )]
 position = Vector2( 902.239, 949.828 )
 scale = Vector2( 0.595844, 0.595844 )
 
-[node name="NPC_LazyDude" parent="." instance=ExtResource( 4 )]
+[node name="NPC_LazyDude" parent="Characters" instance=ExtResource( 4 )]
 position = Vector2( 4755.74, 870.711 )
 scale = Vector2( 0.595844, 0.595844 )
 firstInteraction = [ "Zzzz", "Im very lazy today...", "zzz.." ]
 
-[node name="kaltka0000" parent="NPC_LazyDude" index="0"]
+[node name="kaltka0000" parent="Characters/NPC_LazyDude" index="0"]
 texture = ExtResource( 54 )
 
-[node name="NPC_Boar" parent="." instance=ExtResource( 4 )]
+[node name="AudioStreamPlayer2D" parent="Characters/NPC_LazyDude" index="5"]
+stream = ExtResource( 3 )
+volume_db = -10.628
+
+[node name="NPC_Boar" parent="Characters" instance=ExtResource( 4 )]
 position = Vector2( 9235.74, 859.328 )
 scale = Vector2( 0.595844, 0.595844 )
 firstInteraction = [ "Brr.. Grr..", "If only somebody could help me with those potatoes" ]
 
-[node name="kaltka0000" parent="NPC_Boar" index="0"]
+[node name="kaltka0000" parent="Characters/NPC_Boar" index="0"]
 texture = ExtResource( 53 )
 
-[node name="NPC_Mouse" parent="." instance=ExtResource( 4 )]
+[node name="AudioStreamPlayer2D" parent="Characters/NPC_Boar" index="5"]
+stream = ExtResource( 56 )
+
+[node name="NPC_Mouse" parent="Characters" instance=ExtResource( 4 )]
 position = Vector2( 13336.2, 1004.64 )
 scale = Vector2( 0.595844, 0.595844 )
 firstInteraction = [ "hmm", "I should fix this hole..." ]
 
-[node name="kaltka0000" parent="NPC_Mouse" index="0"]
+[node name="kaltka0000" parent="Characters/NPC_Mouse" index="0"]
 texture = ExtResource( 55 )
 
-[node name="InteractionHint" parent="NPC_Mouse/dymek2" index="0"]
-text = ""
+[node name="InteractionHint" parent="Characters/NPC_Mouse/dymek2" index="0"]
+text = "Press E to interact"
 
-[node name="Goose1" parent="." instance=ExtResource( 26 )]
+[node name="AudioStreamPlayer2D" parent="Characters/NPC_Mouse" index="5"]
+stream = ExtResource( 57 )
+
+[node name="Goose1" parent="Characters" instance=ExtResource( 26 )]
 position = Vector2( 2550.84, 909.894 )
+scale = Vector2( 1, 1 )
 
-[node name="Goose2" parent="." instance=ExtResource( 26 )]
+[node name="Goose2" parent="Characters" instance=ExtResource( 26 )]
 position = Vector2( 3069.4, 873.287 )
+scale = Vector2( 1, 1 )
 
-[node name="Player_Main" parent="." instance=ExtResource( 1 )]
+[node name="Player_Main" parent="Characters" instance=ExtResource( 1 )]
 position = Vector2( 1418.85, 873.751 )
 scale = Vector2( 0.825966, 0.825966 )
 
-[node name="Goose3" parent="." instance=ExtResource( 26 )]
+[node name="Goose3" parent="Characters" instance=ExtResource( 26 )]
 position = Vector2( 3305.93, 876.188 )
+scale = Vector2( 1, 1 )
 
-[node name="Goose4" parent="." instance=ExtResource( 26 )]
+[node name="Goose4" parent="Characters" instance=ExtResource( 26 )]
 position = Vector2( 3723.43, 862.453 )
+scale = Vector2( 1, 1 )
 
 [node name="ColorLayer" type="Sprite" parent="."]
 modulate = Color( 0.964706, 0.654902, 0.329412, 0.301961 )
@@ -611,129 +636,126 @@ position = Vector2( 9741.08, 543.869 )
 scale = Vector2( 1.26962, 1 )
 texture = ExtResource( 32 )
 
-[node name="ColorLayer2" type="Sprite" parent="."]
-visible = false
-modulate = Color( 0.785156, 0.72399, 0.619537, 0.756863 )
-position = Vector2( 9747.96, 531.243 )
+[node name="FirstPlan" type="Node2D" parent="."]
+position = Vector2( 9741.08, 543.869 )
 scale = Vector2( 1.26962, 1 )
-texture = ExtResource( 32 )
 
-[node name="Mushroom3" type="Sprite" parent="."]
-position = Vector2( 6367.15, 976.05 )
-scale = Vector2( 0.778265, 0.778265 )
+[node name="Mushroom3" type="Sprite" parent="FirstPlan"]
+position = Vector2( -2657.43, 432.181 )
+scale = Vector2( 0.612991, 0.778265 )
 texture = ExtResource( 24 )
 
-[node name="Mushroom4" type="Sprite" parent="."]
-position = Vector2( 7964.76, 963.425 )
-scale = Vector2( 0.778265, 0.778265 )
+[node name="Mushroom4" type="Sprite" parent="FirstPlan"]
+position = Vector2( -1399.1, 419.556 )
+scale = Vector2( 0.612991, 0.778265 )
 texture = ExtResource( 24 )
 
-[node name="Bush4" type="Sprite" parent="."]
-position = Vector2( 508, 892 )
-rotation = -0.00117486
-scale = Vector2( 1.54381, 1.54381 )
+[node name="Bush4" type="Sprite" parent="FirstPlan"]
+position = Vector2( -7272.32, 348.131 )
+rotation = -0.00149163
+scale = Vector2( 1.21596, 1.54381 )
 texture = ExtResource( 16 )
 
-[node name="Bush5" type="Sprite" parent="."]
-position = Vector2( 9004.91, 843.968 )
-scale = Vector2( 1.47144, 1.47938 )
+[node name="Bush5" type="Sprite" parent="FirstPlan"]
+position = Vector2( -579.833, 300.099 )
+scale = Vector2( 1.15896, 1.47938 )
 texture = ExtResource( 15 )
 
-[node name="SimpleWheat" type="Sprite" parent="."]
-position = Vector2( 2571.72, 928.462 )
-scale = Vector2( 2.14346, 2.14346 )
+[node name="SimpleWheat" type="Sprite" parent="FirstPlan"]
+position = Vector2( -5646.86, 384.593 )
+scale = Vector2( 1.68827, 2.14346 )
 texture = ExtResource( 20 )
 
-[node name="SimpleWheat2" type="Sprite" parent="."]
-position = Vector2( 6957.64, 911.951 )
-scale = Vector2( 2.14346, 2.14346 )
+[node name="SimpleWheat2" type="Sprite" parent="FirstPlan"]
+position = Vector2( -2192.34, 368.082 )
+scale = Vector2( 1.68827, 2.14346 )
 texture = ExtResource( 20 )
 
-[node name="ForegroundTree3" type="Sprite" parent="."]
-position = Vector2( 664, 545 )
-scale = Vector2( 1.14742, 1.13263 )
+[node name="ForegroundTree3" type="Sprite" parent="FirstPlan"]
+position = Vector2( -7149.45, 1.13098 )
+scale = Vector2( 0.903751, 1.13263 )
 texture = ExtResource( 19 )
 
-[node name="ForegroundTree4" type="Sprite" parent="."]
-position = Vector2( 6131.15, 459.375 )
-scale = Vector2( 1.21105, 1.21105 )
+[node name="ForegroundTree4" type="Sprite" parent="FirstPlan"]
+position = Vector2( -2843.31, -84.494 )
+scale = Vector2( 0.953868, 1.21105 )
 texture = ExtResource( 19 )
 
-[node name="ForegroundTree5" type="Sprite" parent="."]
-position = Vector2( 7411.19, 534.157 )
-rotation = 0.0863196
-scale = Vector2( 1.21105, 1.21105 )
+[node name="ForegroundTree5" type="Sprite" parent="FirstPlan"]
+position = Vector2( -1835.11, -9.71204 )
+rotation = 0.109427
+scale = Vector2( 0.956035, 1.20934 )
 texture = ExtResource( 19 )
 
-[node name="ForegroundTreesCombined" type="Sprite" parent="."]
-position = Vector2( 3912, 504 )
-scale = Vector2( 1.21105, 1.21105 )
+[node name="ForegroundTreesCombined" type="Sprite" parent="FirstPlan"]
+position = Vector2( -4591.2, -39.869 )
+scale = Vector2( 0.953868, 1.21105 )
 texture = ExtResource( 22 )
 
-[node name="ForegroundTreesCombined2" type="Sprite" parent="."]
-position = Vector2( 12729.4, 489.482 )
-scale = Vector2( 1.21105, 1.21105 )
+[node name="ForegroundTreesCombined2" type="Sprite" parent="FirstPlan"]
+position = Vector2( 2353.71, -54.387 )
+scale = Vector2( 0.953868, 1.21105 )
 texture = ExtResource( 22 )
 
-[node name="PinkFlower3" type="Sprite" parent="."]
-position = Vector2( 5526.1, 819.688 )
-rotation = 0.0634939
-scale = Vector2( 0.884852, 0.810417 )
+[node name="PinkFlower3" type="Sprite" parent="FirstPlan"]
+position = Vector2( -3319.87, 275.819 )
+rotation = 0.080547
+scale = Vector2( 0.697801, 0.809798 )
 texture = ExtResource( 11 )
 
-[node name="Bush13" type="Sprite" parent="."]
-position = Vector2( 16303.4, 941.087 )
-rotation = -0.0373067
-scale = Vector2( 1.19994, 1.19994 )
+[node name="Bush13" type="Sprite" parent="FirstPlan"]
+position = Vector2( 5168.73, 397.218 )
+rotation = -0.0473519
+scale = Vector2( 0.94552, 1.19962 )
 texture = ExtResource( 21 )
 
-[node name="PinkFlower2" type="Sprite" parent="."]
-position = Vector2( 8087.14, 808.034 )
-rotation = -0.0280847
-scale = Vector2( 0.801472, 0.801471 )
+[node name="PinkFlower2" type="Sprite" parent="FirstPlan"]
+position = Vector2( -1302.7, 264.165 )
+rotation = -0.0356512
+scale = Vector2( 0.631422, 0.801351 )
 texture = ExtResource( 11 )
 
-[node name="Bush12" type="Sprite" parent="."]
-position = Vector2( 13965.8, 909.038 )
-rotation = -0.0280847
-scale = Vector2( 1.37207, 1.37207 )
+[node name="Bush12" type="Sprite" parent="FirstPlan"]
+position = Vector2( 3327.55, 365.169 )
+rotation = -0.0356512
+scale = Vector2( 1.08095, 1.37186 )
 texture = ExtResource( 7 )
 
-[node name="Bush8" type="Sprite" parent="."]
-position = Vector2( 3647.81, 943.03 )
-scale = Vector2( 1.24872, 1.24872 )
+[node name="Bush8" type="Sprite" parent="FirstPlan"]
+position = Vector2( -4799.29, 399.161 )
+scale = Vector2( 0.983539, 1.24872 )
 texture = ExtResource( 16 )
 
-[node name="Flowers6" type="Sprite" parent="."]
-position = Vector2( 11113.4, 624.478 )
-scale = Vector2( 1.37408, 1.37408 )
+[node name="Flowers6" type="Sprite" parent="FirstPlan"]
+position = Vector2( 1080.89, 80.6091 )
+scale = Vector2( 1.08228, 1.37408 )
 texture = ExtResource( 43 )
 
-[node name="Flowers8" type="Sprite" parent="."]
-position = Vector2( 7137.31, 667.211 )
-scale = Vector2( 1.37408, 1.37408 )
+[node name="Flowers8" type="Sprite" parent="FirstPlan"]
+position = Vector2( -2050.83, 123.342 )
+scale = Vector2( 1.08228, 1.37408 )
 texture = ExtResource( 43 )
 
-[node name="Flowers9" type="Sprite" parent="."]
-position = Vector2( 2956.32, 595.342 )
-scale = Vector2( 1.37408, 1.37408 )
+[node name="Flowers9" type="Sprite" parent="FirstPlan"]
+position = Vector2( -5343.93, 51.473 )
+scale = Vector2( 1.08228, 1.37408 )
 texture = ExtResource( 43 )
 
-[node name="Flowers10" type="Sprite" parent="."]
-position = Vector2( 3290.41, 659.441 )
-scale = Vector2( 1.37408, 1.37408 )
+[node name="Flowers10" type="Sprite" parent="FirstPlan"]
+position = Vector2( -5080.79, 115.572 )
+scale = Vector2( 1.08228, 1.37408 )
 texture = ExtResource( 43 )
 
-[node name="Flowers4" type="Sprite" parent="."]
-position = Vector2( 11384.3, 573.976 )
-rotation = -0.154175
-scale = Vector2( 1.76915, 1.76915 )
+[node name="Flowers4" type="Sprite" parent="FirstPlan"]
+position = Vector2( 1294.26, 30.107 )
+rotation = -0.194807
+scale = Vector2( 1.40347, 1.76121 )
 texture = ExtResource( 44 )
 
-[node name="Flowers7" type="Sprite" parent="."]
-position = Vector2( 11262, 800.264 )
-rotation = 0.247276
-scale = Vector2( 1.37408, 1.37408 )
+[node name="Flowers7" type="Sprite" parent="FirstPlan"]
+position = Vector2( 1197.94, 256.395 )
+rotation = 0.310162
+scale = Vector2( 1.10194, 1.35836 )
 texture = ExtResource( 43 )
 
 [node name="BirdsBackground" type="AudioStreamPlayer" parent="."]
@@ -750,10 +772,13 @@ bus = "Music"
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 2 )
-[connection signal="body_entered" from="GooseHouse/Area2D" to="." method="_on_GooseHouse_body_entered"]
 
-[editable path="NPC_LazyDude"]
+[node name="CollectSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 58 )
+[connection signal="body_entered" from="SecondPlan/GooseHouse/Area2D" to="." method="_on_GooseHouse_body_entered"]
 
-[editable path="NPC_Boar"]
+[editable path="Characters/NPC_LazyDude"]
 
-[editable path="NPC_Mouse"]
+[editable path="Characters/NPC_Boar"]
+
+[editable path="Characters/NPC_Mouse"]

@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://src/Objects/tasks/PotatoesTask.gd" type="Script" id=1]
 [ext_resource path="res://src/Themes/new_basic_theme.tres" type="Theme" id=2]
 [ext_resource path="res://assets/UI/dymek2.png" type="Texture" id=3]
 [ext_resource path="res://assets/interactable/potato.png" type="Texture" id=4]
+[ext_resource path="res://assets/sounds/SFX/grab.wav" type="AudioStream" id=5]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 347.788
@@ -20,6 +21,7 @@ shape = SubResource( 1 )
 [node name="dymek2" type="Sprite" parent="Area2D"]
 visible = false
 position = Vector2( 3.41031, -222.263 )
+scale = Vector2( 0.385317, 0.385317 )
 texture = ExtResource( 3 )
 
 [node name="Info" type="Label" parent="Area2D/dymek2"]
@@ -28,7 +30,7 @@ margin_top = -79.0
 margin_right = 209.0
 margin_bottom = 74.0
 theme = ExtResource( 2 )
-text = "Press E to collect potatoes"
+text = "Keep pushing E to collect potatoes"
 align = 1
 valign = 1
 autowrap = true
@@ -42,25 +44,45 @@ __meta__ = {
 "potatoes",
 ]]
 position = Vector2( -171.59, -56.766 )
+rotation = -1.4753
+scale = Vector2( 0.637372, 0.637372 )
 texture = ExtResource( 4 )
 
 [node name="potato2" type="Sprite" parent="Area2D/Potatoes" groups=[
 "potatoes",
 ]]
 position = Vector2( -59.59, -56.766 )
+rotation = -1.92702
+scale = Vector2( 0.521407, 0.521407 )
 texture = ExtResource( 4 )
 
 [node name="potato3" type="Sprite" parent="Area2D/Potatoes" groups=[
 "potatoes",
 ]]
 position = Vector2( 46.41, -56.766 )
+rotation = -1.73692
 texture = ExtResource( 4 )
 
 [node name="potato4" type="Sprite" parent="Area2D/Potatoes" groups=[
 "potatoes",
 ]]
 position = Vector2( 150.41, -56.766 )
+rotation = 1.79977
+scale = Vector2( 0.717119, 0.717119 )
 texture = ExtResource( 4 )
+
+[node name="potato5" type="Sprite" parent="Area2D/Potatoes" groups=[
+"potatoes",
+]]
+position = Vector2( -265.562, -43.9034 )
+rotation = 1.33637
+scale = Vector2( 0.933284, 0.933284 )
+texture = ExtResource( 4 )
+flip_h = true
+
+[node name="GrabSound" type="AudioStreamPlayer" parent="Area2D"]
+stream = ExtResource( 5 )
+volume_db = -10.909
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="Area2D" to="Area2D" method="_on_Area2D_body_exited"]
 [connection signal="interaction_started" from="Area2D" to="Area2D" method="_on_interaction_started"]

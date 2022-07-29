@@ -12,5 +12,6 @@ func _on_interaction_started() -> void:
 func _process(delta: float) -> void:
 	if !potatoes.empty() and is_picking_potatoes and Input.is_action_just_pressed("interaction"):
 		potatoes.pop_back().queue_free()
+		$GrabSound.play()
 		if potatoes.empty():
 			emit_signal("task_completed")

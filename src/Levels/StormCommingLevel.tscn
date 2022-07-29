@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=2]
+[gd_scene load_steps=67 format=2]
 
 [ext_resource path="res://src/Actors/Player_Main.tscn" type="PackedScene" id=1]
 [ext_resource path="res://tempAssets/tileset.tres" type="TileSet" id=2]
@@ -60,6 +60,9 @@
 [ext_resource path="res://assets/Pigeon/Idle/kaltka0000.png" type="Texture" id=58]
 [ext_resource path="res://assets/NPCs/mouse_2.png" type="Texture" id=59]
 [ext_resource path="res://assets/sounds/SFX/rain.wav" type="AudioStream" id=60]
+[ext_resource path="res://assets/sounds/SFX/Characters/LazyDudeHmmm.wav" type="AudioStream" id=61]
+[ext_resource path="res://assets/sounds/SFX/Characters/BoarMumbling.wav" type="AudioStream" id=62]
+[ext_resource path="res://assets/sounds/SFX/Characters/MouseHmm.wav" type="AudioStream" id=63]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 61.8408, 285.46 )
@@ -638,6 +641,9 @@ firstInteraction = [ "OH, the storm", "I need to take down my laundry" ]
 [node name="kaltka0000" parent="NPC_LazyDude" index="0"]
 texture = ExtResource( 54 )
 
+[node name="AudioStreamPlayer2D" parent="NPC_LazyDude" index="5"]
+stream = ExtResource( 61 )
+
 [node name="NPC_Boar" parent="." instance=ExtResource( 4 )]
 position = Vector2( 8446.83, 836.461 )
 scale = Vector2( 0.595844, 0.595844 )
@@ -645,6 +651,9 @@ firstInteraction = [ "Brr.. Grr..", "Hope everybody will be okay..." ]
 
 [node name="kaltka0000" parent="NPC_Boar" index="0"]
 texture = ExtResource( 53 )
+
+[node name="AudioStreamPlayer2D" parent="NPC_Boar" index="5"]
+stream = ExtResource( 62 )
 
 [node name="NPC_Mouse" parent="." instance=ExtResource( 4 )]
 position = Vector2( 13365.8, 1008.8 )
@@ -655,7 +664,10 @@ firstInteraction = [ "Im scared of thunder!", "Thanks for help..." ]
 texture = ExtResource( 59 )
 
 [node name="InteractionHint" parent="NPC_Mouse/dymek2" index="0"]
-text = ""
+text = "Press E to interact"
+
+[node name="AudioStreamPlayer2D" parent="NPC_Mouse" index="5"]
+stream = ExtResource( 63 )
 
 [node name="Player_Main" parent="." instance=ExtResource( 1 )]
 position = Vector2( 9041.55, 884.965 )
@@ -843,7 +855,7 @@ bus = "Music"
 
 [node name="RainSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 60 )
-volume_db = -26.291
+volume_db = -19.746
 autoplay = true
 bus = "Environment"
 
