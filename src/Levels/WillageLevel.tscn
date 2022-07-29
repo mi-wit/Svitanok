@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=2]
+[gd_scene load_steps=61 format=2]
 
 [ext_resource path="res://src/Actors/Player_Main.tscn" type="PackedScene" id=1]
 [ext_resource path="res://tempAssets/tileset.tres" type="TileSet" id=2]
@@ -57,6 +57,7 @@
 [ext_resource path="res://assets/NPCs/mouse_1.png" type="Texture" id=55]
 [ext_resource path="res://assets/sounds/SFX/Characters/BoarMumbling.wav" type="AudioStream" id=56]
 [ext_resource path="res://assets/sounds/SFX/Characters/MouseHmm.wav" type="AudioStream" id=57]
+[ext_resource path="res://assets/sounds/SFX/grab.wav" type="AudioStream" id=58]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 61.8408, 285.46 )
@@ -604,7 +605,7 @@ firstInteraction = [ "hmm", "I should fix this hole..." ]
 texture = ExtResource( 55 )
 
 [node name="InteractionHint" parent="Characters/NPC_Mouse/dymek2" index="0"]
-text = ""
+text = "Press E to interact"
 
 [node name="AudioStreamPlayer2D" parent="Characters/NPC_Mouse" index="5"]
 stream = ExtResource( 57 )
@@ -771,6 +772,9 @@ bus = "Music"
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 2 )
+
+[node name="CollectSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 58 )
 [connection signal="body_entered" from="SecondPlan/GooseHouse/Area2D" to="." method="_on_GooseHouse_body_entered"]
 
 [editable path="Characters/NPC_LazyDude"]

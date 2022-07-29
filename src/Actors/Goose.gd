@@ -40,3 +40,4 @@ func _on_runningAwayTimer_timeout() -> void:
 	is_moving_right = false
 	$AnimatedSprite.animation = "idle"
 	$GooseSound.stop()
+
