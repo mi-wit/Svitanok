@@ -740,11 +740,13 @@ texture = ExtResource( 43 )
 stream = ExtResource( 52 )
 volume_db = -10.0
 autoplay = true
+bus = "Environment"
 
 [node name="MusicBackground" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 50 )
 volume_db = -5.0
 autoplay = true
+bus = "Music"
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 2 )
