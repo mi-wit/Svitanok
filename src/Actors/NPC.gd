@@ -1,5 +1,7 @@
 extends Actor
 
+var audio_position
+
 # Dialogs texts
 export var firstInteraction = [
 	"Hello, child",
@@ -38,6 +40,7 @@ func _on_PlayerDetector_body_exited(body: Node) -> void:
 
 func _on_DialogTimeOut_timeout() -> void:
 	$dymek.visible = false
+	audio_position = $AudioStreamPlayer2D.get_playback_position()
 	$AudioStreamPlayer2D.stop()
 	var nextDialog = firstInteraction.pop_front()
 	if nextDialog:
@@ -47,5 +50,5 @@ func _on_DialogTimeOut_timeout() -> void:
 func _on_NextSentenceTimer_timeout() -> void:
 	$dymek.visible = true
 	$AudioStreamPlayer2D.seek(rand_range(0, 8))
-	$AudioStreamPlayer2D.play()
+	$AudioStreamPlayer2D.play(audio_position)
 	$dymek/DialogTimeOut.start()

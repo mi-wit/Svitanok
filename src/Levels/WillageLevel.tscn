@@ -1,7 +1,8 @@
-[gd_scene load_steps=57 format=2]
+[gd_scene load_steps=60 format=2]
 
 [ext_resource path="res://src/Actors/Player_Main.tscn" type="PackedScene" id=1]
 [ext_resource path="res://tempAssets/tileset.tres" type="TileSet" id=2]
+[ext_resource path="res://assets/sounds/SFX/Characters/LazyDudeHmmm.wav" type="AudioStream" id=3]
 [ext_resource path="res://src/Actors/NPC.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/Levels/WillageLevel.gd" type="Script" id=5]
 [ext_resource path="res://assets/nowe/placeholder.png" type="Texture" id=6]
@@ -54,6 +55,8 @@
 [ext_resource path="res://assets/NPCs/dzik.png" type="Texture" id=53]
 [ext_resource path="res://assets/NPCs/bocian.png" type="Texture" id=54]
 [ext_resource path="res://assets/NPCs/mouse_1.png" type="Texture" id=55]
+[ext_resource path="res://assets/sounds/SFX/Characters/BoarMumbling.wav" type="AudioStream" id=56]
+[ext_resource path="res://assets/sounds/SFX/Characters/MouseHmm.wav" type="AudioStream" id=57]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 61.8408, 285.46 )
@@ -577,6 +580,10 @@ firstInteraction = [ "Zzzz", "Im very lazy today...", "zzz.." ]
 [node name="kaltka0000" parent="Characters/NPC_LazyDude" index="0"]
 texture = ExtResource( 54 )
 
+[node name="AudioStreamPlayer2D" parent="Characters/NPC_LazyDude" index="5"]
+stream = ExtResource( 3 )
+volume_db = -10.628
+
 [node name="NPC_Boar" parent="Characters" instance=ExtResource( 4 )]
 position = Vector2( 9235.74, 859.328 )
 scale = Vector2( 0.595844, 0.595844 )
@@ -584,6 +591,9 @@ firstInteraction = [ "Brr.. Grr..", "If only somebody could help me with those p
 
 [node name="kaltka0000" parent="Characters/NPC_Boar" index="0"]
 texture = ExtResource( 53 )
+
+[node name="AudioStreamPlayer2D" parent="Characters/NPC_Boar" index="5"]
+stream = ExtResource( 56 )
 
 [node name="NPC_Mouse" parent="Characters" instance=ExtResource( 4 )]
 position = Vector2( 13336.2, 1004.64 )
@@ -595,6 +605,9 @@ texture = ExtResource( 55 )
 
 [node name="InteractionHint" parent="Characters/NPC_Mouse/dymek2" index="0"]
 text = ""
+
+[node name="AudioStreamPlayer2D" parent="Characters/NPC_Mouse" index="5"]
+stream = ExtResource( 57 )
 
 [node name="Goose1" parent="Characters" instance=ExtResource( 26 )]
 position = Vector2( 2550.84, 909.894 )
