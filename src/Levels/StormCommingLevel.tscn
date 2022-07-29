@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=2]
+[gd_scene load_steps=62 format=2]
 
 [ext_resource path="res://src/Actors/Player_Main.tscn" type="PackedScene" id=1]
 [ext_resource path="res://tempAssets/tileset.tres" type="TileSet" id=2]
@@ -55,6 +55,8 @@
 [ext_resource path="res://assets/NPCs/boar_npc_stand.png" type="Texture" id=53]
 [ext_resource path="res://assets/NPCs/stork_npc_stand.png" type="Texture" id=54]
 [ext_resource path="res://src/Objects/tasks/RoofTask.tscn" type="PackedScene" id=55]
+[ext_resource path="res://src/Objects/tasks/PotatoesTask.tscn" type="PackedScene" id=56]
+[ext_resource path="res://assets/sounds/SFX/success_mixdown.wav" type="AudioStream" id=57]
 [ext_resource path="res://assets/Pigeon/Idle/kaltka0000.png" type="Texture" id=58]
 [ext_resource path="res://assets/NPCs/mouse_2.png" type="Texture" id=59]
 
@@ -113,6 +115,7 @@ position = Vector2( 42.3784, -258.509 )
 texture = ExtResource( 38 )
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+modulate = Color( 0.643137, 0.635294, 0.635294, 1 )
 position = Vector2( -112, 91 )
 scale = Vector2( 0.885509, 0.885509 )
 motion_scale = Vector2( 0.1, 1 )
@@ -134,7 +137,6 @@ scale = Vector2( 1.07415, 1.09396 )
 
 [node name="Background3" type="Sprite" parent="Second_plan_background"]
 position = Vector2( 0.000488281, 3.05176e-05 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 29 )
 
 [node name="Church2Big" type="Sprite" parent="Second_plan_background"]
@@ -585,6 +587,10 @@ rotation = -0.0275764
 scale = Vector2( 0.663877, 0.651872 )
 texture = ExtResource( 40 )
 
+[node name="RoofTask" parent="Second_plan_background" instance=ExtResource( 55 )]
+position = Vector2( 4465.57, 116.049 )
+scale = Vector2( 0.930969, 0.91411 )
+
 [node name="LaundryTask" parent="Second_plan_background" instance=ExtResource( 6 )]
 position = Vector2( -2773.37, -90.2017 )
 rotation = -0.0589225
@@ -595,6 +601,10 @@ position = Vector2( -36.2554, 603.461 )
 
 [node name="Basket" parent="Second_plan_background/LaundryTask/Area2D" index="2"]
 position = Vector2( -18.334, 575.159 )
+
+[node name="PotatoesTask" parent="Second_plan_background" instance=ExtResource( 56 )]
+position = Vector2( 1658.61, 323.539 )
+scale = Vector2( 0.930969, 0.91411 )
 
 [node name="NPC_Babushka" parent="." instance=ExtResource( 4 )]
 visible = false
@@ -629,7 +639,7 @@ texture = ExtResource( 59 )
 text = ""
 
 [node name="Player_Main" parent="." instance=ExtResource( 1 )]
-position = Vector2( 6036.19, 927.432 )
+position = Vector2( 9041.55, 884.965 )
 scale = Vector2( 0.825966, 0.825966 )
 
 [node name="pigon" type="Sprite" parent="."]
@@ -801,13 +811,13 @@ volume_db = -16.007
 one_shot = true
 autostart = true
 
+[node name="Succes" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 57 )
+
 [node name="MusicBackground" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 26 )
 volume_db = -5.0
 autoplay = true
-
-[node name="RoofTask" parent="." instance=ExtResource( 55 )]
-position = Vector2( 13029.5, 586.328 )
 [connection signal="body_entered" from="Second_plan_background/GooseHouse/Area2D" to="." method="_on_GooseHouse_body_entered"]
 [connection signal="finished" from="CanvasLayer/VideoPlayer" to="." method="_on_VideoPlayer_finished"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

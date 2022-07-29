@@ -5,7 +5,11 @@ export var next_scene: PackedScene
 func _ready() -> void:
 #	$CanvasLayer/VideoPlayer.visible = true
 	$CanvasLayer/VideoPlayer.play()
+	$Second_plan_background/PotatoesTask/Area2D.connect("task_completed", $".", "play_succes_audio")
 
+func play_succes_audio() -> void:
+	print("playings")
+	$Succes.play()
 
 func _on_VideoPlayer_finished() -> void:
 	$CanvasLayer.queue_free()

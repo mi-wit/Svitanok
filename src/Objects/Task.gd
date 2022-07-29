@@ -1,6 +1,7 @@
 extends Area2D
 
 signal interaction_started
+signal task_completed
 var is_interactable = true
 
 func _ready() -> void:
