@@ -675,7 +675,7 @@ text = "Press E to interact"
 stream = ExtResource( 63 )
 
 [node name="Player_Main" parent="." instance=ExtResource( 1 )]
-position = Vector2( 9041.55, 884.965 )
+position = Vector2( 15167, 902.096 )
 scale = Vector2( 0.825966, 0.825966 )
 
 [node name="pigon" type="Sprite" parent="."]
