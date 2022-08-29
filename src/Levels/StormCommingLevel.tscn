@@ -1,4 +1,4 @@
-[gd_scene load_steps=67 format=2]
+[gd_scene load_steps=72 format=2]
 
 [ext_resource path="res://src/Actors/Player_Main.tscn" type="PackedScene" id=1]
 [ext_resource path="res://tempAssets/tileset.tres" type="TileSet" id=2]
@@ -63,6 +63,11 @@
 [ext_resource path="res://assets/sounds/SFX/Characters/LazyDudeHmmm.wav" type="AudioStream" id=61]
 [ext_resource path="res://assets/sounds/SFX/Characters/BoarMumbling.wav" type="AudioStream" id=62]
 [ext_resource path="res://assets/sounds/SFX/Characters/MouseHmm.wav" type="AudioStream" id=63]
+[ext_resource path="res://assets/grass_flowers_separated/small_flower_3.png" type="Texture" id=64]
+[ext_resource path="res://assets/grass_flowers_separated/grass_6.png" type="Texture" id=65]
+[ext_resource path="res://assets/grass_flowers_separated/small_flower_4.png" type="Texture" id=66]
+[ext_resource path="res://assets/grass_flowers_separated/grass_1.png" type="Texture" id=67]
+[ext_resource path="res://assets/grass_flowers_separated/grass_9.png" type="Texture" id=68]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 61.8408, 285.46 )
@@ -670,7 +675,7 @@ text = "Press E to interact"
 stream = ExtResource( 63 )
 
 [node name="Player_Main" parent="." instance=ExtResource( 1 )]
-position = Vector2( 9041.55, 884.965 )
+position = Vector2( 15167, 902.096 )
 scale = Vector2( 0.825966, 0.825966 )
 
 [node name="pigon" type="Sprite" parent="."]
@@ -864,16 +869,55 @@ layer = 99
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="Rain"]
 z_index = 99
+motion_scale = Vector2( 0, 1 )
 motion_mirroring = Vector2( 1980, 0 )
 
 [node name="rain" type="Particles2D" parent="Rain/ParallaxLayer"]
-position = Vector2( 792.76, -13.9183 )
-rotation = 1.5421
+position = Vector2( 1711.19, -362.922 )
+rotation = 1.93584
 scale = Vector2( 0.850464, 0.850464 )
 amount = 1000
 lifetime = 3.0
 speed_scale = 2.92
+visibility_rect = Rect2( -100, -100, 2000, 200 )
 process_material = SubResource( 3 )
+
+[node name="VeryFirstBackground" type="ParallaxBackground" parent="."]
+layer = 128
+
+[node name="CanvasModulate" type="CanvasModulate" parent="VeryFirstBackground"]
+color = Color( 0.27451, 0.27451, 0.27451, 1 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="VeryFirstBackground"]
+motion_scale = Vector2( 1.5, 1 )
+motion_mirroring = Vector2( 5000, 0 )
+
+[node name="Node2D" type="Node2D" parent="VeryFirstBackground/ParallaxLayer"]
+position = Vector2( 2684.75, 916.098 )
+scale = Vector2( 2.21758, 2.21758 )
+
+[node name="grass_1" type="Sprite" parent="VeryFirstBackground/ParallaxLayer/Node2D"]
+texture = ExtResource( 67 )
+
+[node name="grass_6" type="Sprite" parent="VeryFirstBackground/ParallaxLayer/Node2D"]
+position = Vector2( 481.29, 27.7183 )
+texture = ExtResource( 65 )
+
+[node name="small_flower_3" type="Sprite" parent="VeryFirstBackground/ParallaxLayer/Node2D"]
+position = Vector2( -874.385, 20.1587 )
+texture = ExtResource( 64 )
+
+[node name="small_flower_4" type="Sprite" parent="VeryFirstBackground/ParallaxLayer/Node2D"]
+position = Vector2( 229.305, -10.0793 )
+texture = ExtResource( 66 )
+
+[node name="grass_9" type="Sprite" parent="VeryFirstBackground/ParallaxLayer/Node2D"]
+position = Vector2( -1068.41, 17.6387 )
+texture = ExtResource( 68 )
+
+[node name="bush_2" type="Sprite" parent="VeryFirstBackground/ParallaxLayer/Node2D"]
+position = Vector2( -247.714, 18.1808 )
+texture = ExtResource( 21 )
 [connection signal="body_entered" from="Second_plan_background/GooseHouse/Area2D" to="." method="_on_GooseHouse_body_entered"]
 [connection signal="finished" from="CanvasLayer/VideoPlayer" to="." method="_on_VideoPlayer_finished"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

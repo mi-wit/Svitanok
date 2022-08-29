@@ -3,7 +3,7 @@ extends Node2D
 export var next_scene: PackedScene
 
 func _ready() -> void:
-#	$CanvasLayer/VideoPlayer.visible = true
+	$CanvasLayer/VideoPlayer.visible = true
 	$CanvasLayer/VideoPlayer.play()
 	$Second_plan_background/PotatoesTask/Area2D.connect("task_completed", $".", "play_succes_audio")
 	$Second_plan_background/LaundryTask/Area2D.connect("task_completed", $".", "play_succes_audio")

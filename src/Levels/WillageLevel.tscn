@@ -108,7 +108,6 @@ scale = Vector2( 0.714633, 0.72781 )
 texture = ExtResource( 37 )
 
 [node name="SecondPlan" type="Node2D" parent="."]
-scale = Vector2( 1, 1 )
 
 [node name="Background3" type="Sprite" parent="SecondPlan"]
 position = Vector2( 8232.81, 459.375 )
@@ -138,7 +137,6 @@ texture = ExtResource( 48 )
 
 [node name="Ground1" type="Sprite" parent="SecondPlan"]
 position = Vector2( 2489.17, 412.758 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 45 )
 
 [node name="Ground2" type="Sprite" parent="SecondPlan"]
@@ -195,12 +193,10 @@ texture = ExtResource( 45 )
 
 [node name="Ground6" type="Sprite" parent="SecondPlan"]
 position = Vector2( 5483.36, 1039.18 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 46 )
 
 [node name="Ground11" type="Sprite" parent="SecondPlan"]
 position = Vector2( 10651.1, 1022.67 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 46 )
 
 [node name="BigTree6" type="Sprite" parent="SecondPlan"]
@@ -238,7 +234,6 @@ texture = ExtResource( 23 )
 
 [node name="BackgroundTrees6" type="Sprite" parent="SecondPlan"]
 position = Vector2( 12367.2, 344.774 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 25 )
 
 [node name="NpcHouse1" type="Sprite" parent="SecondPlan"]
@@ -330,7 +325,6 @@ texture = ExtResource( 9 )
 
 [node name="BackgroundTrees3" type="Sprite" parent="SecondPlan"]
 position = Vector2( 9435.15, 305.926 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 25 )
 
 [node name="BackgroundTrees4" type="Sprite" parent="SecondPlan"]
@@ -393,7 +387,6 @@ texture = ExtResource( 21 )
 
 [node name="Bush16" type="Sprite" parent="SecondPlan"]
 position = Vector2( 15094.3, 568.149 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 16 )
 
 [node name="Sunflower" type="Sprite" parent="SecondPlan"]
@@ -464,7 +457,6 @@ texture = ExtResource( 14 )
 visible = false
 modulate = Color( 1, 1, 1, 0.513726 )
 position = Vector2( 3, 1 )
-scale = Vector2( 1, 1 )
 tile_set = ExtResource( 2 )
 collision_layer = 8
 collision_mask = 0
@@ -543,7 +535,6 @@ texture = ExtResource( 16 )
 
 [node name="GooseHouse" type="Sprite" parent="SecondPlan"]
 position = Vector2( 15723.6, 606.025 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 39 )
 script = ExtResource( 45 )
 
@@ -567,7 +558,6 @@ scale = Vector2( 0.713113, 0.713112 )
 texture = ExtResource( 40 )
 
 [node name="Characters" type="Node2D" parent="."]
-scale = Vector2( 1, 1 )
 
 [node name="NPC_Babushka" parent="Characters" instance=ExtResource( 4 )]
 position = Vector2( 902.239, 949.828 )
@@ -612,11 +602,9 @@ stream = ExtResource( 57 )
 
 [node name="Goose1" parent="Characters" instance=ExtResource( 26 )]
 position = Vector2( 2550.84, 909.894 )
-scale = Vector2( 1, 1 )
 
 [node name="Goose2" parent="Characters" instance=ExtResource( 26 )]
 position = Vector2( 3069.4, 873.287 )
-scale = Vector2( 1, 1 )
 
 [node name="Player_Main" parent="Characters" instance=ExtResource( 1 )]
 position = Vector2( 1418.85, 873.751 )
@@ -624,11 +612,9 @@ scale = Vector2( 0.825966, 0.825966 )
 
 [node name="Goose3" parent="Characters" instance=ExtResource( 26 )]
 position = Vector2( 3305.93, 876.188 )
-scale = Vector2( 1, 1 )
 
 [node name="Goose4" parent="Characters" instance=ExtResource( 26 )]
 position = Vector2( 3723.43, 862.453 )
-scale = Vector2( 1, 1 )
 
 [node name="ColorLayer" type="Sprite" parent="."]
 modulate = Color( 0.964706, 0.654902, 0.329412, 0.301961 )
